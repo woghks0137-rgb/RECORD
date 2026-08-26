@@ -4,11 +4,13 @@
 @import url(style-guide.css);
 
 header {
+    position: absolute;
     width: 100%;
     height: 100px;
-    background: url(../img/header,footer.png) no-repeat center/cover;
+    background:
+        url(../img/header,footer.png) no-repeat center/cover;
     /* PC 메인페이지에만 오패서티 0.6 */
-    /* opacity: 0.6; */
+
 }
 
 .header-inner {
@@ -18,6 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 /* ------------------------header left--------------------------- */
 /* 모바일 메인페이지에서만 사용 */
 .header-left .m-sound {
@@ -28,9 +31,10 @@ header {
 .header-left .m-back {
     display: none;
 }
+
 /* ------------------------header left end--------------------------- */
 
-.header-gnb > ul {
+.header-gnb>ul {
     display: flex;
     gap: 70px;
 }
@@ -59,6 +63,16 @@ header {
     width: 100%;
 }
 
+/* 각 맞는 gnb영역에 active 속성 넣어주기 */
+.header-gnb li a.active {
+    color: #EBEAE4;
+}
+
+.header-gnb li a.active::after {
+    width: 100%
+}
+
+
 /* ------------------------header right--------------------------- */
 /* PC 메인페이지에서만 사용 */
 .header-right .sound img {
@@ -67,9 +81,9 @@ header {
     height: 42px;
 }
 
-.header-right .sound .sound-off { 
+.header-right .sound .sound-off {
     /* 자바스크립트 영역임 클릭시 off이미지 block 과 영상 사운드 음소거 */
-    display: none; 
+    display: none;
 }
 
 .header-right .skip {
@@ -94,6 +108,7 @@ header {
     /* 모바일 메뉴 */
     display: none;
 }
+
 /* ------------------------header end--------------------------- */
 
 /* ------------------------footer--------------------------- */
