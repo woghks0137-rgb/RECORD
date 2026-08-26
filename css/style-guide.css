@@ -1,0 +1,303 @@
+@charset "utf-8";
+/* ========================================
+   Typography
+======================================== */
+
+:root {
+
+    /* Font Family */
+    --font-playfair: "Playfair Display", serif;
+    --font-adamina: "Adamina", serif;
+    --font-maru: "MaruBuri", serif;
+    --font-pretendard: "Pretendard", sans-serif;
+
+
+    /* Font Size - Web */
+    --fs-logo: 36px;
+    --fs-header-gnb: 25px;
+    --fs-header-btn: 24px;
+    --fs-footer: 18px;
+
+    --fs-main-title: 80px;
+    --fs-sub-title: 40px;
+    --fs-main-text: 22px;
+
+    --fs-card-main: 20px;
+    --fs-card-place: 16px;
+
+    --fs-icon-main: 18px;
+    --fs-icon-sub: 15px;
+
+    --fs-button: 18px;
+
+    --fs-point-main: 25px;
+    --fs-point-sub: 24px;
+
+
+    /* Font Weight */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+
+
+    /* ==============================
+        COLOR STYLE GUIDE
+============================== */
+
+    /* Primary */
+    --color-main: #251B10;
+    --color-sub: #403729;
+
+
+    /* Secondary */
+    --color-title: #2B1D11;
+
+
+    /* Accent */
+    --color-header: #B8A080;
+    --color-logo: #C5B79A;
+    --color-click: #EBEAE4;
+    --color-hero-text: #EBEAE4;
+
+
+    /* Background */
+    --color-main-bg: #CDBA9A;
+    --color-sub-bg: #C1A787;
+    --color-header-footer: #100D08;
+    --color-button: #26170B;
+
+}
+
+/* ========================================
+   Logo
+======================================== */
+
+.logo {
+    font-family: var(--font-playfair);
+    font-size: var(--fs-logo);
+    font-weight: var(--fw-regular);
+}
+
+
+/* ========================================
+   Header GNB
+======================================== */
+
+.header-gnb {
+    font-family: var(--font-playfair);
+    font-size: var(--fs-header-gnb);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Header Button
+======================================== */
+
+.header-btn {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-header-btn);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Footer
+======================================== */
+
+.footer-text {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-footer);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Main Title
+======================================== */
+
+.main-title {
+    font-family: var(--font-playfair);
+    font-size: var(--fs-main-title);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Sub Title
+======================================== */
+
+.sub-title {
+    font-family: var(--font-playfair);
+    font-size: var(--fs-sub-title);
+    font-weight: var(--fw-regular);
+}
+
+
+/* ========================================
+   Main Text
+======================================== */
+
+.main-text {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-main-text);
+    font-weight: var(--fw-medium);
+    color: var(--color-main);
+}
+
+
+/* ========================================
+   Card Main
+======================================== */
+
+.card-main-text {
+    font-family: var(--font-maru);
+    font-size: var(--fs-card-main);
+    font-weight: var(--fw-semibold);
+}
+
+
+/* ========================================
+   Card Sub
+======================================== */
+
+.card-sub-text {
+    font-family: var(--font-maru);
+    font-size: var(--fs-card-place);
+    font-weight: var(--fw-semibold);
+}
+
+
+/* ========================================
+   Icon Main
+======================================== */
+
+.icon-main-text {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-icon-main);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Icon Sub
+======================================== */
+
+.icon-sub-text {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-icon-sub);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Button
+======================================== */
+
+.button-text {
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-button);
+    font-weight: var(--fw-medium);
+}
+
+
+/* ========================================
+   Point Main
+======================================== */
+
+.point-main-text {
+    font-family: var(--font-adamina);
+    font-size: var(--fs-point-main);
+    font-weight: var(--fw-regular);
+}
+
+
+/* ========================================
+   Point Sub
+======================================== */
+
+.point-sub-text {
+    font-family: var(--font-adamina);
+    font-size: var(--fs-point-sub);
+    font-weight: var(--fw-regular);
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 402px) {
+
+    .logo {
+        font-size: 22px;
+        font-weight: var(--fw-regular);
+    }
+
+    .header-gnb {
+        font-size: 25px;
+        font-weight: var(--fw-medium);
+    }
+
+    .header-btn {
+        font-size: 24px;
+        font-weight: var(--fw-medium);
+    }
+
+    .footer-text {
+        font-size: 12px;
+        font-weight: var(--fw-medium);
+    }
+
+    .main-title {
+        font-size: 28px;
+        font-weight: var(--fw-medium);
+    }
+
+    .sub-title {
+        font-size: 20px;
+        font-weight: var(--fw-regular);
+    }
+
+    .main-text {
+        font-size: 16px;
+        font-weight: var(--fw-medium);
+    }
+
+    .card-main-text {
+        font-size: 20px;
+        font-weight: var(--fw-semibold);
+    }
+
+    .card-sub-text {
+        font-size: 13px;
+        font-weight: var(--fw-semibold);
+    }
+
+    .icon-main-text {
+        font-size: 12px;
+        font-weight: var(--fw-medium);
+    }
+
+    .icon-sub-text {
+        font-size: 11px;
+        font-weight: var(--fw-medium);
+    }
+
+    .button-text {
+        font-size: 13px;
+        font-weight: var(--fw-medium);
+    }
+
+    .point-main-text {
+        font-size: 13px;
+        font-weight: var(--fw-regular);
+    }
+
+    .point-sub-text {
+        font-size: 12px;
+        font-weight: var(--fw-regular);
+    }
+}
