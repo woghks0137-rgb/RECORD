@@ -60,6 +60,7 @@
     --color-logo: #C5B79A;
     --color-click: #EBEAE4;
     --color-hero-text: #EBEAE4;
+    --color-point: #612010;
 
 
     /* Background */
@@ -74,10 +75,15 @@
    Logo
 ======================================== */
 
+/* ========================================
+   Logo
+======================================== */
+
 .logo {
     font-family: var(--font-playfair);
     font-size: var(--fs-logo);
     font-weight: var(--fw-regular);
+    color: var(--color-logo);
 }
 
 
@@ -89,6 +95,7 @@
     font-family: var(--font-playfair);
     font-size: var(--fs-header-gnb);
     font-weight: var(--fw-medium);
+    color: var(--color-header);
 }
 
 
@@ -100,6 +107,7 @@
     font-family: var(--font-pretendard);
     font-size: var(--fs-header-btn);
     font-weight: var(--fw-medium);
+    color: var(--color-click);
 }
 
 
@@ -111,6 +119,7 @@
     font-family: var(--font-pretendard);
     font-size: var(--fs-footer);
     font-weight: var(--fw-medium);
+    color: var(--color-header);
 }
 
 
@@ -122,6 +131,7 @@
     font-family: var(--font-playfair);
     font-size: var(--fs-main-title);
     font-weight: var(--fw-medium);
+    color: var(--color-title);
 }
 
 
@@ -133,6 +143,7 @@
     font-family: var(--font-playfair);
     font-size: var(--fs-sub-title);
     font-weight: var(--fw-regular);
+    color: var(--color-main);
 }
 
 
@@ -156,6 +167,7 @@
     font-family: var(--font-maru);
     font-size: var(--fs-card-main);
     font-weight: var(--fw-semibold);
+    color: var(--color-main);
 }
 
 
@@ -167,6 +179,7 @@
     font-family: var(--font-maru);
     font-size: var(--fs-card-place);
     font-weight: var(--fw-semibold);
+    color: var(--color-sub);
 }
 
 
@@ -178,6 +191,7 @@
     font-family: var(--font-pretendard);
     font-size: var(--fs-icon-main);
     font-weight: var(--fw-medium);
+    color: var(--color-main);
 }
 
 
@@ -189,6 +203,7 @@
     font-family: var(--font-pretendard);
     font-size: var(--fs-icon-sub);
     font-weight: var(--fw-medium);
+    color: var(--color-sub);
 }
 
 
@@ -200,6 +215,7 @@
     font-family: var(--font-pretendard);
     font-size: var(--fs-button);
     font-weight: var(--fw-medium);
+    color: var(--color-main);
 }
 
 
@@ -211,6 +227,7 @@
     font-family: var(--font-adamina);
     font-size: var(--fs-point-main);
     font-weight: var(--fw-regular);
+    color: var(--color-point);
 }
 
 
@@ -222,6 +239,7 @@
     font-family: var(--font-adamina);
     font-size: var(--fs-point-sub);
     font-weight: var(--fw-regular);
+    color: var(--color-point);
 }
 
 
