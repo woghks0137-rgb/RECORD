@@ -16,8 +16,8 @@ section {
 
 .main {
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0.8) 12%,
-            rgba(0, 0, 0, 0) 73%),
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0) 70%),
         url(/img/main-bg.webp)no-repeat center/cover;
 }
 
@@ -47,11 +47,11 @@ section {
 }
 
 .main-text {
-    font-size: 28px;
+    font-size: 26px;
     font-weight: var(--fw-regular);
     color: rgb(from var(--color-click) r g b / 70%);
     line-height: 44px;
-    margin-bottom: 44px;
+    margin-bottom: 54px;
 }
 
 .btn-box {
@@ -92,7 +92,63 @@ section {
 }
 
 .about {
-    position: absolute;
-    top: 80px;
-    left: 100px;
+    width: 100%;
+    max-width: 1620px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.text-group .main-title {
+    color: var(--color-title);
+    font-family: var(--font-playfair);
+    font-size: 36px;
+    margin-bottom: 49px;
+}
+
+.text-group .main-text {
+    font-family: var(--font-pretendard);
+    color: var(--color-main);
+    line-height: 1.2;
+    margin-bottom: 41px;
+}
+
+.text-group .sub-text {
+    color: var(--color-main);
+    font-family: var(--font-pretendard);
+    font-size: var(--fs-main-text);
+    font-weight: var(--fw-regular);
+    margin-bottom: 42px;
+}
+
+.icon-box {
+    display: flex;
+    gap: 25px;
+}
+
+.icon-img {
+    width: 50px;
+    height: 50px;
+    background: var(--color-logo);
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.icon-text {
+    width: 250px;
+    display: flex;
+    color: black;
+    gap: 15px;
+    align-items: center;
+    font-family: var(--font-pretendard);
+    font-weight: var(--fw-regular);
+}
+
+.icon-box .right::before {
+    content: "";
+    display: inline-block;
+    background: rgba(94, 91, 91, 0.397);
+    width: 2px;
+    height: 55px;
+    transform: translate(-30px, 2px);
+
 }
