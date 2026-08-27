@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(style-guide.css);
+
+header {
+    position: absolute;
+    z-index: 1;
+
+    /* 화면에 맞게 포지션 조절 */
+    width: 100%;
+    height: 80px;
+    background:
+        url(../img/header,footer.png) no-repeat center/cover;
+}
+
+.logo {
+    position: relative;
+    z-index: 1;
+}
+
+.logo a {
+    display: block;
+}
+
+
+.header-inner {
+    width: 100%;
+    max-width: 1620px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------header left--------------------------- */
+/* 모바일 메인페이지에서만 사용 */
+.header-left {
+    width: 100px;
+    display: none;
+}
+
+.header-left .m-sound1 {
+    display: none;
+}
+
+.header-left .m-sound2 {
+    display: none;
+}
+
+/* 모바일 메인제외 모든페이지에서 사용 */
+.header-left .m-back {
+    display: none;
+
+}
+
+/* ------------------------header left end--------------------------- */
+
+.header-gnb {
+    z-index: 10;
+}
+
+.header-gnb>ul {
+    display: flex;
+    gap: 70px;
+}
+
+.header-gnb li a {
+    position: relative;
+}
+
+.header-gnb li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #EBEAE4;
+    transition: 0.3s;
+}
+
+.header-gnb li a:hover {
+    color: #EBEAE4;
+    transition: 0.3s;
+}
+
+.header-gnb li a:hover::after {
+    width: 100%;
+}
+
+/* 각 맞는 gnb영역에 active 속성 넣어주기 */
+.header-gnb li a.active {
+    color: #EBEAE4;
+}
+
+.header-gnb li a.active::after {
+    width: 100%
+}
+
+
+/* ------------------------header right--------------------------- */
+/* PC 메인페이지에서만 사용 */
+.header-right {
+    width: 100px;
+    z-index: 1;
+}
+
+.header-right .sound img {
+    display: none;
+}
+
+.header-right .sound .sound-off {
+    /* 자바스크립트 영역임 클릭시 off이미지 block 과 영상 사운드 음소거 */
+    display: none;
+}
+
+.header-right .skip {
+    /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
+    position: relative;
+    top: -10px;
+    display: none;
+    gap: 10px;
+    opacity: 0.7;
+}
+
+.header-right .back {
+    /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
+    position: relative;
+    top: -10px;
+    display: flex;
+    gap: 10px;
+    opacity: 0.7;
+}
+
+.header-right .skip img {
+    transform: scaleX(-1);
+
+
+}
+
+.header-right .back img {
+    position: absolute;
+    top: 2px;
+    left: -25px;
+    transform: scaleX(-1);
+}
+
+.header-right .m-menu {
+    /* 모바일 메뉴 */
+    display: none;
+}
+
+.header-left img,
+.header-right img {
+    width: 24px;
+    height: 24px;
+}
+
+.header-right .sound img {
+    width: 28px;
+    height: 28px;
+}
+
+/* ------------------------header end--------------------------- */
+
+/* ------------------------footer--------------------------- */
+
+.footer {
+    /*  position: fixed;
+     bottom: 0; */
+    /* 화면에 맞게 포지션 조절 */
+    width: 100%;
+    height: 80px;
+    background: url(../img/header,footer.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
