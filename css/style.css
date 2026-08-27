@@ -8,7 +8,7 @@ section {
 .inner {
     position: relative;
 
-    max-width: 1620px;
+    max-width: 1720px;
     height: 100%;
 
     margin: 0 auto;
@@ -23,15 +23,15 @@ section {
 
 .text-box {
     position: absolute;
-    top: 215px;
+    top: 255px;
 }
 
 .img-box {
-    width: 404px;
-    height: 346px;
+    width: 454px;
+    height: 396px;
     position: absolute;
-    top: 315px;
-    right: 405px;
+    top: 345px;
+    right: 395px;
 }
 
 .img-box img {
