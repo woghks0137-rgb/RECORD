@@ -23,15 +23,16 @@ section {
 
 .text-box {
     position: absolute;
-    top: 255px;
+    top: 225px;
+    left: 40px;
 }
 
 .img-box {
-    width: 454px;
-    height: 396px;
+    width: 424px;
+    height: 366px;
     position: absolute;
-    top: 345px;
-    right: 395px;
+    top: 300px;
+    right: 445px;
 }
 
 .img-box img {
