@@ -15,7 +15,7 @@ section {
 }
 
 .main {
-    background: linear-gradient(to bottom,
+    background: linear-gradient(to right,
             rgba(0, 0, 0, 0.8) 0%,
             rgba(0, 0, 0, 0) 70%),
         url(/img/main-bg.webp)no-repeat center/cover;
@@ -93,7 +93,7 @@ section {
 
 .about {
     width: 100%;
-    max-width: 1620px;
+    max-width: 1720px;
     margin: auto;
     padding-top: 100px;
 }
