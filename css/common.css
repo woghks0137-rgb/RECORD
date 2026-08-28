@@ -37,6 +37,7 @@ header {
 /* ------------------------header left--------------------------- */
 /* 모바일 메인페이지에서만 사용 */
 .header-left {
+    width: 100px;
     display: none;
 }
 
@@ -102,11 +103,12 @@ header {
 /* ------------------------header right--------------------------- */
 /* PC 메인페이지에서만 사용 */
 .header-right {
+    width: 100px;
     z-index: 1;
 }
 
 .header-right .sound img {
-    display: flex;
+    display: none;
 }
 
 .header-right .sound .sound-off {
@@ -127,7 +129,7 @@ header {
     /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
     position: relative;
     top: -10px;
-    display: none;
+    display: flex;
     gap: 10px;
     opacity: 0.7;
 }
