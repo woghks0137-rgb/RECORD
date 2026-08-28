@@ -140,12 +140,13 @@ header {
     padding: 28px;
     ;
     position: relative;
-    background: url("../img/타임라인 키프레임 배경.png") center / 100% 100% no-repeat;
+    background: url("../img/1990/텍스트\ 배경.png") center / 100% 100% no-repeat;
     z-index: 1;
 }
 
 .key-items>h3 {
     margin-bottom: 8px;
+    margin-top: 25px;
     font-family: var(--font-adamina);
     font-size: 18px;
     font-weight: var(--fw-regular);
@@ -158,6 +159,7 @@ header {
     display: flex;
     align-items: center;
     gap: 15px;
+
 }
 
 .key-item img {
