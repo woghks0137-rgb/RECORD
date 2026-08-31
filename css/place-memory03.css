@@ -105,7 +105,7 @@
 .sub-container .sub-title {
     position: absolute;
     top: 105px;
-    right: 310px;
+    right: 400px;
     font-family: var(--font-maru);
     font-weight: var(--fw-semibold);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
@@ -114,9 +114,9 @@
 .sub-container .sub-title::after {
     content: "";
     position: absolute;
-    left: 33px;
+    left: 0px;
     bottom: -6px;
-    width: 496px;
+    width: 400px;
     height: 2px;
     background: rgba(0, 0, 0, 0.466);
 }
@@ -194,7 +194,6 @@
     height: 1px;
     background: rgba(0, 0, 0, 0.3);
 }
-
 
 /* 아이콘 */
 .icon-container .item img {
