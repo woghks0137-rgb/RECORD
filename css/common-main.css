@@ -6,11 +6,12 @@
 header {
     position: absolute;
     z-index: 1;
+
     /* 화면에 맞게 포지션 조절 */
     width: 100%;
     height: 80px;
     background:
-        url(../img/header\,footer.png) no-repeat center/cover;
+        url(../img/header,footer.png) no-repeat center/cover;
 }
 
 .logo {
@@ -108,7 +109,7 @@ header {
 
 .header-right .sound img {
     position: relative;
-    display: none;
+    display: flex;
     right: -30px;
 }
 
@@ -124,7 +125,7 @@ header {
     position: relative;
     top: -10px;
     right: -10px;
-    display: block;
+    display: none;
     gap: 10px;
     opacity: 0.7;
 }
@@ -134,13 +135,15 @@ header {
     position: relative;
     top: -10px;
     right: -30px;
-    display: flex;
+    display: none;
     gap: 10px;
     opacity: 0.7;
 }
 
 .header-right .skip img {
     transform: scaleX(-1);
+
+
 }
 
 .header-right .back img {
@@ -169,9 +172,10 @@ header {
 /* ------------------------header end--------------------------- */
 
 /* ------------------------footer--------------------------- */
+
 .footer {
-    /* position: fixed;
-    bottom: 0; */
+    /*  position: fixed;
+     bottom: 0; */
     /* 화면에 맞게 포지션 조절 */
     width: 100%;
     height: 80px;
