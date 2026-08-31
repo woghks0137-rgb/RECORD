@@ -63,8 +63,8 @@
 }
 
 .main-container .main-img-box {
-    width: 606px;
-    height: 503px;
+    width: 656px;
+    height: 513px;
     position: relative;
     overflow: hidden;
     margin-bottom: 10px;
@@ -125,8 +125,8 @@
 
 .sub-container .sub-img01 {
     position: absolute;
-    width: 360px;
-    height: 284px;
+    width: 380px;
+    height: 304px;
     top: 186px;
     right: 565px;
 
@@ -134,10 +134,26 @@
 
 .sub-container .sub-img02 {
     position: absolute;
-    width: 360px;
-    height: 284px;
-    top: 186px;
-    right: 265px;
+    width: 332px;
+    height: 267px;
+    top: 226px;
+    right: 280px;
+}
+
+.sub-container .main-text {
+    position: relative;
+    margin-top: 240px;
+    line-height: 1.6;
+}
+
+.sub-container .main-text::after {
+    content: "";
+    position: absolute;
+    left: -78px;
+    bottom: -40px;
+    width: 650px;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.295);
 }
 
 /* 아이콘 박스 */
@@ -148,4 +164,27 @@
     display: flex;
 }
 
-.icon-container {}
+.icon-container {
+    position: relative;
+    top: -40px;
+    width: 280px;
+    height: 573px;
+    border: 1px solid black;
+    border-radius: 17px;
+}
+
+.icon-container .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 80px;
+}
+
+
+.icon-container .item img {
+    background: var(--color-main);
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50px;
+}
