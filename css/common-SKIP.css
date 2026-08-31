@@ -6,12 +6,11 @@
 header {
     position: absolute;
     z-index: 1;
-
     /* 화면에 맞게 포지션 조절 */
     width: 100%;
     height: 80px;
     background:
-        url(../img/header,footer.png) no-repeat center/cover;
+        url(../img/header\,footer.png) no-repeat center/cover;
 }
 
 .logo {
@@ -37,6 +36,7 @@ header {
 /* ------------------------header left--------------------------- */
 /* 모바일 메인페이지에서만 사용 */
 .header-left {
+    width: 100px;
     display: none;
 }
 
@@ -102,11 +102,12 @@ header {
 /* ------------------------header right--------------------------- */
 /* PC 메인페이지에서만 사용 */
 .header-right {
+    width: 100px;
     z-index: 1;
 }
 
 .header-right .sound img {
-    display: flex;
+    display: none;
 }
 
 .header-right .sound .sound-off {
@@ -118,7 +119,7 @@ header {
     /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
     position: relative;
     top: -10px;
-    display: none;
+    display: block;
     gap: 10px;
     opacity: 0.7;
 }
@@ -166,8 +167,8 @@ header {
 /* ------------------------footer--------------------------- */
 
 .footer {
-    /*  position: fixed;
-     bottom: 0; */
+    position: fixed;
+    bottom: 0;
     /* 화면에 맞게 포지션 조절 */
     width: 100%;
     height: 80px;
@@ -176,5 +177,3 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-g
