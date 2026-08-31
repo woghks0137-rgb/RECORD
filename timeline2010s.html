@@ -188,6 +188,7 @@
                 </div>
             </div>
             <div class="music-player">
+
                 <h3>으르렁 - EXO</h3>
 
                 <div class="record-player">
@@ -207,13 +208,13 @@
                 </div>
 
                 <div class="time">
-                    <span>2 :54</span>
+                    <span>0:00</span>
                     <span>4:28</span>
                 </div>
 
                 <div class="player-buttons">
 
-                    <button type="button" class="prev-btn" aria-label="이전 곡">
+                    <button type="button" class="prev-btn">
                         <img src="./img/타임라인 노래 버튼 왼쪽 2.png" alt="">
                     </button>
 
@@ -221,13 +222,23 @@
                         <img src="./img/타임라인 노래 버튼.png" alt="">
                     </button>
 
-                    <button type="button" class="next-btn" aria-label="다음 곡">
+                    <button type="button" class="next-btn">
                         <img src="./img/타임라인 노래 버튼 오른쪽 2.png" alt="">
                     </button>
 
                 </div>
 
-                <!--  <audio class="audio" src="./audio/붉은 노을.mp3" preload="metadata"></audio> -->
+
+                <!-- 유튜브 플레이어 -->
+                <div class="youtube-player">
+
+                    <iframe id="youtubePlayer"
+                        src="https://www.youtube.com/embed/I3dezFzsNss?enablejsapi=1&playsinline=1" title="EXO - 으르렁"
+                        allow="autoplay; encrypted-media" frameborder="0">
+                    </iframe>
+
+                </div>
+
             </div>
         </section>
 
@@ -250,9 +261,131 @@
             </span>
         </button>
     </main>
+
     <footer class="footer">
         <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
     </footer>
+
+    <script>
+        const playBtn = document.querySelector(".play-btn");
+        const recordPlayer = document.querySelector(".record-player");
+        const tonearm = document.querySelector(".tonearm");
+
+        let youtubePlayer = null;
+        let isPlaying = false;
+        let isMovingTonearm = false;
+
+        /* YouTube API 불러오기 */
+
+        const youtubeScript = document.createElement("script");
+
+        youtubeScript.src =
+            "https://www.youtube.com/iframe_api";
+
+        document.head.appendChild(youtubeScript);
+
+
+        /* YouTube 플레이어 생성 */
+        function onYouTubeIframeAPIReady() {
+            youtubePlayer = new YT.Player(
+                "youtubePlayer", {
+                events: {
+                    /* YouTube 준비 완료 */
+                    onReady: function () {
+                        console.log(
+                            "YouTube 플레이어 준비 완료"
+                        );
+                    },
+
+                    /* 재생 상태 */
+                    onStateChange: function (event) {
+                        /* 노래 재생 중 */
+                        if (
+                            event.data ===
+                            YT.PlayerState.PLAYING
+                        ) {
+                            isPlaying = true;
+                            // LP 회전 시작
+                            recordPlayer.classList.add(
+                                "is-playing"
+                            );
+                        }
+
+                        /* 일시정지 */
+                        if (
+                            event.data ===
+                            YT.PlayerState.PAUSED
+                        ) {
+                            isPlaying = false;
+                            // LP 정지
+                            recordPlayer.classList.remove(
+                                "is-playing"
+                            );
+                        }
+
+
+                        /* 노래 종료 */
+                        if (
+                            event.data ===
+                            YT.PlayerState.ENDED
+                        ) {
+                            isPlaying = false;
+                            recordPlayer.classList.remove(
+                                "is-playing"
+                            );
+                            // 바늘도 원래 위치로
+                            tonearm.classList.remove(
+                                "is-on-record"
+                            );
+                        }
+                    }
+                }
+            }
+            );
+        }
+
+
+        /* 재생버튼 */
+        playBtn.addEventListener(
+            "click",
+            function () {
+                /* YouTube가 아직 준비되지 않았을 때 */
+                if (!youtubePlayer) {
+                    console.log(
+                        "YouTube 플레이어가 준비되지 않았습니다."
+                    );
+                    return;
+                }
+
+                /* 재생 중 -> 일시정지 */
+                if (isPlaying) {
+                    youtubePlayer.pauseVideo();
+                    return;
+                }
+
+                /* 바늘이 움직이는 중이면 클릭 막기 */
+                if (isMovingTonearm) {
+                    return;
+                }
+                isMovingTonearm = true;
+
+                /* 바늘만 LP 위로 이동 */
+                tonearm.classList.add(
+                    "is-on-record"
+                );
+
+                /* 2초 후 노래 + LP 회전 */
+                setTimeout(
+                    function () {
+                        youtubePlayer.playVideo();
+                        isMovingTonearm = false;
+                    },
+                    2000
+                );
+            }
+        );
+        ㄴ    </script>
+
 </body>
 
 </html>

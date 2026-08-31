@@ -391,6 +391,8 @@ header {
 
 }
 
+/* 음악 플레이어 */
+
 .music-player {
     width: 280px;
     height: 300px;
@@ -398,71 +400,112 @@ header {
     margin-left: 28px;
     padding: 18px;
     position: relative;
+
     border-radius: 8px;
+
     background: linear-gradient(180deg,
             #604832 0%,
             #493522 55%,
             #352416 100%);
+
     color: #dfcba8;
+
     box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.2);
+
+    box-sizing: border-box;
 }
 
+
+/* 제목 */
 .music-player h3 {
     font-family: var(--font-maru);
     font-weight: var(--fw-medium);
     font-size: 16px;
     line-height: 1.4;
+
+    margin: 0;
 }
+
+/* LP + 바늘 */
 
 .record-player {
     width: 220px;
     height: 155px;
+
     margin: 5px auto 0;
+
     position: relative;
 }
 
+
+/* LP */
 .record {
     width: 140px;
     height: 140px;
+
     position: absolute;
-    top: 0px;
+
+    top: 0;
     left: 35px;
+
     border-radius: 50%;
 }
 
 .record-disc {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: contain;
 }
 
+/* 바늘 */
 .tonearm {
     width: 100px;
     height: 100px;
+
     position: absolute;
     top: -15px;
     right: -10px;
+
     z-index: 3;
+
     transform-origin: 82% 15%;
-    transform: rotate(25deg);
-    transition: transform 0.6s ease;
+
+    /* 처음에는 LP 밖 */
+    transform: rotate(-8deg);
+
+    /* 2초 동안 LP 위로 이동 */
+    transition: transform 2s ease;
 }
 
 .tonearm img {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: contain;
+
     margin-top: 35px;
     margin-left: 18px;
+
     transform: rotate(-30deg);
 }
 
-.record-player.is-playing .tonearm {
-    transform: rotate(-8deg);
+
+/* 재생하면 바늘이 LP 위로 */
+.tonearm.is-on-record {
+    transform: rotate(35deg);
 }
 
+
+/* 재생 상태가 됐을 때 LP 회전 */
+.record-player.is-playing .record-disc {
+    animation: recordRotate 2s linear infinite;
+}
+
+/* 재생 중 LP 회전 */
 .record-player.is-playing .record-disc {
     animation: recordRotate 2s linear infinite;
 }
@@ -477,53 +520,115 @@ header {
     }
 }
 
+/* 진행바 */
+
 .progress {
     width: 100%;
     height: 3px;
-    margin-top: 2px;
+
+    margin: 8px 0 0;
+
     background: rgba(223, 203, 168, 0.3);
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    overflow: hidden;
 }
 
 .progress span {
     display: block;
-    width: 45%;
+
+    width: 0%;
+
     height: 3px;
+
     background: #dfcba8;
+
+    transition: width 0.1s linear;
 }
+
+
+/* 시간 */
 
 .time {
-    margin-top: 5px;
+    width: 100%;
+
+    margin-top: 7px;
+
     display: flex;
+
     justify-content: space-between;
+    align-items: center;
+
     font-family: var(--font-pretendard);
+
     font-size: 14px;
+
+    line-height: 1;
 }
 
+
+/* 이전 / 재생 / 다음 버튼 */
+
 .player-buttons {
+    width: 100%;
+
     margin-top: 12px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 25px;
 }
 
 .player-buttons button {
     width: 30px;
     height: 30px;
+
+    padding: 0;
+
     border: none;
+
     background: transparent;
+
+    cursor: pointer;
 }
 
 .player-buttons button img {
     width: 100%;
     height: 100%;
+
     display: block;
+
     object-fit: contain;
 }
 
+
+/* 가운데 재생 버튼 */
 .player-buttons button:nth-child(2) {
     width: 45px;
     height: 45px;
+}
+
+/* YouTube 플레이어 : 화면에는 보이지 않게 */
+.youtube-player {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.youtube-player iframe {
+    width: 1px;
+    height: 1px;
+    border: 0;
 }
 
 .prev-year {
@@ -628,4 +733,38 @@ header {
     transform: translateY(-50%);
     display: block;
     object-fit: contain;
+}
+
+/* 음악 플레이어 진행 바 */
+.music-player .progress {
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.music-player .progress span {
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+/* 재생 버튼 클릭 가능 표시 */
+.music-player .player-buttons button {
+    cursor: pointer;
+}
+
+
+
+.youtube-player {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.youtube-player iframe {
+    width: 1px;
+    height: 1px;
+    border: 0;
 }
