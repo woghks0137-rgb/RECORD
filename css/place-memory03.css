@@ -105,7 +105,7 @@
 .sub-container .sub-title {
     position: absolute;
     top: 105px;
-    right: 310px;
+    right: 400px;
     font-family: var(--font-maru);
     font-weight: var(--fw-semibold);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
@@ -114,9 +114,9 @@
 .sub-container .sub-title::after {
     content: "";
     position: absolute;
-    left: 33px;
+    left: 0px;
     bottom: -6px;
-    width: 496px;
+    width: 400px;
     height: 2px;
     background: rgba(0, 0, 0, 0.466);
 }
@@ -201,9 +201,12 @@
     height: 80px;
     padding: 10px;
     margin: 0;
-    background: var(--color-main);
-    border-radius: 50%;
     flex-shrink: 0;
+}
+
+.icon-container .item .img-box {
+    border-radius: 50%;
+    background: var(--color-main);
 }
 
 .icon-container .item .text-box {
