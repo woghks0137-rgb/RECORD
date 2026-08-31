@@ -109,7 +109,7 @@ header {
 
 .header-right .sound img {
     position: relative;
-    display: none;
+    display: flex;
     right: -30px;
 }
 
@@ -135,7 +135,7 @@ header {
     position: relative;
     top: -10px;
     right: -30px;
-    display: flex;
+    display: none;
     gap: 10px;
     opacity: 0.7;
 }
