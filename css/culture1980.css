@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth !important;
+    scroll-snap-type: y mandatory !important;
+}
+
+body {
+    margin: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 11;
+
+    /* 화면에 맞게 포지션 조절 */
+    width: 100%;
+    height: 80px;
+    background:
+        url(../img/header\,footer.png) no-repeat center/cover;
+}
+
+.culture-page {
+    width: 100% !important;
+    background-image: url(../img/기본\ 서브\ 배경.webp) !important;
+}
+
+/* 전체 섹션 */
+.culture-section {
+    width: 1762px !important;
+    height: 100vh !important;
+    min-height: 700px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+
+    display: grid !important;
+    grid-template-columns: 265px 575px 650px !important;
+    column-gap: 50px !important;
+
+    align-items: center !important;
+    box-sizing: border-box !important;
+
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important;
+}
+
+/* 왼쪽 culture menu */
+.culture-nav {
+    width: 300px !important;
+    height: 800px !important;
+
+    position: relative !important;
+    padding: 20px 0 !important;
+    left: -20px;
+    background: url(../img/섹션버튼.png) center / 100% 100% no-repeat !important;
+
+    box-sizing: border-box !important;
+}
+
+/* culture 제목 */
+.culture-nav h2 {
+    margin: 0 0 15px !important;
+
+    text-align: center !important;
+    color: var(--color-point);
+    font-family: var(--font-adamina) !important;
+    font-size: 22px !important;
+    font-weight: var(--fw-regular) !important;
+}
+
+/* 제목 밑 선 */
+.culture-nav h2::after {
+    content: "" !important;
+
+    display: block !important;
+
+    width: 165px !important;
+    height: 1px !important;
+
+    margin: 10px auto 0 !important;
+
+    background-color: var(--color-point) !important;
+}
+
+/* 메뉴 버튼 */
+.culture-btn {
+    width: 100% !important;
+    height: 145px !important;
+
+    padding: 15px 25px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    position: relative !important;
+
+    border: none !important;
+    border-top: 1px solid #251b1033 !important;
+
+    background: transparent !important;
+    color: var(--color-main) !important;
+
+    cursor: pointer !important;
+    text-align: left !important;
+
+    gap: 15px !important;
+    box-sizing: border-box !important;
+
+    margin-bottom: 30px;
+}
+
+/* 첫 번째 버튼 선 제거 */
+.culture-nav .culture-btn:first-of-type {
+    border-top: none !important;
+}
+
+/* 메뉴 이미지 */
+.culture-btn img {
+    width: 95px !important;
+    height: 95px !important;
+
+    flex-shrink: 0 !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    border-radius: 8px !important;
+}
+
+/* 메뉴 글자 */
+.culture-btn>div {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+
+    gap: 10px !important;
+
+    margin: 0 !important;
+}
+
+/* 번호 */
+.culture-number {
+    position: static !important;
+
+    display: block !important;
+
+    font-family: var(--font-adamina) !important;
+    font-size: 18px !important;
+    font-weight: var(--fw-regular) !important;
+
+    line-height: 1 !important;
+}
+
+/* 메뉴 제목 */
+.culture-btn>div>span:last-child {
+    display: block !important;
+
+    font-family: var(--font-maru) !important;
+    font-size: 18px !important;
+    font-weight: var(--fw-medium) !important;
+    color: #403729;
+    line-height: 1.4 !important;
+    white-space: nowrap !important;
+}
+
+/* 선택된 버튼 */
+.culture-btn.active {
+    border: none !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* 선택된 버튼 테두리 */
+.culture-btn.active::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 5px !important;
+    right: 5px !important;
+    top: 5px !important;
+    bottom: 5px !important;
+
+    border: 1px solid #612010 !important;
+    border-radius: 15px !important;
+
+    pointer-events: none !important;
+}
+
+/* 중앙 메인 이미지 */
+.culture-main-image {
+    width: 670px !important;
+    height: 622px !important;
+
+    overflow: hidden !important;
+    position: relative !important;
+
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.culture-main-image img {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+}
+
+/* 오른쪽 내용 */
+.culture-detail {
+    width: 650px !important;
+    margin-left: 80px;
+    align-self: center !important;
+}
+
+/* culture 라벨 */
+.culture-label {
+    display: inline-block !important;
+
+    padding: 7px 22px !important;
+    color: var(--color-point) !important;
+
+    border: 1px solid #612010 !important;
+    border-radius: 20px !important;
+
+    font-family: var(--font-adamina) !important;
+    font-size: 25px !important;
+    font-weight: var(--fw-regular) !important;
+}
+
+/* 제목 */
+.culture-detail h1 {
+    margin-top: 15px !important;
+
+    font-family: var(--font-pretendard) !important;
+    font-size: 60px !important;
+    font-weight: var(--fw-medium) !important;
+
+    line-height: 1.2 !important;
+}
+
+/* 년도 */
+.culture-year {
+    margin-top: 22px !important;
+
+    color: var(--color-point) !important;
+
+    font-family: var(--font-maru) !important;
+    font-size: 24px !important;
+    font-weight: var(--fw-medium) !important;
+}
+
+/* 구분선 */
+.culture-line {
+    width: 100% !important;
+    height: 1px !important;
+
+    margin-top: 22px !important;
+
+    background-color: #251b1099 !important;
+}
+
+/* 설명 */
+.culture-description {
+    width: 100% !important;
+
+    margin-top: 25px !important;
+
+    font-family: var(--font-pretendard) !important;
+    font-size: 22px !important;
+    font-weight: var(--fw-medium) !important;
+
+    line-height: 1.8 !important;
+}
+
+/* 하단 아이콘 */
+.culture-icons {
+    width: 100% !important;
+
+    margin-top: 28px !important;
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+}
+
+/* 아이콘 영역 */
+.culture-icon {
+    width: 190px !important;
+    min-height: 110px !important;
+
+    padding: 0 20px !important;
+
+    box-sizing: border-box !important;
+
+    text-align: center !important;
+
+    border-right: 1px solid #251b104d !important;
+}
+
+.culture-icon:first-child {
+    padding-left: 0 !important;
+}
+
+.culture-icon:last-child {
+    border-right: none !important;
+}
+
+/* 아이콘 이미지 */
+.culture-icon img {
+    width: 45px !important;
+    height: 45px !important;
+
+    display: block !important;
+
+    margin: 0 auto 10px !important;
+
+    object-fit: contain !important;
+}
+
+/* 아이콘 제목 */
+.culture-icon strong {
+    display: block !important;
+
+    font-family: var(--font-pretendard) !important;
+    font-size: 18px !important;
+    font-weight: var(--fw-medium) !important;
+}
+
+/* 아이콘 설명 */
+.culture-icon p {
+    margin-top: 6px !important;
+
+    font-family: var(--font-pretendard) !important;
+    font-size: 14px !important;
+    font-weight: var(--fw-medium) !important;
+
+    line-height: 1.5 !important;
+}
