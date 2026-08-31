@@ -1,0 +1,155 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(style-guide.css);
+
+/* ===================플레이스 헤더푸터========================= */
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/place-bg.webp) no-repeat center/cover
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+/* ===================상단 텍스트========================= */
+
+.place-inner {
+    width: 100%;
+    max-width: 1620px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+.place-text {
+    text-align: center;
+    padding-top: 120px;
+}
+
+.place-text .main-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.place-text .main-title::before,
+.place-text .main-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+
+    width: 130px;
+    height: 20px;
+
+    background-repeat: no-repeat;
+    background-size: 14px, 100px 3px;
+}
+
+.place-text .main-title::before {
+    right: 100%;
+    margin-right: 20px;
+
+    background-image:
+        url("../img/title-star.png"),
+        linear-gradient(to right, transparent, #2b2118);
+
+    background-position:
+        right center,
+        left center;
+}
+
+
+.place-text .main-title::after {
+    left: 100%;
+    margin-left: 20px;
+
+    background-image:
+        url("../img/title-star.png"),
+        linear-gradient(to left, transparent, #2b2118);
+
+    background-position:
+        left center,
+        right center;
+}
+
+.place-text .main-text {
+    margin-bottom: 30px;
+}
+
+/* ===================플레이스 카드========================= */
+
+.place-list {
+    display: flex;
+    gap: 30px;
+}
+
+.place-card {
+    position: relative;
+    flex: 1;
+    height: 528px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.place-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(0, 0, 0, 0.4) 40%,
+            rgba(0, 0, 0, 0) 100%);
+    z-index: 1;
+}
+
+.place-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.place-content {
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    z-index: 2;
+    width: 100%;
+    padding: 40px;
+}
+
+/* ===================플레이스 카드 텍스트========================= */
+
+.place-content h3 {
+    font-size: 34px;
+    font-weight: 500;
+    color: #EBEAE4;
+    margin-bottom: 30px;
+}
+
+.place-content .main-text {
+    color: #EBEAE4;
+    margin-bottom: 30px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.place-button {
+    position: relative;
+}
+
+.place-button>img {
+    width: 170px;
+}
+
+.place-button .button-text {
+    font-family: 'Pretendard';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+}
