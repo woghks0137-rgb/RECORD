@@ -262,6 +262,10 @@
     margin-right: -30px;
 }
 
+.sub-icon-box .sub-item:nth-child(2) img {
+    margin-right: 0px;
+}
+
 .sub-icon-box .sub-item .text {
     font-family: var(--font-maru);
     font-weight: var(--fw-medium);
