@@ -106,7 +106,7 @@
 .sub-container .sub-title {
     font-size: 28px;
     font-family: var(--font-pretendard);
-    font-weight: var(--fw--semibold);
+    font-weight: var(--fw--bold);
     color: var(--color-main);
     text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
     margin-bottom: 47px;
