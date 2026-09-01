@@ -147,8 +147,8 @@
 .sub-container .main-text::after {
     content: "";
     position: absolute;
-    left: -68px;
-    bottom: -40px;
+    left: -61px;
+    bottom: -58px;
     width: 640px;
     height: 2px;
     background: rgba(0, 0, 0, 0.295);
