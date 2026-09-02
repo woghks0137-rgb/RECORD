@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+#main {
+    width: 100%;
+    height: 100vh;
+    background: url(/img/기본\ 서브\ 배경.webp)no-repeat center/cover;
+}
+
+.inner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1720px;
+    height: 100%;
+    padding-top: 105px;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-container .text-box {
+    position: relative;
+    left: 30px;
+}
+
+.left-container .place {
+    position: relative;
+    font-size: 20px;
+    font-family: var(--font-pretendard);
+    color: var(--color-main);
+    font-weight: var(--fw-medium);
+    margin-bottom: 15px;
+}
+
+.left-container .place::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 500px;
+    height: 3px;
+    background: linear-gradient(to left,
+            rgba(131, 120, 120, 0) 0%,
+            #2B1D11 83%);
+}
+
+.left-container .main-title {
+    font-size: 60px;
+    -webkit-text-stroke: 1px var(--color-main);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 25px;
+}
+
+.left-container .sub-title {
+    width: 380px;
+    padding: 13px 18px;
+    background-color: #2B1D11;
+    border-radius: 10px;
+    color: #EBEAE4;
+    font-family: var(--font-maru);
+    font-size: 20px;
+    font-weight: var(--fw-regular);
+    line-height: 1.4;
+    margin-bottom: 25px;
+}
+
+.left-container strong {
+    font-family: var(--font-playfair);
+    font-weight: var(--fw-medium);
+}
+
+.left-container .main-text {
+    font-size: 20;
+    line-height: 1.6;
+}
+
+.place-info {
+    position: relative;
+    left: -20px;
+    height: 180px;
+    margin-top: 0;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.place-info {
+    width: 550px;
+    margin-left: 0;
+    display: flex;
+}
+
+/* 정보 하나 */
+.info-item {
+    width: 180px;
+    min-height: 100px;
+    padding: 0 20px;
+    text-align: center;
+    border-right: 2px solid #251b104d;
+}
+
+/* 마지막 */
+.info-item:last-child {
+    border-right: none;
+    position: relative;
+}
+
+/* 마지막 세로선 */
+/* .info-item:last-child::after {
+    content: "";
+    width: 2.5px;
+    height: 130%;
+    position: absolute;
+    top: -20px;
+    right: -100px;
+    background-color: #08080880;
+} */
+
+/* 정보 아이콘 */
+.info-item img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto 8px;
+    object-fit: contain;
+}
+
+.info-item span {
+    font-family: var(--font-adamina);
+    font-weight: var(--fw-regular);
+    color: var(--color-sub);
+}
+
+/* 정보 제목 */
+.info-item .icon-main {
+    display: block;
+    font-family: var(--font-pretendard);
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-sub);
+}
+
+/* 정보 내용 */
+.info-item .icon-sub {
+    margin-top: 6px;
+    font-family: var(--font-pretendard);
+    font-size: 16px;
+    font-weight: var(--fw-regular);
+    color: var(--color-sub);
+}
+
+.middle-container {
+    position: relative;
+    left: -37px;
+}
+
+.middle-container img {
+    height: 740px;
+    width: 570px;
+}
+
+
+/* ABOUT SPACE */
+.about-space {
+    width: 420px;
+    height: 325px;
+    position: relative;
+    left: 10px;
+    padding: 25px;
+    border: 1px solid #555555;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* ABOUT 장식 이미지 */
+.about-space::after {
+    content: "";
+    width: 183.35px;
+    height: 164.91px;
+    position: absolute;
+    top: -20px;
+    right: -35px;
+    background: url("../img/place-record-point.png") center / contain no-repeat;
+    opacity: 0.25;
+    transform: rotate(25deg);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ABOUT 제목 */
+.about-space h2 {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #555555;
+    font-family: var(--font-adamina);
+    font-size: 18px;
+    font-weight: var(--fw-regular);
+    /* position: relative; */
+    z-index: 1;
+}
+
+/* ABOUT 항목 */
+.about-item {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    /*  position: relative; */
+    z-index: 1;
+    margin-bottom: 27px;
+}
+
+/* ABOUT 아이콘 */
+.about-item img {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: block;
+    object-fit: contain;
+    margin-top: -10px;
+    margin-left: 18px;
+}
+
+.about-item-music img {
+    position: relative;
+    left: -4px;
+    width: 40px;
+    height: 40px;
+    margin-left: 22px;
+}
+
+
+/* ABOUT 제목 */
+.about-item .icon-main {
+    display: block;
+    font-family: var(--font-maru);
+    font-size: 17px;
+    font-weight: var(--fw-semibold);
+    margin-top: -10px;
+}
+
+/* ABOUT 설명 */
+.about-item .icon-sub {
+    margin-top: 3px;
+    font-family: var(--font-pretendard);
+    font-size: 15px;
+    font-weight: var(--fw-regular);
+    line-height: 1.4;
+}
+
+.point-img-box {
+    position: relative;
+    bottom: -50px;
+    left: -30px;
+    width: 470px;
+    height: 305px;
+
+}
