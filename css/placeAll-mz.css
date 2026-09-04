@@ -124,7 +124,7 @@ body {
 }
 
 .place-text .card-main {
-    font-family: var(--font-playfair);
+    font-family: var(--font-maru);
     font-size: 24px;
     font-weight: 700;
     position: relative;
@@ -134,6 +134,7 @@ body {
 }
 
 .card-place {
+    font-family: var(--font-pretendard);
     color: #403729;
 }
 
