@@ -1,0 +1,296 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(style-guide.css);
+
+#wrap {
+    width: 100%;
+    min-height: 100vh;
+    background: #E5D3BD;
+}
+
+.header {
+    position: sticky;
+}
+
+.footer {
+    position: static;
+}
+
+/* ---------------------------------메인 배너------------------------------------------ */
+
+.shop-banner {
+    background: url(../img/shop/shop-bg.png) no-repeat center/cover;
+
+    width: 100%;
+    height: 700px;
+
+    margin-bottom: 50px;
+}
+
+.shop-inner {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.banner-text {
+    margin-bottom: 30px;
+    position: absolute;
+}
+
+.sub-title {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 70px;
+    margin-bottom: 40px;
+}
+
+.sub-text {
+    font-family: var(--font-pretendard);
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+/* --------------------------------상품 리스트------------------------------------------ */
+
+.shop-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #E8DCCB;
+    border: 1px solid rgba(185, 160, 135, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.shop-title .items-text {
+    font-family: var(--font-playfair);
+    color: #3D3028;
+    font-size: 22px;
+}
+
+.shop-title .product-count {
+    color: #3D3028;
+    font-size: 18px;
+}
+
+.hashtag-list {
+    font-size: 17px;
+    font-weight: var(--fw-medium);
+    color: #3D3028;
+}
+
+/* --------------------------------product 리스트------------------------------------------ */
+
+.product-inner {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid rgba(185, 160, 135, 0.5);
+}
+
+.product-card:last-child {
+    border-bottom: none;
+}
+
+.product-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.item-list {
+    width: 240px;
+    height: 332px;
+    background: #E8DCCB;
+    border: 1px solid rgba(185, 160, 135, 0.5);
+    border-radius: 10px;
+    padding: 10px 16px;
+}
+
+/* --------------------------------카드 상단 텍스트 이미지------------------------------------------ */
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(185, 160, 135, 0.5);
+    margin-bottom: 10px;
+}
+
+.number-text {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    font-size: 26px;
+    color: #3D3028;
+}
+
+.number img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+}
+
+.item-img {
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.item-img img {
+    width: 100%;
+    transition: 0.4s
+}
+
+.item-img:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* --------------------------------아이템 텍스트------------------------------------------ */
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 332px;
+}
+
+.item-text .year {
+    font-family: var(--font-maru);
+    font-weight: 700;
+    font-size: 42px;
+    color: #A85F38;
+    margin-bottom: 20px;
+}
+
+.item-text .item-title {
+    font-family: var(--font-pretendard);
+    font-weight: 600;
+    color: #3D3028;
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.item-text .main-text {
+    font-family: var(--font-pretendard);
+    font-weight: 400;
+    color: #3D3028;
+    font-size: 22px;
+}
+
+
+
+/* --------------------------------카드 info------------------------------------------ */
+.info-text {
+    padding-top: 8px;
+}
+
+.info-text .info-year {
+    font-family: var(--font-pretendard);
+    font-weight: 500;
+    font-size: 18px;
+    color: #A85F38;
+}
+
+.info-text .product-title {
+    font-family: var(--font-pretendard);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 5px 0 32px 0;
+    color: var(--color-main);
+}
+
+.info-text .info-subtext {
+    color: rgba(61, 48, 40, 0.5);
+}
+
+.info-text a {
+    font-family: var(--font-pretendard);
+    font-size: 17px;
+    font-weight: 500;
+    color: #3D3028;
+}
+
+/* --------------------------------하단 shop info------------------------------------------ */
+.shop-info {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.shop-info .shop-inner {
+    display: flex;
+    gap: 15px;
+}
+
+.shop-link {
+    width: 470px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* 박스 색상 */
+.shop-link:nth-child(1) {
+    background: #271D12;
+}
+
+.shop-link:nth-child(2) {
+    background: #9D8C78;
+}
+
+.shop-link:nth-child(3) {
+    background: #8D735B;
+}
+
+.shop-link-icon {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    background: #ECDFCE;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-link-icon img {
+    width: 50px;
+    height: 50px;
+    opacity: 0.7;
+}
+
+.shop-link-text h3 {
+    font-family: var(--font-playfair);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.shop-link-text p {
+    font-family: var(--font-pretendard);
+    font-size: 18px;
+    line-height: 1.5;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/plaec.css">
+    <script src="js/place.js" defer></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <!-- header left -->
+                <div class="header-left"> <!-- pc에선 display : none -->
+
+                    <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+                    <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+
+                    <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                </div>
+
+                <h1 class="logo"><a href="#">RE:CORD</a></h1>
+                <nav class="header-gnb">
+                    <ul>
+                        <li><a href="#">TIMELINE</a></li>
+                        <li><a href="#">MUSIC</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#" class="active">PLACE</a></li>
+                        <li><a href="#">EXPERIENCE</a></li>
+                    </ul>
+                </nav>
+                <!-- header right -->
+                <div class="header-right">
+                    <button class="sound">
+                        <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
+                        <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
+                    </button> <!-- PC 메인 페이지에서 사용 -->
+
+                    <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
+                    <!-- PC 타임라인 시작페이지 사용 -->
+
+                    <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
+                    <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+
+                    <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                </div>
+            </div>
+        </header>
+        <section class="place">
+            <div class="place-inner">
+                <div class="place-text">
+                    <h1 class="main-title">PLACE</h1>
+                    <p class="main-text">기억을 느낄 수 있는 공간들</p>
+                </div>
+                <div class="place-list">
+                    <article class="place-card">
+                        <!-- poster : 영상 시작전 보이는 이미지 -->
+                        <!-- muted : 영상 소리 음소거 -->
+                        <!-- playsinline : 모바일에서도 카드 공간 안에서 영상재생 -->
+                        <!-- loop 영상이 끝나면 다시 재생 -->
+                        <video class="place-video" poster="img/place-memory.png" muted playsinline loop>
+                            <source src="video/place01.mp4" type="video/mp4">
+                        </video>
+                        <div class="place-content">
+                            <h3>추억의 빈티지 공간</h3>
+                            <p class="main-text">시간의 흔적이 그대로 남아있는<br>진짜 아날로그 공간</p>
+                            <a href="#" class="place-button">
+                                <img src="img/place-btn.png" alt="버튼">
+                                <span class="button-text">공간 둘러보기 -></span>
+                            </a>
+                        </div>
+                    </article>
+                    <article class="place-card">
+                        <video class="place-video" poster="img/place MZ.png" muted playsinline loop>
+                            <source src="video/place02.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="place-content">
+                            <h3>MZ 빈티지 공간</h3>
+                            <p class="main-text">새로운 감성으로 재해석한<br>힙한 빈티지 공간</p>
+                            <a href="#" class="place-button">
+                                <img src="img/place-btn.png" alt="빈티지 버튼">
+                                <span class="button-text">공간 둘러보기 -></span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

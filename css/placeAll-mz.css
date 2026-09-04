@@ -1,0 +1,185 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(style-guide.css);
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/placeAll-bg.png) no-repeat center/cover;
+}
+
+
+.header-right .sound img {
+    display: none;
+}
+
+.header-right .back {
+    display: block;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+}
+
+/* ========================플레이스 타이틀============================= */
+
+.placeAll-inner {
+    padding-top: 120px;
+    width: 100%;
+    max-width: 1620px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.placeAll-title {
+    display: flex;
+    /* 피그마에선 space-around 이지만 between 더 이쁨 */
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #403729;
+    margin-bottom: 60px;
+}
+
+/* 스타일 가이드 css에 MaruBuri 60px이 없음 */
+.placeAll-title .main-title {
+    font-family: 'MaruBuri';
+    font-weight: 700;
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.placeAll-title .main-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ========================플레이스 카드============================= */
+
+.place-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.place-card {
+    width: 348px;
+    /*  filter drop-shadow : 투명공백을 제외하고 이미지에 외각을 따라 box-shadow 적용 << 개신기함 */
+    filter: drop-shadow(8px 10px 15px rgba(50, 35, 20, 0.4));
+    /* 
+        cardUP 이라는 애니메이션을 사용한다
+        ease-out : 처음엔 빨랐다가 점점 느려지게
+        both : 애니메이션 시작 전에는 from 상태 , 종료 후에는 to 상태를 유지
+    */
+    animation: cardUp 0.8s ease-out both;
+}
+
+/* 각 카드의 애니메이션 시작 시간을 다르게 설정 */
+.place-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.place-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.place-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.place-card:nth-child(4) {
+    animation-delay: 0.55s;
+}
+
+.place-img {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.place-img img {
+    width: 348px;
+    height: 272px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.4s;
+}
+
+.place-card:hover .place-img img {
+    /* 마우스가 올라가면 이미지 확대 */
+    transform: scale(1.05);
+}
+
+.place-text {
+    width: 348px;
+    height: 266px;
+    /* 장소 이미지는 html 메모지는 css에 넣어서 포지션 안쓰도록 */
+    background: url(../img/place-note.png) no-repeat center/cover;
+    margin-top: -8px;
+    position: relative;
+    z-index: 2;
+    padding: 20px 42px;
+}
+
+.place-text .card-main {
+    font-family: var(--font-maru);
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #403729;
+    margin-bottom: 15px;
+}
+
+.card-place {
+    font-family: var(--font-pretendard);
+    color: #403729;
+}
+
+/* 첫번째 info-row를 제외하고 나머지에 적용 */
+.info-row+.info-row {
+    border-top: 1px solid rgba(64, 55, 41, 0.3);
+    padding-top: 8px;
+    margin-top: 10px;
+}
+
+.info-row img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.place-text .button {
+    font-family: var(--font-pretendard);
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    background: #26170B;
+    color: rgba(235, 234, 228, 0.8);
+    border-radius: 10px;
+    padding: 12px 0;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* 
+    위에서 만든 cardUp 애니메이션 정의
+    from : 애니메이션 시작 전 상태
+    to : 애니메이션 끝 상태
+ */
+@keyframes cardUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

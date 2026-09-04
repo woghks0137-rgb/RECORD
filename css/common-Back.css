@@ -131,7 +131,12 @@ header {
 }
 
 .header-right .back {
+
     /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
+
+    /* PC 타임라인 선택창페이지,타임라인스킵 페이지에서 사용 */
+
+
     font-family: var(--font-playfair);
     font-weight: var(--fw-regular);
     font-size: 24px;
