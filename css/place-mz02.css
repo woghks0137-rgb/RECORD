@@ -74,7 +74,10 @@ body {
     margin-top: 20px;
     font-family: var(--font-playfair);
     font-size: 60px;
-    font-weight: var(--fw-boldgit);
+
+
+    font-weight: var(--fw-bold);
+
     line-height: 1.1;
     text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
 }
