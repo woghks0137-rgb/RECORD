@@ -33,11 +33,12 @@ html {
 .main-title {
     color: #CEBB9C;
     margin-bottom: 70px;
+    font-size: 60px;
 }
 
 .sub-title {
     font-family: var(--font-pretendard);
-    font-size: 36px;
+    font-size: 33px;
     color: #B8A080;
     margin-bottom: 50px;
     line-height: 1.5;
@@ -94,11 +95,11 @@ html {
 .camera-btn,
 .next-photo-btn {
     font-family: var(--font-maru);
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     background: url(../img/EXPERLENCE/ex-btn.png)no-repeat center/cover;
     width: 250px;
     height: 77px;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .tv-btns {
