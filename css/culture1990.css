@@ -132,7 +132,7 @@ header {
 
     display: block !important;
 
-    object-fit: cover !important;
+    /*     object-fit: cover !important; */
     border-radius: 8px !important;
     filter: brightness(0.25) !important;
     transition: filter 0.3s ease !important
