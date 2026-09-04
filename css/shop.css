@@ -84,6 +84,8 @@
 }
 
 .hashtag-list {
+    font-size: 17px;
+    font-weight: var(--fw-medium);
     color: #3D3028;
 }
 
@@ -165,10 +167,10 @@
 /* --------------------------------아이템 텍스트------------------------------------------ */
 
 .item-text {
-    height: 332px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 332px;
 }
 
 .item-text .year {
@@ -197,6 +199,9 @@
 
 
 /* --------------------------------카드 info------------------------------------------ */
+.info-text {
+    padding-top: 8px;
+}
 
 .info-text .info-year {
     font-family: var(--font-pretendard);
@@ -209,7 +214,8 @@
     font-family: var(--font-pretendard);
     font-size: 22px;
     font-weight: 500;
-    margin: 5px 0;
+    margin: 5px 0 32px 0;
+    color: var(--color-main);
 }
 
 .info-text .info-subtext {

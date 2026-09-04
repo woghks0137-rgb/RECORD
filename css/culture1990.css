@@ -26,7 +26,7 @@ header {
 
 .culture-page {
     width: 100% !important;
-    background-image: url(../img/sub-bg\ 15\ \(1\).webp) !important;
+    background-image: url(../img/기본\ 서브\ 배경.webp) !important;
 }
 
 /* 전체 섹션 */
@@ -39,7 +39,7 @@ header {
 
     display: grid !important;
     grid-template-columns: 265px 575px 650px !important;
-    column-gap: 50px !important;
+    column-gap: 85px !important;
 
     align-items: center !important;
     box-sizing: border-box !important;
@@ -51,12 +51,12 @@ header {
 /* 왼쪽 culture menu */
 .culture-nav {
     width: 300px !important;
-    height: 800px !important;
+    height: 700px !important;
 
     position: relative !important;
     padding: 20px 0 !important;
-    left: -20px;
-    background: url(../img/section.png) center / 100% 100% no-repeat !important;
+    left: -10px;
+    background: url(../img/섹션버튼.png) center / 100% 100% no-repeat !important;
 
     box-sizing: border-box !important;
 }
@@ -110,7 +110,12 @@ header {
     gap: 15px !important;
     box-sizing: border-box !important;
 
-    margin-bottom: 30px;
+    margin-bottom: 15px !important;
+}
+
+/* 각 카드 사이 선 */
+.culture-btn+.culture-btn {
+    border-top: 1px solid #251b1033 !important;
 }
 
 /* 첫 번째 버튼 선 제거 */
@@ -129,6 +134,12 @@ header {
 
     object-fit: cover !important;
     border-radius: 8px !important;
+    filter: brightness(0.25) !important;
+    transition: filter 0.3s ease !important
+}
+
+.culture-btn.active img {
+    filter: brightness(1) !important;
 }
 
 /* 메뉴 글자 */
@@ -149,19 +160,23 @@ header {
     display: block !important;
 
     font-family: var(--font-adamina) !important;
-    font-size: 18px !important;
+    font-size: 22px !important;
     font-weight: var(--fw-regular) !important;
-
+    color: #403729;
     line-height: 1 !important;
+}
+
+.culture-btn.active .culture-number {
+    color: #612010;
 }
 
 /* 메뉴 제목 */
 .culture-btn>div>span:last-child {
     display: block !important;
 
-    font-family: var(--font-maru) !important;
+    font-family: var(--font-pretendard) !important;
     font-size: 18px !important;
-    font-weight: var(--fw-medium) !important;
+    font-weight: var(--fw-regular) !important;
     color: #403729;
     line-height: 1.4 !important;
     white-space: nowrap !important;
@@ -173,21 +188,22 @@ header {
     background: rgba(255, 255, 255, 0.08) !important;
 }
 
+
 /* 선택된 버튼 테두리 */
 .culture-btn.active::after {
-    content: "" !important;
+    content: "";
 
-    position: absolute !important;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 10px;
+    bottom: 5px;
 
-    left: 5px !important;
-    right: 5px !important;
-    top: 5px !important;
-    bottom: 5px !important;
+    border: 1px solid #612010;
+    border-radius: 15px;
 
-    border: 1px solid #612010 !important;
-    border-radius: 15px !important;
-
-    pointer-events: none !important;
+    pointer-events: none;
+    box-sizing: border-box;
 }
 
 /* 중앙 메인 이미지 */
@@ -225,8 +241,8 @@ header {
     color: var(--color-point) !important;
 
     border: 1px solid #612010 !important;
-    border-radius: 20px !important;
-
+    border-radius: 30px !important;
+    margin-top: -20px;
     font-family: var(--font-adamina) !important;
     font-size: 25px !important;
     font-weight: var(--fw-regular) !important;
@@ -239,7 +255,7 @@ header {
     font-family: var(--font-pretendard) !important;
     font-size: 60px !important;
     font-weight: var(--fw-medium) !important;
-
+    text-shadow: 6px 7px 6px rgba(0, 0, 0, 0.28);
     line-height: 1.2 !important;
 }
 
@@ -249,9 +265,9 @@ header {
 
     color: var(--color-point) !important;
 
-    font-family: var(--font-maru) !important;
+    font-family: var(--font-adamina) !important;
     font-size: 24px !important;
-    font-weight: var(--fw-medium) !important;
+    font-weight: var(--fw-regular) !important;
 }
 
 /* 구분선 */
@@ -275,6 +291,16 @@ header {
     font-weight: var(--fw-medium) !important;
 
     line-height: 1.8 !important;
+}
+
+/* 구분선 */
+.culture-line {
+    width: 100% !important;
+    height: 1px !important;
+
+    margin-top: 22px !important;
+
+    background-color: #251b1099 !important;
 }
 
 /* 하단 아이콘 */

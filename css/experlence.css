@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import url(reset.css);
+@import url(font.css);
+@import url(style-guide.css);
+
+/* ------------------------공통------------------------------- */
+
+html {
+    /* 스크롤 이동을 부드럽게 */
+    scroll-behavior: smooth;
+    /* 
+        스크롤 스냅 활성화
+        - y 세로 스크롤
+        - mandatory 스냅 위치가 있으면 거기에 맞춰줌
+    */
+    scroll-snap-type: y mandatory;
+}
+
+.header {
+    position: fixed;
+}
+
+.experlence-banner,
+.tv-experlence,
+.cassette-experlence,
+.camera-experlence {
+    width: 100%;
+    height: 100vh;
+    /* 스크롤을 하면 특정요소에 딱 맞춰 멈추게 하기 */
+    scroll-snap-align: start;
+}
+
+.main-title {
+    color: #CEBB9C;
+    margin-bottom: 70px;
+    font-size: 60px;
+}
+
+.sub-title {
+    font-family: var(--font-pretendard);
+    font-size: 33px;
+    color: #B8A080;
+    margin-bottom: 50px;
+    line-height: 1.5;
+}
+
+/* ---------------------------배너----------------------------------- */
+.experlence-banner {
+    background: url(../img/EXPERLENCE/intro.webp) no-repeat center/cover;
+}
+
+.experlence-inner {
+    width: 100%;
+    max-width: 1720px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.sub-title span {
+    font-family: var(--font-playfair);
+}
+
+.banner-text .sub-title:nth-of-type(2) {
+    font-size: 28px;
+}
+
+/* --------------------------tv 체험관----------------------------------- */
+
+.tv-experlence {
+    position: relative;
+    background: url(../img/EXPERLENCE/sec01.webp) no-repeat center/cover;
+}
+
+.tv-text {
+    position: relative;
+    top: -50px;
+}
+
+.tv-experlence .frame {
+    position: relative;
+    width: 630px;
+    height: 430px;
+    z-index: 2;
+    /* 티비가 어떠한 터치나 이벤트도 받지않음 */
+    pointer-events: none;
+}
+
+.tv-btn,
+.change-btn,
+.play-btn,
+.stop-btn,
+.camera-btn,
+.next-photo-btn {
+    font-family: var(--font-maru);
+    font-weight: var(--fw-semibold);
+    background: url(../img/EXPERLENCE/ex-btn.png)no-repeat center/cover;
+    width: 250px;
+    height: 77px;
+    font-size: 26px;
+}
+
+.tv-btns {
+    display: flex;
+    gap: 70px;
+}
+
+/* 영상 위치 티비화면안에 맞추기 */
+.screen {
+    position: absolute;
+    left: 10%;
+    bottom: 21%;
+    width: 62%;
+    height: 64%;
+    z-index: 1;
+}
+
+/* 티비 위치 탁자위에 맞추기 */
+.tv {
+    position: relative;
+    left: 22%;
+    bottom: 8%;
+}
+
+/* 영상을 스크린영역에 안에 맞춤 */
+.screen video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 영상이 실행되기전,티비끄면 나오는 화면 인셋으로 부모영역 전체를 #222색으로 덮음 버튼 실행시 off는 display : none  */
+.off {
+    position: absolute;
+    inset: 0;
+    background: #1A1A1A;
+    z-index: 2;
+}
+
+/* --------------------------카세트 플레이어 체험관----------------------------------- */
+.cassette-experlence {
+    background: url(../img/EXPERLENCE/sec02.png)no-repeat center/cover;
+}
+
+.cassette-text {
+    margin-left: auto;
+    position: relative;
+    top: -50px;
+}
+
+.cassette-btn {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+
+/* ------------------------- 필름 카메라 체험관----------------------------------- */
+
+.camera-experlence {
+    position: relative;
+    background: url(../img/EXPERLENCE/sec03.png)no-repeat center/cover;
+}
+
+.camera-text {
+    position: relative;
+    top: -5%;
+}
+
+.camera-btns {
+    display: flex;
+    gap: 70px;
+}
+
+.camera-photo {
+    position: absolute;
+    top: 17%;
+    right: 23%;
+    width: 734px;
+    height: 343px;
+    border-radius: 5px;
+    /* 버튼 클릭전까진 사진은 안보임 */
+    opacity: 0;
+    transition: opacity 3s ease;
+}
+
+/* on 클래스가 붙으면 사진이 천천히 나옴  */
+.camera-photo.on {
+    opacity: 1;
+}
