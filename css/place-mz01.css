@@ -248,6 +248,7 @@
 
 /* ABOUT 설명 */
 .about-item .icon-sub {
+    color: var(--color-sub);
     margin-top: 3px;
     font-family: var(--font-pretendard);
     font-size: 15px;
