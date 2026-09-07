@@ -137,6 +137,21 @@ body {
     margin-left: 15px;
 }
 
+.key-item::after {
+    position: absolute;
+    top: 110%;
+    left: 45%;
+    width: 82%;
+    height: 0.5px;
+    transform: translateX(-50%);
+    background: #B8A080;
+    content: "";
+}
+
+.key-item:nth-child(4)::after {
+    display: none;
+}
+
 .key-item img {
     width: 70px;
     height: 60px;
