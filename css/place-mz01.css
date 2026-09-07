@@ -130,11 +130,7 @@
     object-fit: contain;
 }
 
-.info-item span {
-    font-family: var(--font-adamina);
-    font-weight: var(--fw-regular);
-    color: var(--color-sub);
-}
+
 
 /* 정보 제목 */
 .info-item .icon-main {
