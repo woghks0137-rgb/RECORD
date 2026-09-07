@@ -201,3 +201,111 @@ header {
 }
 
 /* ------------------------footer end--------------------------- */
+
+/* ------------------------모바일 header/footer--------------------------- */
+
+@media screen and (max-width:768px) {
+    header {
+        height: 60px;
+    }
+
+    .header-inner {
+        position: relative;
+        height: 60px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* PC skip 텍스트 숨김 */
+    .header-right .skip {
+        display: none;
+    }
+
+    /* GNB 숨김 */
+    .header-gnb {
+        display: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    /* 메뉴 클릭시 gnb */
+    .header-gnb.on {
+        width: 100%;
+        height: 60px;
+        background: url(../img/header,footer.png) no-repeat center/cover;
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    /* 가로 정렬 */
+    .header-gnb.on ul {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* pc gap값 제거 */
+        gap: 0;
+        padding: 0 20px;
+    }
+
+    .header-gnb.on li a {
+        font-size: 16px;
+    }
+
+    /* ------------------------왼쪽 부분--------------------------- */
+    .header-left {
+        display: flex;
+        align-items: center;
+        width: auto;
+    }
+
+    /* 왼쪽 백 버튼 */
+    .header-left .m-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .m-back img {
+        width: 28px;
+        height: 28px;
+        transform: translateY(3px);
+    }
+
+    /* ------------------------가운데 부분--------------------------- */
+    .header .logo {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+    }
+
+    /* ------------------------오른쪽 부분--------------------------- */
+
+    /* 오른쪽 모바일 메뉴 등장 */
+    .header-right .m-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-7.5px);
+    }
+
+    .header-right {
+        width: auto;
+    }
+
+    /* ------------------------footer--------------------------- */
+    .footer {
+        height: 60px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+}
