@@ -1,18 +1,13 @@
 const musicPlayer = document.querySelector('.music-player');
-
 const recordPlayer = musicPlayer.querySelector('.record-player');
 const recordDisc = musicPlayer.querySelector('.record-disc');
 const tonearm = musicPlayer.querySelector('.tonearm');
-
 const playBtn = musicPlayer.querySelector('.play-btn');
 const playBtnImg = playBtn.querySelector('img');
 const audio = musicPlayer.querySelector('.audio');
-
 const progressBar = musicPlayer.querySelector('.progress span');
-
 const currentTimeText = musicPlayer.querySelector('.current-time');
 const durationText = musicPlayer.querySelector('.duration');
-
 const prevBtn = musicPlayer.querySelector('.prev-btn');
 const nextBtn = musicPlayer.querySelector('.next-btn');
 
@@ -39,7 +34,6 @@ let currentSong = 0;
 
 let isPlaying = false;
 let isMovingTonearm = false;
-
 let playTimer = null;
 
 
@@ -52,13 +46,10 @@ function formatTime(time) {
     if (isNaN(time)) {
         return '0:00';
     }
-
     const minutes = Math.floor(time / 60);
-
     const seconds = Math.floor(time % 60)
         .toString()
         .padStart(2, '0');
-
     return `${minutes}:${seconds}`;
 }
 
@@ -179,7 +170,6 @@ playBtn.addEventListener('click', () => {
     playTimer = setTimeout(() => {
 
         isMovingTonearm = false;
-
         startMusic();
 
     }, 800);

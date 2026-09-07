@@ -629,3 +629,23 @@ body {
     display: block;
     object-fit: contain;
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 998;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-box {
+    margin: auto;
+    width: 1200px;
+    height: 570px;
+    background: #AF9675;
+    z-index: 999;
+}
