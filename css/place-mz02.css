@@ -211,8 +211,9 @@ body {
 
 /* ABOUT 설명 */
 .about-item p {
-    margin-top: 5px;
-    font-family: var(--font-maru);
+    color: var(--color-sub);
+    margin-top: 3px;
+    font-family: var(--font-pretendard);
     font-size: 15px;
     font-weight: var(--fw-regular);
     line-height: 1.4;
@@ -241,7 +242,7 @@ body {
 /* 정보 하나 */
 .info-item {
     width: 175px;
-    min-height: 100px;
+    height: 100px;
     padding: 0 20px;
     box-sizing: border-box;
     text-align: center;
@@ -280,19 +281,21 @@ body {
 }
 
 /* 정보 제목 */
-.info-item strong {
+.info-item .icon-main {
     display: block;
     font-family: var(--font-pretendard);
     font-size: 18px;
     font-weight: var(--fw-semibold);
+    color: var(--color-sub);
 }
 
 /* 정보 내용 */
-.info-item p {
+.info-item .icon-sub {
     margin-top: 6px;
     font-family: var(--font-pretendard);
     font-size: 16px;
     font-weight: var(--fw-regular);
+    color: var(--color-sub);
 }
 
 /* 하단 이미지 */
