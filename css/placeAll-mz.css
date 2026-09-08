@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background: url(../img/place-main-bg.png) no-repeat center/cover;
+    background: url(../img/placeAll-bg.png) no-repeat center/cover;
 }
 
 
@@ -124,7 +124,7 @@ body {
 }
 
 .place-text .card-main {
-    font-family: var(--font-playfair);
+    font-family: var(--font-maru);
     font-size: 24px;
     font-weight: 700;
     position: relative;
@@ -134,6 +134,7 @@ body {
 }
 
 .card-place {
+    font-family: var(--font-pretendard);
     color: #403729;
 }
 
