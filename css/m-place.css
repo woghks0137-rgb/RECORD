@@ -1,10 +1,93 @@
 @charset "utf-8";
 
 @media screen and (max-width: 767px) {
+
+    /* =================== HEADER =================== */
+
+    .header-inner {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .header-left {
+        display: block;
+        width: 40px;
+    }
+
+    .header-left .m-sound1,
+    .header-left .m-sound2 {
+        display: none;
+    }
+
+    .header-left .m-back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .header-left .m-back img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo a {
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .header-right {
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-right .sound,
+    .header-right .skip,
+    .header-right .back {
+        display: none;
+    }
+
+    .header-right .m-menu {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: none;
+    }
+
+    .header-right .m-menu img {
+        display: block;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* =================== MOBILE GNB =================== */
+
     .header-gnb {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 55px;
+        display: block;
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
+        background: url("../img/header,footer.png") no-repeat center/cover;
+        z-index: 100;
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
@@ -14,15 +97,27 @@
         transform: translateY(0);
     }
 
+    .header-gnb>ul {
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .header-gnb li a {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    /* =================== PLACE =================== */
+
     html,
     body {
         width: 100%;
         height: 100%;
-        overflow: hidden;
-    }
-
-    .place {
-        height: calc(100vh - 60px);
         overflow: hidden;
     }
 
@@ -33,6 +128,7 @@
     }
 
     /* title */
+
     .place-text {
         padding-top: 105px;
     }
@@ -63,6 +159,7 @@
     }
 
     /* card */
+
     .place-list {
         flex-direction: column;
         gap: 20px;
@@ -99,6 +196,8 @@
         left: 18px;
         font-size: 14px;
     }
+
+    /* footer */
 
     .footer {
         height: 60px;
