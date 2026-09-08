@@ -29,4 +29,5 @@ menuBtn.addEventListener('click', function () {
             gnb.style.transform = 'translateY(0)';
         }, 10);
     }
-});
+}); console.log(menuBtn);
+console.log(gnb);
