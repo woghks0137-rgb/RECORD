@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/common-SKIP.css">
     <link rel="stylesheet" href="./css/timeline-mobile.css">
 
+    <script src="js/timeline.js" defer></script>
     <script src="js/header.js" defer></script>
 </head>
 
@@ -188,23 +189,7 @@
         </p>
     </footer>
 
-    <script>
-        const cards = document.querySelectorAll('.card-photo');
 
-        cards.forEach(card => {
-            const video = card.querySelector('video');
-
-            card.addEventListener('mouseenter', () => {
-                video.currentTime = 0;
-                video.play();
-            });
-
-            card.addEventListener('mouseleave', () => {
-                video.pause();
-                video.currentTime = 0;
-            });
-        });
-    </script>
 
 </body>
 
