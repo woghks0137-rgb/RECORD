@@ -11,6 +11,7 @@ const durationText = musicPlayer.querySelector('.duration');
 const prevBtn = musicPlayer.querySelector('.prev-btn');
 const nextBtn = musicPlayer.querySelector('.next-btn');
 
+const detailBtns = document.querySelectorAll('.detail-btn');
 
 const songs = [
     {
@@ -254,46 +255,75 @@ function changeSong(index) {
 
     const song = songs[currentSong];
 
-    /* 제목 변경 */
+    // 제목 변경
     musicPlayer.querySelector('.title').textContent = song.title;
 
-    /* 오디오 변경 */
-    audio.src = song.src;
+    // 기존 예약 취소
+    clearTimeout(playTimer);
 
-    /* 시간 초기화 */
+    // 기존 음악 정지
+    audio.pause();
+
+    // 오디오 변경
+    audio.src = song.src;
     audio.currentTime = 0;
 
+    // 시간 초기화
     currentTimeText.textContent = '0:00';
     durationText.textContent = '0:00';
     progressBar.style.width = '0%';
 
-    /* 기존 예약 취소 */
-    clearTimeout(playTimer);
-
-    /* 기존 음악 정지 */
-    audio.pause();
-
-    /*
-        바늘과 LP 상태는 유지
-    */
-    isPlaying = true;
+    // 상태
+    isPlaying = false;
     isMovingTonearm = true;
 
+    // LP 회전
     recordDisc.classList.add('is-rotating');
+
+    // 바늘 이동
     recordPlayer.classList.add('is-playing');
 
-    /* 정지 버튼 유지 */
+    // 정지 버튼 유지
     playBtnImg.src = './img/pause.png';
     playBtnImg.alt = '정지';
 
-    /*
-        1.5초 후 새 노래 재생
-    */
+    // 1.5초 후 재생
     playTimer = setTimeout(() => {
 
         isMovingTonearm = false;
+        isPlaying = true;
 
         audio.play();
 
     }, 1500);
 }
+
+detailBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".modal").forEach((modal) => {
+            modal.classList.remove("active")
+        });
+
+        const modalId = btn.dataset.modal;
+
+        const modal = document.querySelector(`#${modalId}`)
+
+        modal.classList.add("active")
+    })
+})
+
+
+const closeBtns = document.querySelectorAll('.closeBtn');
+closeBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+        btn.closest('.modal').classList.remove('active');
+    });
+});
+
+document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("active");
+        }
+    });
+});
