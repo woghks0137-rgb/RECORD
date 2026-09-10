@@ -327,3 +327,11 @@ document.querySelectorAll(".modal").forEach((modal) => {
         }
     });
 });
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach((modal) => {
+            modal.classList.remove('active');
+        });
+    }
+});
