@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERLENCE</title>
+    <link rel="stylesheet" href="css/common-Back.css">
+    <link rel="stylesheet" href="css/experlence.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <!-- header left -->
+                <div class="header-left"> <!-- pc에선 display : none -->
+
+                    <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+                    <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+
+                    <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                </div>
+
+                <h1 class="logo"><a href="#">RE:CORD</a></h1>
+                <nav class="header-gnb">
+                    <ul>
+                        <li><a href="#">TIMELINE</a></li>
+                        <li><a href="#">MUSIC</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">PLACE</a></li>
+                        <li><a href="#" class="active">EXPERIENCE</a></li>
+                    </ul>
+                </nav>
+                <!-- header right -->
+                <div class="header-right">
+                    <button class="sound">
+                        <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
+                        <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
+                    </button> <!-- PC 메인 페이지에서 사용 -->
+
+                    <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
+                    <!-- PC 타임라인 시작페이지 사용 -->
+
+                    <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
+                    <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+
+                    <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                </div>
+            </div>
+        </header>
+        <!-- --------------------------------배너----------------------------------- -->
+        <section class="experlence-banner">
+            <div class="experlence-inner">
+                <div class="banner-text">
+                    <h1 class="main-title">EXPERLENCE</h1>
+                    <p class="sub-title">
+                        읽는 기록을 넘어<br>
+                        직접 경험해보세요.</p>
+                    <p class="sub-title">
+                        단순히 정보를 읽는 것이 아닌,<br>
+                        직접 조작하고 반응하며<br>
+                        기억 속 장면을 체험할 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------TV 체험----------------------------------- -->
+        <section class="tv-experlence">
+            <div class="experlence-inner">
+                <div class="tv-text">
+                    <h1 class="main-title">CRT TV체험</h1>
+                    <p class="sub-title">1. TV 전원 키기</p>
+                    <p class="sub-title">2. 옛날 티비영상 감상하기</p>
+                    <p class="sub-title">3. 채널 변경을 눌러 다른 영상 감상하기</p>
+                    <div class="tv-btns">
+                        <button class="tv-btn">티비 켜기</button>
+                        <!-- 만약에 티비 켜기를 먼저 안눌렀다면 js에서 tvOn -> false -->
+                        <button class="change-btn">채널 변경</button>
+                    </div>
+
+                </div>
+                <div class="tv">
+                    <!-- 영상 -->
+                    <div class="screen">
+                        <div class="off"></div>
+                        <video id="video">
+                            <source src="" type="video/mp4">
+                        </video>
+                    </div>
+                    <!-- TV 프레임 -->
+                    <img class="frame" src="img/EXPERLENCE/tv.png" alt="TV">
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------카세트 플레이어 체험----------------------------------- -->
+        <section class="cassette-experlence">
+            <div class="experlence-inner">
+                <div class="cassette-text">
+                    <h1 class="main-title">카세트 플레이어 체험</h1>
+                    <p class="sub-title">1. <span>PLAY</span>를 눌러 재생하기</p>
+                    <p class="sub-title">2. 라디오 듣기</p>
+                    <p class="sub-title">3. <span>STOP</span>을 눌러 라디오 끄기</p>
+                    <div class="cassette-btn">
+                        <button class="play-btn">PLAY</button>
+
+                        <button class="stop-btn">STOP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- --------------------------------필름 카메라 체험----------------------------------- -->
+        <section class="camera-experlence">
+            <div class="experlence-inner">
+                <div class="camera-text">
+                    <h1 class="main-title">필름 카메라 체험</h1>
+                    <p class="sub-title">1. 셔터 누르기</p>
+                    <p class="sub-title">2. 사진을 남기기</p>
+                    <p class="sub-title">3. 셔터를 눌러 다른 사진 감상하기</p>
+                    <div class="camera-btns">
+                        <button class="camera-btn">셔터 누르기</button>
+                        <button class="next-photo-btn">다음 사진</button>
+                    </div>
+
+                </div>
+                <div class="camera">
+                    <img src="img/EXPERLENCE/intro.webp" class="camera-photo" alt="촬영한 사진">
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+        </footer>
+    </div>
+    <!-- ---------------------효과음 모음--------------------------- -->
+    <!-- TV ON 소리 -->
+    <audio id="tvBtn" src=""></audio>
+    <!-- 채널 변경 소리 -->
+    <audio id="changeBtn" src=""></audio>
+    <!-- 카세트 on 소리 -->
+    <audio id="playBtn" src=""></audio>
+    <!-- 카세트 off 소리 -->
+    <audio id="stopBtn" src=""></audio>
+    <!-- 카메라 셔텨음 -->
+    <audio id="cameraBtn" src=""></audio>
+</body>
+
+</html>

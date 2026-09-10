@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    min-height: 100vh;
+    background: url(../img/music/music-bg.jpg) no-repeat center/cover;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* -----------------------------상단 영역------------------------------------------ */
+
+.music-inner {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.music-inner.player-active {
+    padding-bottom: 190px;
+}
+
+.music-top {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.music-top .main-title,
+.sub-title,
+.main-text {
+    margin-bottom: 15px;
+}
+
+.year-btn {
+    border: 1px solid #222;
+    border-radius: 45px;
+    padding: 5px 50px;
+    font-size: 24px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+
+}
+
+.year-btn:hover {
+    background: #92734F;
+    color: #EBEAE4;
+    border: 1px solid #92734F;
+}
+
+.year-btn.active {
+    background: #92734F;
+    color: #EBEAE4;
+    border: 1px solid #92734F;
+}
+
+/* -----------------------------뮤직 리스트------------------------------------------ */
+
+.music-list {
+    width: 100%;
+}
+
+.music-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #D5BFA6;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+/* -----------------------------뮤직 리스트 레프트------------------------------------------ */
+
+.music-item-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.music-info .main-text,
+.music-info .sub-text {
+    margin: 0;
+}
+
+.music-info .main-text {
+    font-size: 24px;
+}
+
+.music-info .sub-text {
+    font-size: 20px;
+}
+
+.music-item-left img {
+    padding: 10px 0;
+    padding-left: 15px;
+}
+
+
+/* -----------------------------뮤직 리스트 라이트------------------------------------------ */
+
+.music-item-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.music-item-right .sub-text {
+    font-size: 20px;
+}
+
+.music-item-right .play-button {
+    width: 50px;
+    height: 50px;
+    background: #C1A787;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.music-item-right .play-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ----------------------뮤직 플레이어 ------------------------------ */
+
+.music-player {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 95px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #B8A080;
+    border: 1px solid rgba(34, 34, 34, 0.3);
+    border-radius: 20px;
+}
+
+/* ----------------------뮤직 플레이어 가운데 영역 ------------------------------ */
+
+/* 가운데 아이콘 3개 가운데로 정렬 */
+.player-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 첫번째 아이콘 좌우반전 */
+#backBtn img {
+    transform: scaleX(-1);
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.player-controls button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* ------------------------------음악 진행바------------------------------- */
+
+/* 뮤직 진행바 정렬 */
+.progress-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 진행바 선  */
+#progressBar {
+    width: 300px;
+    height: 3px;
+    background: #222;
+
+    appearance: none;
+    /* 기본 진행바 디자인 제거 */
+    cursor: pointer;
+    /* 마우스를 올렸을 때 클릭할 수 있는 커서로 변경 */
+}
+
+
+/* 진행바 동그라미
+    -webkit : 크롬 엣지 브라우저 
+    -slider : input type range의 슬라이더
+    -thumb : 잡고 움직이는 동그라미
+*/
+#progressBar::-webkit-slider-thumb {
+    /* 기본 브라우저 디자인 제거 */
+    appearance: none;
+
+    width: 14px;
+    height: 14px;
+
+    background: #222;
+    border-radius: 50%;
+
+    /* 마우스를 올렸을 때 클릭할 수 있는 커서로 변경 */
+    cursor: pointer;
+}
+
+
+
+/* ----------------------뮤직 플레이어 라이트 텍스트------------------------------ */
+
+.music-item-right .closeBtn {
+    width: 50px;
+    height: 50px;
+    background: #92734F;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.music-item-right .closeBtn img {
+    width: 24px;
+    height: 24px;
+}

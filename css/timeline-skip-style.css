@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/* TIMELINE */
+.timeline {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url("../img/타임라인\ 배경.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+/* TIMELINE INNER */
+.timeline-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 80px;
+}
+
+/* TITLE */
+.timeline-title {
+    width: 100%;
+    text-align: center;
+    transform: translateY(30px);
+}
+
+.timeline-title .main-title {
+    font-family: "Playfair Display", seri;
+    font-size: 80px;
+    font-weight: var(--fw-medium);
+    line-height: 1;
+    color: var(--color-title);
+    letter-spacing: -2px;
+    text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.35);
+}
+
+/* TITLE LINE */
+.title-line {
+    width: 700px;
+    height: 1px;
+    margin: 20px auto 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-line::before {
+    content: "";
+    width: 330px;
+    height: 1px;
+    background-color: var(--color-main);
+}
+
+.title-line span {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    margin: 0 12px;
+    border-radius: 50%;
+    background-color: var(--color-main);
+}
+
+.title-line::after {
+    content: "";
+    width: 330px;
+    height: 1px;
+    background-color: var(--color-main);
+}
+
+/* TITLE TEXT */
+.timeline-sub-text {
+    font-family: var(--font-pretendard);
+    font-size: 22px;
+    font-weight: var(--fw-medium);
+    line-height: 1.5;
+    color: var(--color-main);
+}
+
+.timeline-description {
+    margin-top: 5px;
+    font-size: 22px;
+    line-height: 2;
+}
+
+/* CARDS */
+.timeline-cards {
+    width: 1390px;
+    margin: 68px auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+    align-items: flex-start;
+}
+
+.timeline-card {
+    width: 310px;
+    height: 428px;
+    position: relative;
+    flex-shrink: 0;
+    filter: drop-shadow(8px 10px 6px rgba(0, 0, 0, 0.35));
+}
+
+.card-photo {
+    width: 325px;
+    height: 250px;
+    position: absolute;
+    top: 30px;
+    left: -8px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+    z-index: 1;
+}
+
+.card-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-img {
+    width: 280px;
+    height: 428px;
+    position: absolute;
+    top: 360px;
+    left: 190px;
+    display: block;
+    z-index: 2;
+    pointer-events: none;
+    transform: rotate(90deg) scale(0.82);
+    transform-origin: center top;
+}
+
+.card-content {
+    width: 310px;
+    position: absolute;
+    top: 280px;
+    left: 0;
+    z-index: 10;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-family: var(--font-adamina);
+    font-size: 28 px;
+    font-weight: var(--fw-regular);
+    line-height: 1;
+    color: var(--color-main);
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.card-line {
+    width: 200px;
+    height: 10px;
+    margin: 14px auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+}
+
+.card-line::before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #251B10;
+}
+
+.card-line span {
+    width: 6px;
+    height: 6px;
+    margin: 0 8px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #251B10;
+}
+
+.card-line::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    background-color: #251B10;
+}
+
+.card-content p {
+    font-family: var(--font-maru);
+    font-size: 20px;
+    font-weight: var(--fw-semibold);
+    line-height: 1.5;
+    color: var(--color-main);
+}
+
+.card-btn {
+    width: 48px;
+    height: 48px;
+    margin: 24px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 11;
+    border-radius: 50%;
+    background-color: #26170B;
+}
+
+.card-btn img {
+    width: 35px;
+    height: 35px;
+    display: block;
+    object-fit: contain;
+}

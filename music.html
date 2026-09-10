@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뮤직</title>
+    <link rel="stylesheet" href="css/common-Back.css">
+    <link rel="stylesheet" href="css/music.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="header-inner">
+                <!-- header left -->
+                <div class="header-left"> <!-- pc에선 display : none -->
+
+                    <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+                    <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
+                    <!-- 모바일 메인페이지에서 사용 -->
+
+                    <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                </div>
+
+                <h1 class="logo"><a href="#">RE:CORD</a></h1>
+                <nav class="header-gnb">
+                    <ul>
+                        <li><a href="#">TIMELINE</a></li>
+                        <li><a href="#" class="active">MUSIC</a></li>
+                        <li><a href="#">SHOP</a></li>
+                        <li><a href="#">PLACE</a></li>
+                        <li><a href="#">EXPERIENCE</a></li>
+                    </ul>
+                </nav>
+                <!-- header right -->
+                <div class="header-right">
+                    <button class="sound">
+                        <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
+                        <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
+                    </button> <!-- PC 메인 페이지에서 사용 -->
+
+                    <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
+                    <!-- PC 타임라인 시작페이지 사용 -->
+
+                    <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
+                    <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+
+                    <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                </div>
+            </div>
+        </header>
+        <main class="music">
+            <div class="music-inner">
+                <!-- 맨위에 텍스트 -->
+                <div class="music-top">
+                    <!-- 상단 좌측 텍스트 정보 -->
+                    <div class="left-text">
+                        <h2 class="main-title">MUSIC ARCHIVE</h2>
+                        <p class="sub-title">
+                            시대를 울린 우리의 음악 한 시대를 대표했던<br>
+                            목소리와 멜로디를 다시 기록합니다.
+                        </p>
+                        <!-- 년도에 따라 바뀌는 텍스트  -->
+                        <p class="main-text" id="yearText">1980년대 발라드와 록이 대중음악의 중심이 되던 시대</p>
+                    </div>
+                    <!-- 재생버튼 클릭시 해당 음악 이미지 상단 우측에 출력 -->
+                    <div class="right-img">
+                        <!-- 자바스크립트에서 넣을꺼라 빈칸 -->
+                        <img id="musicImg" src="" alt="">
+                    </div>
+                </div>
+                <!-- 년도별 버튼 -->
+                <div class="year-buttons">
+                    <!-- data-year : JS에서 년도 버튼 구분하기 쉽게 -->
+                    <button class="year-btn active" data-year="1980">1980s</button>
+                    <button class="year-btn" data-year="1990">1990s</button>
+                    <button class="year-btn" data-year="2000">2000s</button>
+                    <button class="year-btn" data-year="2010">2010s </button>
+                </div>
+                <!-- 뮤직 7개 -->
+                <section class="music-list" id="musicList">
+                    <!-- data-index : JS에서 구분할수있는 정보 index는 0부터 시작-->
+                    <div class="music-item" data-index="0">
+
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music01.webp" alt="1번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">난 아직 모르잖아요</h3>
+                                <p class="sub-text">이문세</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1985</span>
+                            <span class="sub-text">04:08</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+
+                    </div>
+                    <div class="music-item" data-index="1">
+
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music02.webp" alt="2번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">사랑하기 때문에</h3>
+                                <p class="sub-text">유재하</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1987</span>
+                            <span class="sub-text">06:18</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                    <div class="music-item" data-index="2">
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music03.webp" alt="3번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">비처럼 음악처럼</h3>
+                                <p class="sub-text">김현식</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1986</span>
+                            <span class="sub-text">04:35</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                    <div class="music-item" data-index="3">
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music04.webp" alt="4번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">가로수 그늘 아래 서면</h3>
+                                <p class="sub-text">이문세</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1988</span>
+                            <span class="sub-text">05:27</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                    <div class="music-item" data-index="4">
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music05.webp" alt="5번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">홀로 된다는 것</h3>
+                                <p class="sub-text">변지섭</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1988</span>
+                            <span class="sub-text">04:13</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                    <div class="music-item" data-index="5">
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music06.webp" alt=" 6번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">홀로 된다는 것</h3>
+                                <p class="sub-text">구창모</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1985</span>
+                            <span class="sub-text">04:06</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                    <div class="music-item" data-index="6">
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music07.webp" alt=" 7번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">사랑은 창밖에 빗물 같아요</h3>
+                                <p class="sub-text">양수경</p>
+                            </div>
+                        </div>
+                        <div class="music-item-right">
+                            <span class="sub-text">1989</span>
+                            <span class="sub-text">03:33</span>
+                            <button class="play-button"><img src="img/music/music icon/play-button-arrowhead.png"
+                                    alt="재생버튼"></button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ---------------------------뮤직 플레이어---------------------------------- -->
+                <div class="music-player" id="musicPlayer">
+                    <!-- 현재 곡 정보 -->
+                    <div class="player-info">
+                        <!-- 뮤직 플레이어 왼쪽 텍스트 -->
+                        <div class="music-item-left">
+                            <img src="img/music/80/80music03.webp" alt="3번 노래 이미지">
+                            <div class="music-info">
+                                <h3 class="main-text">비처럼 음악처럼</h3>
+                                <p class="sub-text">김현식</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ---------------------------뮤직 플레이어 가운데 영역---------------------------------- -->
+                    <div class="progress-area">
+                        <div class="player-center">
+                            <!-- 음악 진행바 -->
+                            <div class="progress-bar-wrap">
+                                <!-- 현재 재생시간 -->
+                                <span id="currentTime">00:00</span>
+
+                                <!--  
+                                type = "range": 범위 안에서 값을 조절하는 입력창 코드 
+                                min="0", max="100" : 진행바 최소 0부터 최대 100까지 움직일수있도록 
+                                 value : 나중에 바뀌는 값이라 넣음 
+                                 - value가 0이면 노래처음 50이면 노래 중간 100이면 노래끝 
+                                 -->
+                                <input type="range" id="progressBar" min="0" max="100" value="0">
+                                <!-- 전체 음악 길이를 표시함 -->
+                                <span id="duration">00:00</span>
+                            </div>
+                            <!-- 재생 컨트롤 (진행바 아래 아이콘3개)-->
+                            <div class="player-controls">
+                                <button id="backBtn" type="button">
+                                    <img src="img/music/music icon/play-button.png" alt="이전곡">
+                                </button>
+
+                                <button id="playBtn" type="button">
+                                    <img src="img/music/music icon/free-icon-pause-3669483.png" alt="재생">
+                                </button>
+
+                                <button id="nextBtn" type="button">
+                                    <img src="img/music/music icon/play-button.png" alt="다음곡">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 뮤직 플레이어 오른쪽 텍스트 -->
+                    <div class="music-item-right">
+                        <span class="sub-text">1989</span>
+                        <span class="sub-text">03:33</span>
+                        <button class="closeBtn"><img src="img/music/music icon/xicon.png" alt="재생버튼"></button>
+                    </div>
+                </div>
+                <!-- 재생버튼 클릭시 음악 -->
+                <audio id="audio"></audio>
+        </main>
+
+        <!-- -----------------푸터----------------------- -->
+        <footer class="footer">
+            <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
