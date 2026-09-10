@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="./css/timeline1990.css">
     <link rel="stylesheet" href="./css/common-Back.css">
+    <script src="js/script-timeline-1990.js" defer></script>
 </head>
 
 <body>
@@ -27,14 +28,14 @@
                 <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
             </div>
 
-            <h1 class="logo"><a href="#">RE:CORD</a></h1>
+            <h1 class="logo"><a href="./index.html">RE:CORD</a></h1>
             <nav class="header-gnb">
                 <ul>
                     <li><a href="#" class="active">TIMELINE</a></li>
-                    <li><a href="#">MUSIC</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">PLACE</a></li>
-                    <li><a href="#">EXPERIENCE</a></li>
+                    <li><a href="./music.html">MUSIC</a></li>
+                    <li><a href="./shop.html">SHOP</a></li>
+                    <li><a href="./place.html">PLACE</a></li>
+                    <li><a href="./experlence.html">EXPERIENCE</a></li>
                 </ul>
             </nav>
             <!-- header right -->
@@ -47,7 +48,8 @@
                 <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
                 <!-- PC 타임라인 시작페이지 사용 -->
 
-                <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
+                <button class="header-btn back"><a href="./timeline.html"><img src="img/arrow.png"
+                            alt="-> 화살표">Back</a></button>
                 <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
 
                 <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
@@ -111,7 +113,9 @@
                                 <div class="object-text">
                                     <h4>데스크톱 컴퓨터</h4>
                                     <p>1990년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal01">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -124,7 +128,9 @@
                                 <div class="object-text">
                                     <h4>삐삐</h4>
                                     <p>1990년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal02">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -137,7 +143,9 @@
                                 <div class="object-text">
                                     <h4>cd 플레이어</h4>
                                     <p>1990년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal03">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -150,7 +158,9 @@
                                 <div class="object-text">
                                     <h4>휴대용 게임기</h4>
                                     <p>1990년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal04">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -169,7 +179,7 @@
                                 <div class="culture-text">
                                     <h4>인터넷의 확산</h4>
                                     <p>1990년대</p><!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                                    <a href="./culture1990s.html#culture01">자세히 보기 →</a>
                                 </div>
                             </div>
                         </article>
@@ -182,7 +192,7 @@
                                 <div class="culture-text">
                                     <h4>가요와 아이돌 문화</h4>
                                     <p>1990년대</p> <!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                                    <a href="./culture1990s.html#culture02">자세히 보기 →</a>
                                 </div>
                             </div>
                         </article>
@@ -190,7 +200,7 @@
                     </div>
                 </div>
                 <div class="music-player">
-                    <h3>난 알아요 - 서태지와 아이들</h3>
+                    <h3 class="title">난 알아요 - 서태지와 아이들</h3>
                     <div class="lp-line"></div>
                     <div class="record-player">
 
@@ -209,8 +219,8 @@
                     </div>
 
                     <div class="time">
-                        <span>0:00</span>
-                        <span>4:28</span>
+                        <span class="current-time">0:00</span>
+                        <span class="duration">4:28</span>
                     </div>
 
                     <div class="player-buttons">
@@ -229,33 +239,170 @@
 
                     </div>
 
-                    <!--  <audio class="audio" src="./audio/붉은 노을.mp3" preload="metadata"></audio> -->
+                    <audio class="audio" src="./audio/테스트.mp3" preload="metadata"></audio>
                 </div>
             </section>
 
             <!-- 이전 연도 버튼 -->
-            <button class="prev-year">
-                <img class="prev-year-bg" src="./img/베이지 버튼 배경.png" alt="">
 
+            <a href="./timeline1980s.html" class="prev-year">
+                <img class="prev-year-bg" src="./img/베이지 버튼 배경.png" alt="">
                 <span class="prev-year-arrow">
                     <img src="./img/타임라인 푸터 버튼 화살표.png" alt="">
                 </span>
-
                 <span>1980</span>
-            </button>
+            </a>
 
-            <button class="next-year">
+
+
+            <a href="./timeline2000s.html" class="next-year">
                 <img class="next-year-bg" src="./img/베이지 버튼 배경.png" alt="">
                 <span>2000</span>
                 <span class="next-year-arrow">
                     <img src="./img/타임라인 푸터 버튼 화살표.png" alt="">
                 </span>
-            </button>
+            </a>
+
         </div>
     </main>
     <footer class="footer">
         <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
     </footer>
+    <div class="modal" id="modal01">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/90/데스크톱 컴퓨터.png" alt="컴퓨터">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">1990 ARCHIVE</p>
+                <h3 class="main-title">데스크톱 컴퓨터</h3>
+                <p class="point-text">1990<span>년대</span></p>
+                <p class="main-text">
+                    1990년대 데스크톱 컴퓨터는 문서 작업부터 게임, 인터넷까지 다양한 기능을 제공하며 디지털 시대의 시작을 이끌었습니다. 가정과 학교, 사무실에서 널리 사용되며 일상 속 필수
+                    기기로 자리 잡았습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/컴퓨터1.png" alt="컴퓨터 아이콘">
+                        <p class="icon-main-text">디지털 작업</p>
+                        <p class="icon-sub-text">문서와 게임 등 다양한 작업을 수행하던 컴퓨터</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/컴퓨터2.png" alt="인터넷 아이콘">
+                        <p class="icon-main-text">인터넷</p>
+                        <p class="icon-sub-text">새로운 정보와 사람들을 연결하던 온라인 문화</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/컴퓨터3.png" alt="데이터 저장 아이콘">
+                        <p class="icon-main-text">데이터 저장</p>
+                        <p class="icon-sub-text">여러 가지 데이터를 쉽게 저장하고 관리할 수 있는 컴퓨터</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal02">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/90/삐삐.png" alt="삐삐">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">1990 ARCHIVE</p>
+                <h3 class="main-title">삐삐</h3>
+                <p class="point-text">1990<span>년대</span></p>
+                <p class="main-text">
+                    1990년대 삐삐는 숫자와 간단한 메시지로 연락을 주고받던 대표적인 통신기기였습니다. 호출을 받으면 공중전화나 집 전화로 다시 연락하는 방식이 일상이었습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/삐삐1.png" alt="삐비 아이콘">
+                        <p class="icon-main-text">무선 호출</p>
+                        <p class="icon-sub-text">숫자와 간단한 메시지로 연락을 주고받던 통신 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/삐삐2.png" alt="패턴 아이콘">
+                        <p class="icon-main-text">숫자 메시지</p>
+                        <p class="icon-sub-text">숫자로 약속과 의미를 전달하던 독특한 소통 문화</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/삐삐3.png" alt="공중전화 아이콘">
+                        <p class="icon-main-text">공중전화</p>
+                        <p class="icon-sub-text">호출을 확인한 뒤 공중전화로 다시 연락하던 방식</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal03">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/90/cd 플레이어.png" alt="CD 플레이어">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">1990 ARCHIVE</p>
+                <h3 class="main-title">CD 플레이어</h3>
+                <p class="point-text">1990<span>년대</span></p>
+                <p class="main-text">
+                    1990년대 CD 플레이어는 선명한 음질로 음악을 감상할 수 있게 해준 디지털 음향기기였습니다. CD를 교체하며 좋아하는 앨범을 듣는 새로운 음악 문화가 자리 잡았습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/CD1.png" alt="CD 아이콘">
+                        <p class="icon-main-text">CD 음악</p>
+                        <p class="icon-sub-text">디지털 음원으로 선명한 음악을 감상하던 매체</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/CD2.png" alt="음악 재생 아이콘">
+                        <p class="icon-main-text">음악 재생</p>
+                        <p class="icon-sub-text">좋아하는 앨범을 선택해 음악을 감상하던 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/CD3.png" alt="디스크 아이콘">
+                        <p class="icon-main-text">디스크 교체</p>
+                        <p class="icon-sub-text">원하는 CD를 교체하며 음악을 감상하던 방식</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal04">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/90/휴대용 게임기.png" alt="휴대용 게임기">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">1990 ARCHIVE</p>
+                <h3 class="main-title">휴대용 게임기</h3>
+                <p class="point-text">1990<span>년대</span></p>
+                <p class="main-text">
+                    1990년대 휴대용 게임기는 언제 어디서나 게임을 즐길 수 있게 해준 대표적인 놀이 기기였습니다. 다양한 게임팩을 교체하며 친구들과 함께 즐기는 문화가 만들어졌습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/게임기1.png" alt="게임기 아이콘">
+                        <p class="icon-main-text">게임 플레이</p>
+                        <p class="icon-sub-text">친구들과 재밌는 추억을
+                            만들어준 게임</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/게임기2.png" alt="앨범 아이콘">
+                        <p class="icon-main-text">조이스틱</p>
+                        <p class="icon-sub-text">버튼과 방향키를 이용해 게임을 플레이하던 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 1990/게임기3.png" alt="하트 아이콘">
+                        <p class="icon-main-text"> 함께 즐기기</p>
+                        <p class="icon-sub-text">친구들과 게임을 즐기며 추억을 만들던 놀이 문화</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

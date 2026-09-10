@@ -11,49 +11,75 @@
     <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="./css/timeline-style.css">
     <link rel="stylesheet" href="./css/common-SKIP.css">
+    <link rel="stylesheet" href="./css/timeline-mobile.css">
+
+    <script src="js/timeline.js" defer></script>
+    <script src="js/header.js" defer></script>
 </head>
 
 <body>
     <header class="header">
         <div class="header-inner">
+
             <!-- header left -->
-            <div class="header-left"> <!-- pc에선 display : none -->
+            <div class="header-left">
 
-                <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
-                <!-- 모바일 메인페이지에서 사용 -->
-                <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
-                <!-- 모바일 메인페이지에서 사용 -->
+                <button class="m-sound1">
+                    <img src="img/volume-up (1).png" alt="소리켜기">
+                </button>
 
-                <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                <button class="m-sound2">
+                    <img src="img/volume-mute (1).png" alt="소리끄기">
+                </button>
+
+                <button class="m-back">
+                    <img src="img/Vector.png" alt="#">
+                </button>
+
             </div>
 
-            <h1 class="logo"><a href="#">RE:CORD</a></h1>
+            <h1 class="logo">
+                <a href="index.html">RE:CORD</a>
+            </h1>
+
             <nav class="header-gnb">
                 <ul>
                     <li><a href="#" class="active">TIMELINE</a></li>
-                    <li><a href="#">MUSIC</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">PLACE</a></li>
-                    <li><a href="#">EXPERIENCE</a></li>
+                    <li><a href="music.html">MUSIC</a></li>
+                    <li><a href="shop.html">SHOP</a></li>
+                    <li><a href="place.html">PLACE</a></li>
+                    <li><a href="experlence.html">EXPERIENCE</a></li>
                 </ul>
             </nav>
+
             <!-- header right -->
             <div class="header-right">
+
                 <button class="sound">
-                    <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
-                    <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
-                </button> <!-- PC 메인 페이지에서 사용 -->
+                    <img src="img/volume-up (1).png" alt="소리 on" class="sound-on">
+                    <img src="img/volume-mute (1).png" alt="소리 off" class="sound-off">
+                </button>
 
-                <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
-                <!-- PC 타임라인 시작페이지 사용 -->
+                <button class="header-btn skip">
 
-                <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">BACK</button>
-                <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+                    <a href="timeline-skip.html">SKIP
+                        <img src="img/left-arrows.png" alt="화살표"></a>
+                </button>
 
-                <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                <button class="header-btn back">
+                    <img src="img/arrow.png" alt="화살표">
+                    BACK
+                </button>
+
+                <button class="header-btn m-menu">
+                    <img src="img/menu.png" alt="메뉴">
+                </button>
+
             </div>
         </div>
     </header>
+
+
     <!-- TIMELINE -->
     <main class="timeline">
         <div class="timeline-inner">
@@ -63,40 +89,42 @@
                 <div class="title-line">
                     <span></span>
                 </div>
-                <p class="timeline-sub-text">
-                    시간을 따라 떠나는 기억 여행
-                </p>
-                <p class="main-text timeline-description">
-                    각 시대를 클릭하면 그 시절의 물건, 문화, 음악과 이야기를 만나볼 수 있습니다.
-                </p>
+                <p class="timeline-sub-text">시간을 따라 떠나는 기억 여행</p>
+                <p class="main-text timeline-description">각 시대를 클릭하면 그 시절의 물건, 문화, 음악과 이야기를 만나볼 수 있습니다.</p>
             </section>
 
             <!-- 타임라인 카드 -->
             <section class="timeline-cards">
-
-                <!-- 1980 -->
+                <!-- ==================== 1980 ==================== -->
                 <article class="timeline-card">
                     <img class="card-img" src="./img/타임라인 텍스트 배경 최종 3 1 (1).png" alt="">
                     <div class="card-photo">
                         <img src="./img/1980.webp" alt="1980년대 거리">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="./video/timeline 시작/timeline1980.mp4" type="video/mp4">
+                        </video>
                     </div>
-                    <div class="card-content">
+                    <div class=" card-content">
                         <h2>1980</h2>
                         <div class="card-line">
                             <span></span>
                         </div>
                         <p>아날로그의 시작</p>
-                        <a href="#" class="card-btn">
+                        <a href="timeline1980s.html" class="card-btn">
                             <img src="./img/ArrowRight.png" alt="">
                         </a>
                     </div>
                 </article>
 
-                <!-- 1990 -->
+
+                <!-- ==================== 1990 ==================== -->
                 <article class="timeline-card">
                     <img class="card-img" src="./img/타임라인 텍스트 배경 최종 3 1 (1).png" alt="">
                     <div class="card-photo">
                         <img src="./img/타임라인 90년.webp" alt="1990년대 거리">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="./video/timeline 시작/timeline1990.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="card-content">
                         <h2>1990</h2>
@@ -104,17 +132,20 @@
                             <span></span>
                         </div>
                         <p>디지털 전환의 시작</p>
-                        <a href="#" class="card-btn">
+                        <a href="timeline1990s.html" class="card-btn">
                             <img src="./img/ArrowRight.png" alt="">
                         </a>
                     </div>
                 </article>
 
-                <!-- 2000 -->
+                <!-- ==================== 2000 ==================== -->
                 <article class="timeline-card">
                     <img class="card-img" src="./img/타임라인 텍스트 배경 최종 3 1 (1).png" alt="">
                     <div class="card-photo">
                         <img src="./img/2000.webp" alt="2000년대 거리">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="./video/timeline 시작/timeline2000.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="card-content">
                         <h2>2000</h2>
@@ -122,17 +153,20 @@
                             <span></span>
                         </div>
                         <p>인터넷과 모바일의 확산</p>
-                        <a href="#" class="card-btn">
+                        <a href="timeline2000s.html" class="card-btn">
                             <img src="./img/ArrowRight.png" alt="">
                         </a>
                     </div>
                 </article>
 
-                <!-- 2010 -->
+                <!-- ==================== 2010 ==================== -->
                 <article class="timeline-card">
                     <img class="card-img" src="./img/타임라인 텍스트 배경 최종 3 1 (1).png" alt="">
                     <div class="card-photo">
                         <img src="./img/2010.webp" alt="2010년대 거리">
+                        <video muted loop playsinline preload="metadata">
+                            <source src="./video/timeline 시작/timeline2010.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="card-content">
                         <h2>2010</h2>
@@ -140,7 +174,7 @@
                             <span></span>
                         </div>
                         <p>스마트 시대의 개막</p>
-                        <a href="#" class="card-btn">
+                        <a href="timeline2010s.html" class="card-btn">
                             <img src="./img/ArrowRight.png" alt="">
                         </a>
                     </div>
@@ -149,10 +183,13 @@
         </div>
     </main>
 
-
     <footer class="footer">
-        <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+        <p class="footer-text">
+            ⓒ2026 RE:CORD.ALL rights reserved.
+        </p>
     </footer>
+
+
 
 </body>
 

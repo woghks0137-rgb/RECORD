@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="./css/timeline2000.css">
     <link rel="stylesheet" href="./css/common-Back.css">
+    <script src="js/script-timeline-2000.js" defer></script>
 </head>
 
 <body>
@@ -27,14 +28,14 @@
                 <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
             </div>
 
-            <h1 class="logo"><a href="#">RE:CORD</a></h1>
+            <h1 class="logo"><a href="./index.html">RE:CORD</a></h1>
             <nav class="header-gnb">
                 <ul>
                     <li><a href="#" class="active">TIMELINE</a></li>
-                    <li><a href="#">MUSIC</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">PLACE</a></li>
-                    <li><a href="#">EXPERIENCE</a></li>
+                    <li><a href="./music.html">MUSIC</a></li>
+                    <li><a href="./shop.html">SHOP</a></li>
+                    <li><a href="./place.html">PLACE</a></li>
+                    <li><a href="./experlence.html">EXPERIENCE</a></li>
                 </ul>
             </nav>
             <!-- header right -->
@@ -47,7 +48,8 @@
                 <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
                 <!-- PC 타임라인 시작페이지 사용 -->
 
-                <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
+                <button class="header-btn back"><a href="./timeline.html"><img src="img/arrow.png"
+                            alt="-> 화살표">Back</a></button>
                 <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
 
                 <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
@@ -111,7 +113,9 @@
                                 <div class="object-text">
                                     <h4>휴대폰</h4>
                                     <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal01">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -124,7 +128,9 @@
                                 <div class="object-text">
                                     <h4>MP3 플레이어</h4>
                                     <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal02">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -137,7 +143,9 @@
                                 <div class="object-text">
                                     <h4>디지털 카메라</h4>
                                     <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal03">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -150,7 +158,9 @@
                                 <div class="object-text">
                                     <h4>전자사전</h4>
                                     <p>2000 년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                    <button type="button" class="detail-btn" data-modal="modal04">
+                                        자세히 보기 →
+                                    </button>
                                 </div>
                             </div>
                         </article>
@@ -169,7 +179,7 @@
                                 <div class="culture-text">
                                     <h4>싸이월드 열풍</h4>
                                     <p>2000년대</p><!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                                    <a href="./culture2000s.html#culture01">자세히 보기 →</a>
                                 </div>
                             </div>
                         </article>
@@ -182,7 +192,7 @@
                                 <div class="culture-text">
                                     <h4>온라인 게임 문화</h4>
                                     <p>2000년대</p> <!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                                    <a href="./culture2000s.html#culture02">자세히 보기 →</a>
                                 </div>
                             </div>
                         </article>
@@ -190,7 +200,7 @@
                     </div>
                 </div>
                 <div class="music-player">
-                    <h3>거짓말 - BIGBANG</h3>
+                    <h3 class="title">거짓말 - BIGBANG</h3>
                     <div class="lp-line"></div>
 
                     <div class="record-player">
@@ -210,8 +220,8 @@
                     </div>
 
                     <div class="time">
-                        <span>0:00</span>
-                        <span>4:28</span>
+                        <span class="current-time">0:00</span>
+                        <span class="duration">4:28</span>
                     </div>
 
                     <div class="player-buttons">
@@ -230,33 +240,167 @@
 
                     </div>
 
-                    <!--  <audio class="audio" src="./audio/붉은 노을.mp3" preload="metadata"></audio> -->
+                    <audio class="audio" src="./audio/테스트.mp3" preload="metadata"></audio>
                 </div>
             </section>
 
             <!-- 이전 연도 버튼 -->
-            <button class="prev-year">
+            <a href="./timeline1990s.html" class="prev-year">
                 <img class="prev-year-bg" src="./img/베이지 버튼 배경.png" alt="">
-
                 <span class="prev-year-arrow">
                     <img src="./img/타임라인 푸터 버튼 화살표.png" alt="">
                 </span>
-
                 <span>1990</span>
-            </button>
-
-            <button class="next-year">
+            </a>
+            <a href="./timeline2010s.html" class="next-year">
                 <img class="next-year-bg" src="./img/베이지 버튼 배경.png" alt="">
                 <span>2010</span>
                 <span class="next-year-arrow">
                     <img src="./img/타임라인 푸터 버튼 화살표.png" alt="">
                 </span>
-            </button>
+            </a>
+
         </div>
     </main>
     <footer class="footer">
         <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
     </footer>
+    <div class="modal" id="modal01">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/00/타임라인 휴대폰 1 1.png" alt="휴대폰">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">2000 ARCHIVE</p>
+                <h3 class="main-title">핸드폰</h3>
+                <p class="point-text">2000<span>년대</span></p>
+                <p class="main-text">
+                    2000년대 휴대폰은 통화뿐만 아니라 문자와 사진 촬영 등 다양한 기능을 제공하며 일상 속 필수 기기로 자리 잡았습니다. 개성을 표현하는 벨소리와 배경화면 문화도 함께
+                    유행했습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/핸드폰1.png" alt="문자 아이콘">
+                        <p class="icon-main-text">문자메시지</p>
+                        <p class="icon-sub-text">짧은 문자로 일상을 주고받던 대표적인 소통 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/핸드폰2.png" alt="카메라 아이콘">
+                        <p class="icon-main-text">사진 촬영</p>
+                        <p class="icon-sub-text">일상의 순간을 휴대폰으로 간편하게 기록하던 문화</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/핸드폰3.png" alt="벨소리 아이콘">
+                        <p class="icon-main-text">벨소리</p>
+                        <p class="icon-sub-text">다양한 벨소리로 자신만의 개성을 표현하던 문화</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal02">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/00/타임라인 MP3 1 1.png" alt="MP3">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">2000 ARCHIVE</p>
+                <h3 class="main-title">MP3 플레이어</h3>
+                <p class="point-text">2000<span>년대</span></p>
+                <p class="main-text">
+                    2000년대 MP3 플레이어는 수백 곡의 음악을 작은 기기에 담아 언제 어디서나 감상할 수 있게 해준 디지털 음악기기였습니다. CD 없이도 다양한 음악을 휴대하는 새로운 문화를
+                    만들었습니다
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/플레이어1.png" alt="재생 아이콘">
+                        <p class="icon-main-text">간편한 재생</p>
+                        <p class="icon-sub-text">원하는 음악을 손쉽게 선택해 감상할 수 있었던 기기</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/플레이어2.png" alt="저장 아이콘">
+                        <p class="icon-main-text">대용량 저장</p>
+                        <p class="icon-sub-text">좋아하는 음악을 저장해 언제든 들을 수 있었던 문화</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/플레이어3.png" alt="음악 아이콘">
+                        <p class="icon-main-text">디지털 음악</p>
+                        <p class="icon-sub-text">수백 곡의 음악을 한 기기에 담아 감상하던 방식</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal03">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/00/타임라인 디지털 카메라 1 1.png" alt="디지털 카메라">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">2000 ARCHIVE</p>
+                <h3 class="main-title">디지털 카메라</h3>
+                <p class="point-text">2000<span>년대</span></p>
+                <p class="main-text">
+                    2000년대 디지털 카메라는 필름 없이 사진을 찍고 바로 확인할 수 있게 해준 대표적인 기록 도구였습니다. 여행과 학교, 일상의 순간을 손쉽게 남기며 새로운 사진 문화를
+                    만들었습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/디카1.png" alt="카메라 아이콘">
+                        <p class="icon-main-text">메인사진 촬영</p>
+                        <p class="icon-sub-text">서브 일상의 순간을 간편하게 기록하던 디지털 카메라</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/디카2.png" alt="사진 아이콘">
+                        <p class="icon-main-text">메인 바로 확인</p>
+                        <p class="icon-sub-text">서브 촬영한 사진을 즉시 확인할 수 있었던 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/디카3.png" alt="메모리 아이콘">
+                        <p class="icon-main-text">메인메모리 저장</p>
+                        <p class="icon-sub-text">서브 수많은 사진을 메모리카드에 보관하던 문화</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="modal04">
+        <div class="modal-box">
+            <div class="img-box">
+                <img src="./img/당시 물건/00/전자사전.png" alt="전자사전">
+            </div>
+            <div class="text-box">
+                <button class="closeBtn"><img src="./img/X.png" alt="X 아이콘"></button>
+                <p class="point-title">2000 ARCHIVE</p>
+                <h3 class="main-title">전자사전</h3>
+                <p class="point-text">2000<span>년대</span></p>
+                <p class="main-text">
+                    2000년대 전자사전은 단어 검색부터 예문과 발음까지 확인할 수 있는 학습 기기였습니다. 학생들의 필수품으로 자리 잡으며 학교와 학원에서 널리 사용되었습니다.
+                </p>
+                <div class="icon-box">
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/전자사전1.png" alt="검색 아이콘">
+                        <p class="icon-main-text">단어 검색</p>
+                        <p class="icon-sub-text">궁금한 단어의 뜻을 빠르게 찾아보던 학습 방식</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/전자사전2.png" alt="듣는 아이콘">
+                        <p class="icon-main-text">발음 듣기</p>
+                        <p class="icon-sub-text">원어민 발음을 들으며 학습할 수 있었던 기능</p>
+                    </div>
+                    <div class="item">
+                        <img src="./img/당시 물건/물건 자세히보기 아이콘 2000/전자사전3.png" alt="학습 아이콘">
+                        <p class="icon-main-text">학습 도구</p>
+                        <p class="icon-sub-text">학교와 학원에서 함께하던 대표적인 학습 기기</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
