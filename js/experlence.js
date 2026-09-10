@@ -202,6 +202,10 @@ nextPhotoBtn.addEventListener('click', function () {
     cameraPhoto.classList.add('change');
     // 0.2초후에 실행될 코드  
     setTimeout(function () {
+
+        // 카메라 셔터음
+        cameraSound.currentTime = 0;
+        cameraSound.play();
         // 사진 변경  
         cameraPhoto.src = photos[photo];
         // 기존 애니메이션 제거  
