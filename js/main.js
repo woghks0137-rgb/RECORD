@@ -2,6 +2,10 @@ const video = document.querySelector(".opening-video");
 const wrap = document.querySelector("#wrap");
 const yearButtons = document.querySelectorAll(".year-btn");
 
+const soundButton = document.querySelector(".sound");
+const soundOn = document.querySelector(".sound-on");
+const soundOff = document.querySelector(".sound-off");
+video.muted = true;
 
 // ==========================
 // 영상 경로
@@ -106,7 +110,7 @@ yearButtons.forEach(button => {
         const videoSrc = yearVideos[year];
 
         video.src = videoSrc;
-        video.loop = false;
+        video.loop = true;
 
         video.load();
 
@@ -116,5 +120,19 @@ yearButtons.forEach(button => {
             });
 
     });
+
+});
+
+soundButton.addEventListener("click", () => {
+
+    video.muted = !video.muted;
+
+    if (video.muted) {
+        soundOn.style.display = "none";
+        soundOff.style.display = "block";
+    } else {
+        soundOn.style.display = "block";
+        soundOff.style.display = "none";
+    }
 
 });
