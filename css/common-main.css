@@ -269,6 +269,17 @@ header {
         height: 28px;
     }
 
+
+    .header-right .sound {
+        /* 자바스크립트 영역임 클릭시 off이미지 block 과 영상 사운드 음소거 */
+
+        display: none;
+
+    }
+
+
+
+
     /* ------------------------가운데 부분--------------------------- */
     .header .logo {
         position: absolute;
@@ -285,7 +296,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        transform: translateY(-7.5px);
+        transform: translateY(3px);
     }
 
     .header-right {
@@ -300,5 +311,4 @@ header {
     .footer-text {
         font-size: 12px;
     }
-
 }
