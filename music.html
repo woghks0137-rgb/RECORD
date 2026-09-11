@@ -7,6 +7,11 @@
     <title>뮤직</title>
     <link rel="stylesheet" href="css/common-Back.css">
     <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/m-music.css">
+    <script src="js/header.js" defer></script>
+    <script src="js/music.js" defer></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
 </head>
 
 <body>
@@ -247,7 +252,8 @@
                     </div>
                 </div>
                 <!-- 재생버튼 클릭시 음악 -->
-                <audio id="audio"></audio>
+                <!-- YouTube IFrame Player API 플레이어 -->
+                <div id="youtubePlayer" aria-label="YouTube 음악 플레이어"></div>
         </main>
 
         <!-- -----------------푸터----------------------- -->
