@@ -5,6 +5,9 @@ const yearButtons = document.querySelectorAll(".year-btn");
 const soundButton = document.querySelector(".sound");
 const soundOn = document.querySelector(".sound-on");
 const soundOff = document.querySelector(".sound-off");
+
+const mSound1 = document.querySelector(".m-sound1");
+const mSound2 = document.querySelector(".m-sound2");
 video.muted = true;
 
 // ==========================
@@ -135,4 +138,59 @@ soundButton.addEventListener("click", () => {
         soundOff.style.display = "none";
     }
 
+});
+
+// 모바일 사운드
+mSound1.addEventListener("click", () => {
+    video.muted = true;
+
+    mSound1.style.display = "none";
+    mSound2.style.display = "flex";
+});
+
+mSound2.addEventListener("click", () => {
+    video.muted = false;
+
+    mSound2.style.display = "none";
+    mSound1.style.display = "flex";
+});
+
+const aboutBtn = document.querySelector(".about-btn");
+const mobileModal = document.querySelector(".mobile-modal");
+const modalBox = document.querySelector(".modal-box");
+const modalClose = document.querySelector(".modal-close");
+
+// ==========================
+// ABOUT 모달 열기
+// ==========================
+aboutBtn.addEventListener("click", () => {
+    mobileModal.classList.add("on");
+    aboutBtn.querySelector("img").classList.add("stop");
+});
+// ==========================
+// 모달 바깥 클릭하면 닫기
+// ==========================
+
+mobileModal.addEventListener("click", (e) => {
+    if (e.target === mobileModal) {
+        mobileModal.classList.remove("on");
+        aboutBtn.querySelector("img").classList.remove("stop");
+    }
+});
+// ==========================
+// X 버튼으로 닫기
+// ==========================
+modalClose.addEventListener("click", () => {
+    mobileModal.classList.remove("on");
+    aboutBtn.querySelector("img").classList.remove("stop");
+});
+
+// ==========================
+// ESC 누르면 닫기
+// ==========================
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        mobileModal.classList.remove("on");
+        aboutBtn.querySelector("img").classList.remove("stop");
+    }
 });
