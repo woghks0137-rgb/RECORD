@@ -109,14 +109,14 @@ header {
 
 .header-right .sound img {
     position: relative;
-    display: flex;
+    display: none;
     right: -30px;
 }
 
 .header-right .sound .sound-off {
     /* 자바스크립트 영역임 클릭시 off이미지 block 과 영상 사운드 음소거 */
     position: relative;
-    display: none;
+    display: flex;
     right: -30px;
 }
 

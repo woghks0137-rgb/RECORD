@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>메인화면</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="css/common-main.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap" class="intro-zoom">
         <header class="header">
             <div class="header-inner">
                 <!-- header left -->
@@ -27,14 +28,14 @@
                     <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
                 </div>
 
-                <h1 class="logo"><a href="#">RE:CORD</a></h1>
+                <h1 class="logo"><a href="./index.html">RE:CORD</a></h1>
                 <nav class="header-gnb">
                     <ul>
-                        <li><a href="#">TIMELINE</a></li>
-                        <li><a href="#">MUSIC</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#">PLACE</a></li>
-                        <li><a href="#">EXPERIENCE</a></li>
+                        <li><a href="./timeline.html">TIMELINE</a></li>
+                        <li><a href="./music.html">MUSIC</a></li>
+                        <li><a href="./shop.html">SHOP</a></li>
+                        <li><a href="./place.html">PLACE</a></li>
+                        <li><a href="./experlence.html">EXPERIENCE</a></li>
                     </ul>
                 </nav>
                 <!-- header right -->
@@ -55,15 +56,28 @@
             </div>
         </header>
         <section class="main">
-            <div class="inner">
-                <div class="text-box">
-                    <h2 class="main-title">기억은 사라져도<br> 기록은 남습니다. </h2>
-                    <p class="main-text">사라져가는 문화와 물건을 기록해<br>다음세대에도 전하는 디지털 아카이브</p>
-                    <div class="btn-box"><button class="btn" type="button">기억 여행 시작하기<img src="/img/타임라인 푸터 버튼 화살표.png"
-                                alt="화살표"></button></div>
-                </div>
-                <div class="img-box">
-                    <img src="img/TV.png" alt="">
+            <div class="main-point">
+                <div class="inner">
+                    <div class="text-box">
+                        <h2 class="main-title">기억은 사라져도<br> 기록은 남습니다. </h2>
+                        <p class="main-text">사라져가는 문화와 물건을 기록해<br>다음세대에도 전하는 디지털 아카이브</p>
+                        <div class="btn-box"><a href="./timeline.html">
+                                <button class="btn" type="button">기억 여행 시작하기<img src="/img/타임라인 푸터 버튼 화살표.png"
+                                        alt="화살표"></button>
+                            </a></div>
+                    </div>
+                    <div class="img-box">
+                        <video class="opening-video" muted playsinline></video>
+                        <img src="img/TV.png" alt="">
+                    </div>
+                    <div class="year-nav">
+                        <span class="point-tag"></span>
+                        <button class="year-btn" type="button" data-year="1980">1980</button>
+                        <button class="year-btn" type="button" data-year="1990">1990</button>
+                        <button class="year-btn" type="button" data-year="2000">2000</button>
+                        <button class="year-btn" type="button" data-year="2010">2010</button>
+
+                    </div>
                 </div>
             </div>
         </section>
