@@ -215,15 +215,27 @@ header {
     position: relative !important;
 
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.15) !important;
+
+    object-fit: cover !important;
 }
 
 .culture-main-image img {
+    object-fit: cover !important;
+}
+
+.culture-main-image video {
     width: 100% !important;
     height: 100% !important;
-
     display: block !important;
-
     object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    opacity: 0 !important;
+}
+
+.culture-main-image:hover video {
+    opacity: 1 !important;
 }
 
 /* 오른쪽 내용 */
