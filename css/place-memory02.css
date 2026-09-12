@@ -6,7 +6,7 @@
     max-width: 1720px;
     height: 100%;
 
-    padding: 130px 0 110px 0;
+    padding: 170px 0 110px 0;
     margin: 0 auto;
 }
 
@@ -126,6 +126,19 @@
     gap: 20px;
 }
 
+.thumbnail-list .img-btn {
+    transition: 0.3s;
+}
+
+.thumbnail-list .img-btn.active {
+    opacity: 1;
+}
+
+.thumbnail-list .img-btn.active img {
+    outline: 3px solid #2B1D11;
+    outline-offset: 3px;
+}
+
 .sub-container .thumbnail-list img {
     border-radius: 15px;
     box-shadow: 8px 8px 4px 0 rgba(0, 0, 0, 0.25);
@@ -192,6 +205,6 @@
 
 .point-img-box img {
     position: absolute;
-    bottom: 170px;
+    bottom: 220px;
     right: 57px;
 }

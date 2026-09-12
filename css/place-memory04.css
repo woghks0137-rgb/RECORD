@@ -6,7 +6,7 @@
     max-width: 1720px;
     height: 100%;
 
-    padding: 130px 0 110px 0;
+    padding: 170px 0 110px 0;
     margin: 0 auto;
 }
 
@@ -136,6 +136,20 @@
     height: 100px;
 }
 
+.thumbnail-list .img-btn {
+    transition: 0.3s;
+}
+
+.thumbnail-list .img-btn.active {
+    opacity: 1;
+}
+
+.thumbnail-list .img-btn.active img {
+    outline: 3px solid #2B1D11;
+    outline-offset: 3px;
+}
+
+
 .point-container .img-box {
     position: relative;
     left: -72px;
@@ -208,6 +222,6 @@
 
 .point-img-box img {
     position: absolute;
-    bottom: 170px;
+    bottom: 220px;
     right: 57px;
 }
