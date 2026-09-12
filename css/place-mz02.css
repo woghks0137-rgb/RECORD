@@ -121,7 +121,7 @@ body {
     transform: translate(-50%, -50%);
 
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 25px;
 
     box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
 }
@@ -327,4 +327,8 @@ body {
     height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.gallery-item.active {
+    box-shadow: 0 0 0 3px #2B1D11, 6px 7px 7px rgba(0, 0, 0, 0.3);
 }
