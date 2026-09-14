@@ -88,7 +88,7 @@
     line-height: 2;
 }
 
-/* CARDS */
+/* cards */
 .timeline-cards {
     width: 1390px;
     margin: 68px auto 0;
@@ -109,7 +109,7 @@
 .card-photo {
     width: 325px;
     height: 250px;
-    position: absolute;
+    position: relative;
     top: 30px;
     left: -8px;
     overflow: hidden;
@@ -216,4 +216,33 @@
     height: 35px;
     display: block;
     object-fit: contain;
+}
+
+/* card video */
+
+.card-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-photo video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.card-photo:hover img {
+    opacity: 0;
+}
+
+.card-photo:hover video {
+    opacity: 1;
 }
