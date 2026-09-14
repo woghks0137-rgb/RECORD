@@ -3,6 +3,17 @@
 @import url(font.css);
 @import url(style-guide.css);
 
+/* 오른쪽 하얀색 스크롤바 없애기 */
+html,
+body {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
+
 header {
     position: absolute;
     z-index: 1;
