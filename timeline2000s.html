@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -10,187 +10,411 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="css/style-guide.css">
     <link rel="stylesheet" href="./css/timeline2000.css">
-    <link rel="stylesheet" href="./css/common-Back.css">
+    <link rel="stylesheet" href="./css/m-timeline2000.css">
+    <link rel="stylesheet" href="./css/common-Back-timeline.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="js/script-timeline-2000.js" defer></script>
+    <script src="js/header.js" defer></script>
 </head>
 
 <body>
+
     <header class="header">
         <div class="header-inner">
-            <!-- header left -->
-            <div class="header-left"> <!-- pc에선 display : none -->
 
-                <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
-                <!-- 모바일 메인페이지에서 사용 -->
-                <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
-                <!-- 모바일 메인페이지에서 사용 -->
+            <div class="header-left">
 
-                <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                <button class="m-sound1">
+                    <img src="img/volume-up (1).png" alt="소리켜기">
+                </button>
+
+                <button class="m-sound2">
+                    <img src="img/volume-mute (1).png" alt="소리끄기">
+                </button>
+
+                <button class="m-back">
+                    <img src="img/Vector.png" alt="#">
+                </button>
+
             </div>
 
-            <h1 class="logo"><a href="#">RE:CORD</a></h1>
+            <h1 class="logo">
+                <a href="./index.html">RE:CORD</a>
+            </h1>
+
             <nav class="header-gnb">
                 <ul>
                     <li><a href="#" class="active">TIMELINE</a></li>
-                    <li><a href="#">MUSIC</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">PLACE</a></li>
-                    <li><a href="#">EXPERIENCE</a></li>
+                    <li><a href="./music.html">MUSIC</a></li>
+                    <li><a href="./shop.html">SHOP</a></li>
+                    <li><a href="./place.html">PLACE</a></li>
+                    <li><a href="./experlence.html">EXPERIENCE</a></li>
                 </ul>
             </nav>
-            <!-- header right -->
+
             <div class="header-right">
+
                 <button class="sound">
-                    <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
-                    <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
-                </button> <!-- PC 메인 페이지에서 사용 -->
+                    <img src="img/volume-up (1).png" alt="소리 on" class="sound-on">
+                    <img src="img/volume-mute (1).png" alt="소리 off" class="sound-off">
+                </button>
 
-                <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
-                <!-- PC 타임라인 시작페이지 사용 -->
+                <button class="header-btn skip">
+                    SKIP
+                    <img src="img/left-arrows.png" alt="화살표">
+                </button>
 
-                <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">BACK</button>
-                <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+                <button class="header-btn back">
+                    <a href="./timeline.html">
+                        <img src="img/arrow.png" alt="화살표">
+                        Back
+                    </a>
+                </button>
 
-                <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                <button class="header-btn m-menu">
+                    <img src="img/menu.png" alt="메뉴">
+                </button>
+
             </div>
+
         </div>
     </header>
+
     <main class="detail">
+
         <div class="detail-inner">
+
             <section class="detail-top">
+
                 <div class="hero-image">
                     <img src="./img/2000/타임라인 2000 메인이미지.webp" alt="main img">
-
-                    <img src="./img/2000/메인 배경 스티커.png" alt="1980 ARCHIVE" class="archive-img">
+                    <img src="./img/2000/메인 배경 스티커.png" alt="2000 ARCHIVE" class="archive-img">
                 </div>
+
                 <div class="hero-info">
+
                     <h2>2000</h2>
                     <h3>인터넷과 모바일의 확산</h3>
 
                     <div class="info-line"></div>
 
-                    <p>새로운 기술이 일상을 빠르게 바꾸던 2000년대 <br>
+                    <p>
+                        새로운 기술이 일상을 빠르게 바꾸던 2000년대 <br>
                         인터넷과 휴대폰이 대중화되며 사람들의 소통방식과 <br>
                         생활방식이 크게 변화했습니다. 기억하고 싶은 <br>
-                        2000년대의 추억을 디지털 아카이브로 기록합니다.</p>
+                        2000년대의 추억을 디지털 아카이브로 기록합니다.
+                    </p>
+
                 </div>
+
                 <div class="key-items">
+
                     <h3>KEY ITEMS</h3>
+
                     <div class="key-item">
                         <img src="./img/2000/휴대폰.png" alt="휴대폰">
+
                         <div>
                             <strong>휴대폰</strong>
                             <p>언제 어디서나<br>연결된 소통의 시작</p>
                         </div>
                     </div>
+
                     <div class="key-item">
                         <img src="./img/2000/MP3.png" alt="MP3">
+
                         <div>
                             <strong>MP3 플레이어</strong>
                             <p>음악을 내 손안에,<br>나만의 플레이리스트</p>
                         </div>
                     </div>
+
                     <div class="key-item">
                         <img src="./img/2000/디지털 카메라.png" alt="디지털 카메라">
+
                         <div>
                             <strong>디지털 카메라</strong>
-                            <p>일상을 기록하는<br> 새로운 방법</p>
+                            <p>일상을 기록하는<br>새로운 방법</p>
                         </div>
                     </div>
+
                 </div>
+
             </section>
+
             <section class="detail-bottom">
+
                 <div class="objects">
+
                     <h3 class="object-title">대표 물건</h3>
-                    <div class="object-list">
 
-                        <article class="object-card">
-                            <img class="object-photo" src="./img/2000/00/타임라인 휴대폰 1.png" alt="대표물건 휴대폰">
+                    <div class="pc-card-list">
 
-                            <div class="object-info">
-                                <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
-                                <div class="object-text">
-                                    <h4>휴대폰</h4>
-                                    <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                        <div class="object-list">
+
+                            <article class="object-card">
+                                <img class="object-photo" src="./img/2000/00/타임라인 휴대폰 1.png" alt="대표물건 휴대폰">
+
+                                <div class="object-info">
+                                    <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                    <div class="object-text">
+                                        <h4>휴대폰</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="modal01">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <article class="object-card">
-                            <img class="object-photo" src="./img/2000/00/타임라인 MP3 1.png" alt="대표물건 MP3 플레이어">
+                            <article class="object-card">
+                                <img class="object-photo" src="./img/2000/00/타임라인 MP3 1.png" alt="대표물건 MP3 플레이어">
 
-                            <div class="object-info">
-                                <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
-                                <div class="object-text">
-                                    <h4>MP3 플레이어</h4>
-                                    <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                <div class="object-info">
+                                    <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                    <div class="object-text">
+                                        <h4>MP3 플레이어</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="modal02">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <article class="object-card">
-                            <img class="object-photo" src="./img/2000/00/카메라.png" alt="대표물건 cd 플레이어">
+                            <article class="object-card">
+                                <img class="object-photo" src="./img/2000/00/카메라.png" alt="대표물건 디지털 카메라">
 
-                            <div class="object-info">
-                                <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
-                                <div class="object-text">
-                                    <h4>디지털 카메라</h4>
-                                    <p>2000년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                <div class="object-info">
+                                    <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                    <div class="object-text">
+                                        <h4>디지털 카메라</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="modal03">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <article class="object-card">
-                            <img class="object-photo" src="./img/2000/00/전자사전.png" alt="대표물건 전자사전">
+                            <article class="object-card">
+                                <img class="object-photo" src="./img/2000/00/전자사전.png" alt="대표물건 전자사전">
 
-                            <div class="object-info">
-                                <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
-                                <div class="object-text">
-                                    <h4>전자사전</h4>
-                                    <p>2000 년대</p>
-                                    <a href="#">자세히 보기 →</a>
+                                <div class="object-info">
+                                    <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                    <div class="object-text">
+                                        <h4>전자사전</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="modal04">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+
+                        </div>
 
                     </div>
+
+                    <div class="mobile-card-list">
+
+                        <div class="object-list swiper mobile-object-swiper">
+
+                            <div class="swiper-wrapper">
+
+                                <article class="object-card swiper-slide">
+                                    <img class="object-photo" src="./img/2000/00/타임라인 휴대폰 1.png" alt="대표물건 휴대폰">
+
+                                    <div class="object-info">
+                                        <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                        <div class="object-text">
+                                            <h4>휴대폰</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn" data-modal="modal01">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="object-card swiper-slide">
+                                    <img class="object-photo" src="./img/2000/00/타임라인 MP3 1.png" alt="대표물건 MP3 플레이어">
+
+                                    <div class="object-info">
+                                        <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                        <div class="object-text">
+                                            <h4>MP3 플레이어</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn" data-modal="modal02">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="object-card swiper-slide">
+                                    <img class="object-photo" src="./img/2000/00/카메라.png" alt="대표물건 디지털 카메라">
+
+                                    <div class="object-info">
+                                        <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                        <div class="object-text">
+                                            <h4>디지털 카메라</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn" data-modal="modal03">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="object-card swiper-slide">
+                                    <img class="object-photo" src="./img/2000/00/전자사전.png" alt="대표물건 전자사전">
+
+                                    <div class="object-info">
+                                        <img class="text-card-bg" src="./img/텍스트 카드 배경.webp" alt="">
+
+                                        <div class="object-text">
+                                            <h4>전자사전</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn" data-modal="modal04">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+                <div class="section-line" id="mobile"></div>
+
                 <div class="culture">
+
                     <h3 class="culture-title">당시 문화</h3>
-                    <div class="culture-list">
 
-                        <article class="culture-card">
-                            <img class="culture-photo" src="./img/2000/00/포털사이트 2.png" alt="싸이월드">
+                    <div class="pc-card-list">
 
-                            <div class="culture-info">
-                                <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
-                                <div class="culture-text">
-                                    <h4>싸이월드 열풍</h4>
-                                    <p>2000년대</p><!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                        <div class="culture-list">
+
+                            <article class="culture-card">
+                                <img class="culture-photo" src="./img/2000/00/포털사이트 2.png" alt="싸이월드">
+
+                                <div class="culture-info">
+                                    <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
+
+                                    <div class="culture-text">
+                                        <h4>싸이월드 열풍</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="cultureModal01">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
 
-                        <article class="culture-card">
-                            <img class="culture-photo" src="./img/2000/00/pc.webp" alt="pc">
+                            <article class="culture-card">
+                                <img class="culture-photo" src="./img/2000/00/pc.webp" alt="pc">
 
-                            <div class="culture-info">
-                                <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
-                                <div class="culture-text">
-                                    <h4>온라인 게임 문화</h4>
-                                    <p>2000년대</p> <!-- 긴 설명글에서 1980년대 로 바꿈 -->
-                                    <a href="#">자세히 보기 →</a>
+                                <div class="culture-info">
+                                    <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
+
+                                    <div class="culture-text">
+                                        <h4>온라인 게임 문화</h4>
+                                        <p>2000년대</p>
+
+                                        <button type="button" class="detail-btn" data-modal="cultureModal02">
+                                            자세히 보기 →
+                                        </button>
+                                    </div>
                                 </div>
-                            </div>
-                        </article>
+                            </article>
+
+                        </div>
 
                     </div>
+
+                    <div class="mobile-card-list">
+
+                        <div class="culture-list swiper mobile-culture-swiper">
+
+                            <div class="swiper-wrapper">
+
+                                <article class="culture-card swiper-slide">
+                                    <img class="culture-photo" src="./img/2000/00/포털사이트 2.png" alt="싸이월드">
+
+                                    <div class="culture-info">
+                                        <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
+
+                                        <div class="culture-text">
+                                            <h4>싸이월드 열풍</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn mobile-modal-btn"
+                                                data-modal="cultureModal01">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="culture-card swiper-slide">
+                                    <img class="culture-photo" src="./img/2000/00/pc.webp" alt="pc">
+
+                                    <div class="culture-info">
+                                        <img class="text-card-bg" src="./img/문화 텍스트 카드 배경.webp" alt="">
+
+                                        <div class="culture-text">
+                                            <h4>온라인 게임 문화</h4>
+                                            <p>2000년대</p>
+
+                                            <button type="button" class="detail-btn mobile-modal-btn"
+                                                data-modal="cultureModal02">
+                                                자세히 보기 →
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
                 <div class="music-player">
-                    <h3>거짓말 - BIGBANG</h3>
+
+                    <h3 class="title">거짓말 - BIGBANG</h3>
+
                     <div class="lp-line"></div>
 
                     <div class="record-player">
@@ -210,8 +434,8 @@
                     </div>
 
                     <div class="time">
-                        <span>0:00</span>
-                        <span>4:28</span>
+                        <span class="current-time">0:00</span>
+                        <span class="duration">4:28</span>
                     </div>
 
                     <div class="player-buttons">
@@ -230,12 +454,15 @@
 
                     </div>
 
-                    <!--  <audio class="audio" src="./audio/붉은 노을.mp3" preload="metadata"></audio> -->
+                    <audio class="audio" src="./audio/붉은 노을.mp3" preload="metadata">
+                    </audio>
+
                 </div>
+
             </section>
 
-            <!-- 이전 연도 버튼 -->
-            <button class="prev-year">
+            <a href="./timeline1990s.html" class="prev-year">
+
                 <img class="prev-year-bg" src="./img/베이지 버튼 배경.png" alt="">
 
                 <span class="prev-year-arrow">
@@ -243,20 +470,229 @@
                 </span>
 
                 <span>1990</span>
-            </button>
 
-            <button class="next-year">
+            </a>
+
+            <a href="./timeline2010s.html" class="next-year">
+
                 <img class="next-year-bg" src="./img/베이지 버튼 배경.png" alt="">
+
                 <span>2010</span>
+
                 <span class="next-year-arrow">
                     <img src="./img/타임라인 푸터 버튼 화살표.png" alt="">
                 </span>
-            </button>
+
+            </a>
+
         </div>
+
     </main>
+
     <footer class="footer">
-        <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+        <p class="footer-text">
+            ⓒ2026 RE:CORD.ALL rights reserved.
+        </p>
     </footer>
+
+
+    <div class="modal" id="modal01">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/타임라인 휴대폰 1.png" alt="휴대폰">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="X 아이콘">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    휴대폰
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="modal02">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/타임라인 MP3 1.png" alt="MP3 플레이어">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="X 아이콘">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    MP3 플레이어
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="modal03">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/카메라.png" alt="디지털 카메라">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="X 아이콘">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    디지털 카메라
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="modal04">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/전자사전.png" alt="전자사전">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="X 아이콘">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    전자사전
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="cultureModal01">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/포털사이트 2.png" alt="싸이월드">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="닫기">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    싸이월드 열풍
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="modal" id="cultureModal02">
+
+        <div class="modal-box">
+
+            <div class="img-box">
+                <img src="./img/2000/00/pc.webp" alt="온라인 게임 문화">
+            </div>
+
+            <div class="text-box">
+
+                <button class="closeBtn">
+                    <img src="./img/X.png" alt="닫기">
+                </button>
+
+                <p class="point-title">
+                    2000 ARCHIVE
+                </p>
+
+                <h3 class="main-title">
+                    온라인 게임 문화
+                </h3>
+
+                <p class="point-text">
+                    2000<span>년대</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 
 </html>
