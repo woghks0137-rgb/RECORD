@@ -559,7 +559,7 @@
          position: relative;
 
          top: auto;
-         left: -125px;
+         left: -90px;
 
          margin: 0;
 
@@ -653,7 +653,7 @@
          position: absolute;
 
          top: 15px;
-         left: 55%;
+         left: 50%;
 
          margin: 0;
 
@@ -698,7 +698,7 @@
          position: absolute;
 
          top: 40px;
-         left: 55%;
+         left: 50%;
 
          transform:
              translateX(calc(-50% + 71px));
@@ -759,7 +759,7 @@
          position: absolute;
 
          top: 45px;
-         left: 55%;
+         left: 50%;
 
          transform:
              translateX(calc(-50% + 71px));
@@ -788,7 +788,7 @@
          position: absolute;
 
          top: 55px;
-         left: 55%;
+         left: 50%;
 
          transform:
              translateX(calc(-50% + 71px));
