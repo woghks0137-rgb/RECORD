@@ -300,12 +300,12 @@ html {
 
     .main-title {
         margin-bottom: 30px;
-        font-size: 42px;
+        font-size: 36px;
         text-align: center;
     }
 
     .sub-title {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 30px;
         text-align: center;
     }
@@ -345,7 +345,7 @@ html {
         left: 0;
         bottom: auto;
         width: 370px;
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     .tv-experlence .frame {
@@ -413,8 +413,8 @@ html {
 
     .camera-photo {
         top: 51%;
-        right: 21%;
-        width: 57%;
+        right: 18%;
+        width: 65%;
         height: auto;
         object-fit: contain;
     }
