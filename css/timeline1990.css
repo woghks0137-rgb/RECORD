@@ -278,6 +278,16 @@ body {
     width: 175px;
 }
 
+.object-text button:hover {
+    color: #612010;
+    font-weight: 700;
+}
+
+.culture-text a:hover {
+    color: #612010;
+    font-weight: 700;
+}
+
 .object-photo {
     width: 175px;
     height: 185px;
