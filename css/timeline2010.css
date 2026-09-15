@@ -336,6 +336,16 @@ body {
 
 }
 
+.object-text button:hover {
+    color: #612010;
+    font-weight: 700;
+}
+
+.culture-text a:hover {
+    color: #612010;
+    font-weight: 700;
+}
+
 #mobile-only {
     display: none;
 }
