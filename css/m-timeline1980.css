@@ -1,0 +1,1036 @@
+@charset "utf-8";
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        background-image: url("../img/기본 서브 배경.webp");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+
+    /* =========================
+       detail
+    ========================= */
+
+    .detail {
+        width: 100%;
+        min-height: calc(100vh - 60px);
+        height: auto;
+        margin-top: 60px;
+        overflow: visible;
+        position: relative;
+
+
+        background: url("../img/타임라인 배경사진 (1).webp") center / cover no-repeat;
+    }
+
+    .detail-inner {
+        width: 100%;
+        height: auto;
+        padding: 0 6px 20px;
+    }
+
+
+    /* =========================
+       top
+    ========================= */
+
+    .detail-top {
+        width: 100%;
+        height: auto;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        top: 0;
+    }
+
+
+    /* =========================
+       메인 이미지
+    ========================= */
+
+    .hero-image {
+        width: 120%;
+        height: 285px;
+
+        margin: 0;
+        top: 0;
+        left: -10px;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+
+    .hero-image>img:first-child {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .archive-img {
+        width: 125px;
+
+        left: 18px;
+        bottom: 18px;
+    }
+
+
+    /* =========================
+       설명
+    ========================= */
+
+    .hero-info {
+        width: 100%;
+
+        padding: 25px 18px 0;
+        margin: 0;
+
+        transform: none;
+
+        box-sizing: border-box;
+    }
+
+
+    .hero-info h2 {
+        margin: 0 0 8px;
+
+        font-size: 38px;
+        line-height: 1;
+
+        text-shadow: none;
+    }
+
+
+    .hero-info h3 {
+        margin: 0 0 14px;
+
+        font-size: 23px;
+
+        text-shadow: none;
+    }
+
+
+    .info-line {
+        width: 185px;
+        height: 2px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .hero-info p {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.55;
+
+        letter-spacing: 0;
+    }
+
+
+    /* PC용 KEY ITEMS 숨김 */
+
+    .key-items {
+        display: none;
+    }
+
+
+    /* =========================
+       bottom
+    ========================= */
+
+    .detail-bottom {
+        width: 100%;
+        height: auto;
+
+        margin: 20px 0 0;
+        padding: 15px 18px 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+
+        position: relative;
+        top: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .detail-bottom::before {
+        height: 2px;
+        top: 0;
+    }
+
+
+    /* =========================
+       대표 물건
+    ========================= */
+
+    .objects {
+        width: 100%;
+
+        padding: 0;
+
+        border: none;
+    }
+
+
+    .objects::after {
+        display: none;
+    }
+
+
+    .object-title {
+        margin: 0 0 12px;
+
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+
+    /* 모바일 전용 카드 */
+
+    .object-list.swiper {
+        width: calc(100vw - 18px);
+
+        margin-left: 0;
+
+        overflow: hidden;
+
+        padding-bottom: 8px;
+
+        box-sizing: border-box;
+    }
+
+
+    .object-list.swiper .swiper-wrapper {
+        display: flex;
+
+        width: auto;
+
+        gap: 0;
+    }
+
+
+    .object-list.swiper .swiper-slide {
+        width: 145px;
+        min-width: 145px;
+
+        flex-shrink: 0;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    /* 모바일 전용 모달 */
+
+    #mobileonly {
+        display: block !important;
+    }
+
+
+    /* 대표 물건 이미지 */
+
+    .object-photo {
+        width: 132px;
+        height: 112px;
+
+        border-radius: 10px 10px 0 0;
+
+        object-fit: cover;
+    }
+
+
+    .object-info {
+        width: 132px;
+        height: 90px;
+    }
+
+
+    .text-card-bg {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    .object-text {
+        padding: 9px;
+    }
+
+
+    .object-text h4 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+
+    .object-text p {
+        margin-top: 3px;
+
+        font-size: 12px;
+    }
+
+
+    .object-text button {
+        margin-top: 8px;
+
+        font-size: 14px;
+    }
+
+
+    /* 대표 물건 페이지네이션 */
+
+    .object-list.swiper .swiper-pagination {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        margin-top: 8px;
+    }
+
+
+    .object-list.swiper .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+
+        margin: 0 3px;
+    }
+
+
+    /* =========================
+       대표 물건 / 문화 사이 선
+    ========================= */
+
+    .section-line {
+        width: 768px;
+        height: 1px;
+
+        background: #976F42;
+
+        margin: 0;
+    }
+
+
+    /* =========================
+       기타 모바일 요소
+    ========================= */
+
+    #mobile {
+        display: block;
+    }
+
+
+    /* =========================
+       대표 문화
+    ========================= */
+
+    #culture {
+        width: 100%;
+
+        padding: 0;
+
+        border: none;
+
+        left: 0;
+    }
+
+
+    .culture::after {
+        display: none;
+    }
+
+
+    .culture-title {
+        margin: 0 0 12px;
+
+        font-size: 18px;
+        line-height: 1.3;
+    }
+
+
+    /* 모바일 문화 Swiper */
+
+    .culture-list.swiper {
+        width: calc(100vw - 18px);
+
+        margin: 0;
+
+        overflow: hidden;
+
+        padding-bottom: 8px;
+
+        transform: none;
+
+        box-sizing: border-box;
+    }
+
+
+    .culture-list.swiper .swiper-wrapper {
+        display: flex;
+
+        width: auto;
+
+        gap: 0;
+    }
+
+
+    .culture-list.swiper .swiper-slide {
+        width: 145px;
+        min-width: 145px;
+
+        flex-shrink: 0;
+
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .culture-photo {
+        width: 132px;
+        height: 112px;
+
+        border-radius: 10px 10px 0 0;
+
+        object-fit: cover;
+    }
+
+
+    .culture-info {
+        width: 132px;
+        height: 90px;
+    }
+
+
+    .culture-text {
+        padding: 9px;
+    }
+
+
+    .culture-text h4 {
+        font-size: 15px;
+        line-height: 1.3;
+    }
+
+
+    .culture-text p {
+        margin-top: 3px;
+
+        font-size: 12px;
+    }
+
+
+    .culture-text a {
+        margin-top: 8px;
+
+        font-size: 14px;
+    }
+
+
+    .culture-text button {
+        margin-top: 8px;
+
+        font-size: 14px;
+    }
+
+
+    /* 대표 문화 페이지네이션 */
+
+    .culture-list.swiper .swiper-pagination {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        margin-top: 8px;
+    }
+
+
+    .culture-list.swiper .swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+
+        margin: 0 3px;
+    }
+
+
+    /* =========================
+       문화 모달
+    ========================= */
+
+    #cultureModal01,
+    #cultureModal02,
+    #cultureModal03,
+    #cultureModal04 {
+        display: none;
+    }
+
+
+    #cultureModal01.active,
+    #cultureModal02.active,
+    #cultureModal03.active,
+    #cultureModal04.active {
+        display: flex;
+    }
+
+
+    /* =========================
+       뮤직 플레이어
+    ========================= */
+
+    .music-player {
+        width: calc(100vw - 70px);
+        height: 100px;
+
+        margin: 5px auto 0;
+        padding: 0;
+
+        position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        border-radius: 8px;
+
+        background: linear-gradient(180deg,
+                #604832 0%,
+                #493522 55%,
+                #352416 100%);
+
+        box-shadow:
+            5px 7px 7px rgba(0, 0, 0, 0.2);
+
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       왼쪽 턴테이블
+    ========================= */
+
+    .record-player {
+        width: 130px;
+        height: 80px;
+
+        position: relative;
+
+        top: auto;
+        left: -90px;
+
+        margin: 0;
+
+        flex-shrink: 0;
+
+        border-radius: 7px;
+
+        background: #76583e;
+    }
+
+
+    /* LP */
+
+    .record {
+        width: 62px;
+        height: 62px;
+
+        position: absolute;
+
+        top: 9px;
+        left: 15px;
+    }
+
+
+    .record-disc {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+        margin-left: 20px;
+        animation:
+            recordRotate 2s linear infinite;
+
+        animation-play-state: paused;
+    }
+
+
+    .record-disc.is-rotating {
+        animation-play-state: running;
+    }
+
+
+    /* =========================
+       톤암
+    ========================= */
+
+    .tonearm {
+        width: 55px;
+        height: 55px;
+
+        position: absolute;
+
+        top: 2px;
+        right: 0;
+
+        z-index: 3;
+
+        transform-origin: 50% 8%;
+
+        transform: rotate(-8deg);
+
+        transition:
+            transform 0.8s ease;
+    }
+
+
+    .tonearm img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+    }
+
+
+    .record-player.playing .tonearm {
+        transform: rotate(15deg);
+    }
+
+
+    /* =========================
+       곡 제목
+    ========================= */
+
+    .music-player h3 {
+        width: 175px;
+
+        position: absolute;
+
+        top: 15px;
+        left: 50%;
+
+        margin: 0;
+
+        transform:
+            translateX(calc(-50% + 71px));
+
+        color: #b8a080;
+
+        font-family: var(--font-pretendard);
+
+        font-weight: var(--fw-medium);
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+    }
+
+
+    /* 기존 장식선 제거 */
+
+    .lp-line {
+        display: none;
+    }
+
+
+    /* =========================
+       진행바
+    ========================= */
+
+    .progress {
+        width: 175px;
+        height: 2px;
+
+        position: absolute;
+
+        top: 40px;
+        left: 50%;
+
+        transform:
+            translateX(calc(-50% + 71px));
+
+        margin: 0;
+
+        background:
+            rgba(223, 203, 168, 0.3);
+
+        border-radius: 10px;
+    }
+
+
+    .progress span {
+        display: block;
+
+        width: 0%;
+        height: 2px;
+        position: relative;
+
+        background: #dfcba8;
+
+        border-radius: 10px;
+
+        transition:
+            width 0.1s linear;
+    }
+
+
+    /* 진행 위치 */
+
+    .progress span::after {
+        content: "";
+
+        width: 5px;
+        height: 5px;
+
+        position: absolute;
+
+        top: 50%;
+        right: -2.5px;
+
+        transform: translateY(-50%);
+
+        border-radius: 50%;
+
+        background: #dfcba8;
+    }
+
+
+    /* =========================
+       재생 시간
+    ========================= */
+
+    .time {
+        width: 175px;
+
+        position: absolute;
+
+        top: 45px;
+        left: 50%;
+
+        transform:
+            translateX(calc(-50% + 71px));
+
+        margin: 0;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        font-family: var(--font-pretendard);
+
+        font-size: 9px;
+
+        color: #9f8d74;
+    }
+
+
+    /* =========================
+       재생 버튼
+    ========================= */
+
+    .player-buttons {
+        width: 175px;
+
+        position: absolute;
+
+        top: 55px;
+        left: 50%;
+
+        transform:
+            translateX(calc(-50% + 71px));
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    .player-buttons button {
+        width: 18px;
+        height: 18px;
+
+        padding: 0;
+
+        border: none;
+
+        background: transparent;
+
+        cursor: pointer;
+    }
+
+
+    .player-buttons button img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+    }
+
+
+    /* 가운데 재생 버튼 */
+
+    .player-buttons button:nth-child(2) {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* =========================
+       오디오
+    ========================= */
+
+    .music-player .audio {
+        display: none;
+    }
+
+    /* =========================
+   다음 연도
+========================= */
+
+    .next-year {
+        position: absolute;
+
+        width: 42px;
+        height: 42px;
+
+        right: 18px;
+        bottom: -21px;
+
+        margin: 0;
+
+        z-index: 20;
+    }
+
+    .next-year-bg {
+        display: block;
+        width: 35px;
+        height: 35px;
+        margin-top: 30px;
+        border-radius: 10px;
+
+    }
+
+    .next-year span:first-of-type {
+        display: none;
+    }
+
+    .next-year-arrow {
+        width: 22px;
+    }
+
+    .next-year-arrow img {
+        display: block;
+        width: 22px;
+        margin-top: 22px;
+        margin-left: -3px;
+        height: auto;
+
+    }
+
+    /* =========================
+   footer
+========================= */
+
+    .footer {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        z-index: 10;
+    }
+
+    .footer-text {
+        font-size: 10px;
+    }
+
+    /* =========================
+       모달
+    ========================= */
+
+    .modal {
+        z-index: 998;
+
+        padding: 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    .modal-box {
+        width: calc(100% - 30px);
+        height: auto;
+
+        max-height: 85vh;
+
+        padding: 15px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+
+        overflow-y: auto;
+
+        border-radius: 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    .img-box {
+        width: 100%;
+        height: 220px;
+
+        margin: 0;
+
+        flex-shrink: 0;
+
+        border-radius: 12px;
+    }
+
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .text-box {
+        width: 100%;
+        height: auto;
+
+        padding: 10px 5px 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    .text-box .closeBtn {
+        top: 0;
+        right: 0;
+    }
+
+
+    .point-title {
+        width: fit-content;
+
+        font-size: 14px;
+
+        padding: 4px 12px;
+
+        margin-bottom: 10px;
+    }
+
+
+    .text-box .main-title {
+        font-size: 25px;
+
+        padding-left: 0;
+
+        margin-bottom: 8px;
+    }
+
+
+    .point-text {
+        font-size: 17px;
+
+        padding-left: 0;
+
+        margin-bottom: 8px;
+    }
+
+
+    .text-box .main-text {
+        padding-left: 0;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .icon-box {
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 8px;
+
+        margin-top: 15px;
+    }
+
+
+    .item img {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .icon-box .item::after {
+        height: 80px;
+
+        right: -5px;
+    }
+
+
+    .icon-box .item .icon-main-text {
+        font-size: 11px;
+    }
+
+
+    .icon-box .item .icon-sub-text {
+        font-size: 9px;
+    }
+
+
+
+    .modal .icon-box {
+        display: none !important;
+    }
+}

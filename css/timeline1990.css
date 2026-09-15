@@ -59,6 +59,14 @@ body {
     transform: rotate(-5deg);
 }
 
+#mobile-only {
+    display: none !important;
+}
+
+#mobile {
+    display: none;
+}
+
 .hero-image>img:first-child {
     width: 100%;
     height: 100%;
@@ -140,7 +148,7 @@ body {
     position: absolute;
     top: 110%;
     left: 50%;
-    width: 90%;
+    width: 100%;
     height: 0.5px;
     transform: translateX(-50%);
     background: #B8A080;
@@ -150,7 +158,6 @@ body {
 .key-item:nth-child(4)::after {
     display: none;
 }
-
 
 .key-item img {
     width: 70px;
@@ -195,6 +202,7 @@ body {
 .music-player {
     position: relative;
     left: 0;
+
 }
 
 .detail-bottom::before {
@@ -258,15 +266,26 @@ body {
     line-height: 1.3;
 }
 
-
-.object-list {
-    display: flex;
+.pc-card-list .object-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     gap: 15px;
 }
 
-.object-card {
+.pc-card-list .object-list .object-card {
+    flex: 0 0 175px;
     width: 175px;
-    flex-shrink: 0;
+}
+
+.object-text button:hover {
+    color: #612010;
+    font-weight: 700;
+}
+
+.culture-text a:hover {
+    color: #612010;
+    font-weight: 700;
 }
 
 .object-photo {
@@ -323,18 +342,46 @@ body {
     font-weight: var(--fw-medium);
     padding: 0;
     color: var(--color-main);
+
 }
 
-.culture-list {
-    display: flex;
-    gap: 30px;
+#mobile-only {
+    display: none;
+}
+
+#cultureModal01,
+#cultureModal02,
+#cultureModal03,
+#cultureModal04 {
+    display: none;
+}
+
+.culture-text button {
+    display: block;
+    margin-top: 15px;
+    font-family: var(--font-pretendard);
+    font-size: 18px;
+    font-weight: var(--fw-medium);
+    padding: 0;
+    color: var(--color-main);
+
+}
+
+.pc-card-list .culture-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 25px;
     transform: translateX(-20px);
 }
 
-.culture-card {
+.pc-card-list .culture-list .culture-card {
+    flex: 0 0 210px;
     width: 210px;
-    flex-shrink: 0;
 }
+
+
+
 
 .culture-photo {
     width: 210px;
@@ -380,6 +427,8 @@ body {
     font-weight: var(--fw-medium);
 }
 
+
+
 .music-player {
     width: 240px;
     height: 300px;
@@ -397,12 +446,10 @@ body {
 }
 
 .music-player h3 {
-    width: 230px;
     color: #B8A080;
-    margin-left: -15px;
     font-family: var(--font-pretendard);
     font-weight: var(--fw-medium);
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
     text-align: center;
     transform: translateY(-10px);
@@ -415,12 +462,16 @@ body {
     position: relative;
 }
 
+
+/* LP */
 .record {
     width: 140px;
     height: 140px;
+
     position: absolute;
     top: 0;
     left: 35px;
+
     border-radius: 50%;
 }
 
@@ -488,7 +539,7 @@ body {
 }
 
 /* 재생할 때 LP 쪽으로 이동 */
-.record-player.is-playing .tonearm {
+.record-player.playing .tonearm {
     transform: rotate(15deg);
 }
 
@@ -678,7 +729,7 @@ body {
     position: absolute;
     left: 0;
     top: 50%;
-    transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) scaleX(-1);
     display: block;
     object-fit: contain;
 }
@@ -848,4 +899,8 @@ body {
 .icon-box .item .icon-sub-text {
     font-size: 15px;
     color: var(--color-main);
+}
+
+.mobile-card-list {
+    display: none;
 }

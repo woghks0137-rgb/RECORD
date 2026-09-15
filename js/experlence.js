@@ -37,6 +37,13 @@ const videos = [
     "video/ex-tv03.mp4"
 ];
 
+// TV 소리 볼륨
+video.volume = 0.2;
+
+// TV 효과음 볼륨
+tvOnSound.volume = 1;
+tvOffSound.volume = 1;
+
 // 배열은 0부터 시작하므로 첫 번째 영상
 let channel = 0;
 // 처음 값은 false(off)
@@ -65,7 +72,7 @@ tvOnBtn.addEventListener('click', function () {
         //영상 정지
         video.pause();
         //tvoff sound 재생
-        tvOnSound.currentTime = 0;
+        tvOffSound.currentTime = 0;
         tvOffSound.play();
         //off 화면 다시 보여주기
         off.classList.remove('hide');
@@ -103,18 +110,28 @@ changeBtn.addEventListener('click', function () {
 // 처음 값은 false(off)
 let cassetteOn = false;
 
+//라디오 볼륨설정
+cassetteRadioSound.volume = 0.1;
+cassettePlaySound.volume = 0.3;
+cassetteStopSound.volume = 0.3;
+
 // PLAY / STOP 버튼
 cassettePlayBtn.addEventListener('click', function () {
     // 카세트가 꺼져있다면 -> !가 붙기때문에 true로 바뀜 
     if (!cassetteOn) {
-        // PLAY 소리 재생
+        // PLAY 소리 재생 
         cassettePlaySound.currentTime = 0;
         cassettePlaySound.play();
-        // 라디오 음악 재생
-        cassetteRadioSound.play();
-        // 카세트 켜기
+
+        // 2초 후 라디오 음악 재생
+        setTimeout(function () {
+            cassetteRadioSound.play();
+        }, 2000);
+
+        // 카세트 켜기 
         cassetteOn = true;
-        // 버튼 글자 변경
+
+        // 버튼 글자 변경 
         cassettePlayBtn.textContent = 'STOP';
         // 카세트가 켜져있다면
     } else {
@@ -158,7 +175,6 @@ let photo = 0;
 
 // 셔터 누르기   
 cameraBtn.addEventListener('click', function () {
-    console.log('PLAY 버튼 클릭됨');
     // 사진이 나와있다면 아무것도 하지 않음  
     if (cameraPhoto.classList.contains('on')) {
         return;
