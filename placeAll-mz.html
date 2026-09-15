@@ -5,169 +5,531 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>플레이스 MZ장소 한번에보기</title>
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common-Back.css">
     <link rel="stylesheet" href="css/placeAll-mz.css">
+    <script src="./js/header.js" defer></script>
+    <script src="./js/placeAll-mz.js" defer></script>
 
 </head>
 
 <body>
     <div id="wrap">
+
         <header class="header">
             <div class="header-inner">
+
                 <!-- header left -->
-                <div class="header-left"> <!-- pc에선 display : none -->
+                <div class="header-left">
 
-                    <button class="m-sound1"><img src="img/volume-up (1).png" alt="소리켜기"></button>
-                    <!-- 모바일 메인페이지에서 사용 -->
-                    <button class="m-sound2"><img src="img/volume-mute (1).png" alt="소리끄기"></button>
-                    <!-- 모바일 메인페이지에서 사용 -->
+                    <button class="m-sound1">
+                        <img src="img/volume-up (1).png" alt="소리켜기">
+                    </button>
 
-                    <button class="m-back"><img src="img/Vector.png" alt="#"></button> <!-- 모바일 메인제외 페이지에서 사용 -->
+                    <button class="m-sound2">
+                        <img src="img/volume-mute (1).png" alt="소리끄기">
+                    </button>
+
+                    <button class="m-back"><a href="timeline-skip.html">
+                            <img src="img/Vector.png" alt="#">
+                        </a>
+                    </button>
+
                 </div>
 
-                <h1 class="logo"><a href="#">RE:CORD</a></h1>
+                <h1 class="logo">
+                    <a href="./index.html">RE:CORD</a>
+                </h1>
+
                 <nav class="header-gnb">
                     <ul>
-                        <li><a href="#">TIMELINE</a></li>
-                        <li><a href="#">MUSIC</a></li>
-                        <li><a href="#">SHOP</a></li>
-                        <li><a href="#" class="active">PLACE</a></li>
-                        <li><a href="#">EXPERIENCE</a></li>
+                        <li><a href="./timeline.html">TIMELINE</a></li>
+                        <li><a href="./music.html">MUSIC</a></li>
+                        <li><a href="./shop.html">SHOP</a></li>
+                        <li><a href="./place.html" class="active">PLACE</a></li>
+                        <li><a href="./experlence.html">EXPERIENCE</a></li>
                     </ul>
                 </nav>
+
                 <!-- header right -->
                 <div class="header-right">
+
                     <button class="sound">
                         <img src="img/volume-up (1).png" alt="<- 소리 on" class="sound-on">
                         <img src="img/volume-mute (1).png" alt="<- 소리 off" class="sound-off">
-                    </button> <!-- PC 메인 페이지에서 사용 -->
+                    </button>
 
-                    <button class="header-btn skip">SKIP <img src="img/left-arrows.png" alt="<- 화살표"></button>
-                    <!-- PC 타임라인 시작페이지 사용 -->
+                    <button class="header-btn skip">
+                        SKIP
+                        <img src="img/left-arrows.png" alt="<- 화살표">
+                    </button>
 
-                    <button class="header-btn back"><img src="img/arrow.png" alt="-> 화살표">Back</button>
-                    <!-- PC 문화 자세히보기,플레이스 공간한번에보기,자세히보기 에서 사용-->
+                    <button class="header-btn back">
+                        <a href="./place.html">
+                            <img src="img/arrow.png" alt="-> 화살표">
+                            Back
+                        </a>
+                    </button>
 
-                    <button class="header-btn m-menu"><img src="img/menu.png" alt="메뉴"></button> <!-- 모바일 메뉴 -->
+                    <button class="header-btn m-menu">
+                        <img src="img/menu.png" alt="메뉴">
+                    </button>
+
                 </div>
             </div>
         </header>
 
+
         <section class="placeAll-mz">
+
             <div class="placeAll-inner">
+
                 <div class="placeAll-title">
-                    <h2 class="main-title">MZ 빈티지 공간 한 번에 보기</h2>
+
+                    <h2 class="main-title">
+                        MZ 빈티지 공간 한 번에 보기
+                    </h2>
+
+                    <!-- 추가 -->
+                    <h2 class="main-title-mobile">
+                        PLACE
+                    </h2>
+
                     <p class="main-text">
                         빈티지 감성을 새롭게 담아낸 공간들,<br>
                         과거와 현재가 어우러진 특별한 순간을 만나보세요.
                     </p>
+
+                    <!-- 추가 -->
+                    <p class="main-text-mobile">
+                        빈티지 감성을 새롭게 담아낸 공간들,
+                        <br>
+                        과거와 현재가 어우러진 특별한 순간들을 만나보세요
+                    </p>
+
+                    <!-- 추가 -->
+                    <div class="mobile-img">
+                        <img src="./img/모바일/플레이스 언더바 모바일.png" alt="">
+                    </div>
+
                 </div>
+
+
                 <ul class="place-list">
+
+                    <!-- 1번 카드 -->
                     <li class="place-card">
+
                         <div class="place-img">
                             <img src="img/placeAll MZ/placeMZ01.webp" alt="장소 1">
                         </div>
+
                         <div class="place-text">
-                            <h3 class="card-main">Vinyl Seongsu</h3>
+
+                            <h3 class="card-main enfont">
+                                Vinyl Seongsu
+                            </h3>
+
+                            <!-- 추가 -->
+                            <div class="card-line">
+                                <span></span>
+                            </div>
+
                             <div class="place-info">
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/sub-clock.png" alt="시간">
-                                    <span class="card-place">운영시간 : 10:00 ~ 23:00</span>
+                                    <span class="card-place">
+                                        운영시간 : 10:00 ~ 23:00
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/telephone.png" alt="전화">
-                                    <span class="card-place">연락처 : 0507-1339-5194</span>
+                                    <span class="card-place">
+                                        연락처 : 0507-1339-5194
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/location.png" alt="장소">
-                                    <span class="card-place">주소 : 성동구 성수동1가 656-1112</span>
+                                    <span class="card-place">
+                                        주소 : 성동구 성수동1가 656-1112
+                                    </span>
                                 </div>
+
                             </div>
-                            <a href="#" class="button">자세히보기 -></a>
+
+                            <a href="./place-mz-01.html" class="button" data-modal="modal01">
+                                자세히보기 ->
+                            </a>
+
                         </div>
+
                     </li>
+
+
+                    <!-- 2번 카드 -->
                     <li class="place-card">
+
                         <div class="place-img">
-                            <img src="img/placeAll MZ/placeMZ02.webp" alt="장소 2">
+                            <img src="./img/place MZ 02/울트라 빈티지 02.jfif" alt="place-mz02">
                         </div>
 
                         <div class="place-text">
-                            <h3 class="card-main">Ultravintage</h3>
+
+                            <h3 class="card-main enfont">
+                                ULTRAVINTAGE
+                            </h3>
+
+                            <!-- 추가 -->
+                            <div class="card-line">
+                                <span></span>
+                            </div>
+
                             <div class="place-info">
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/sub-clock.png" alt="시간">
-                                    <span class="card-place">운영시간 : 13:00 ~ 21:00</span>
+                                    <span class="card-place">
+                                        운영시간 : 13:00 ~ 21:00
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/telephone.png" alt="전화">
-                                    <span class="card-place">연락처 : 0507-1461-2523</span>
+                                    <span class="card-place">
+                                        연락처 : 0507-1461-2523
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/location.png" alt="장소">
-                                    <span class="card-place">주소 : 서교동 346-2</span>
+                                    <span class="card-place">
+                                        주소 : 서교동 346-2
+                                    </span>
                                 </div>
+
                             </div>
-                            <a href="#" class="button">자세히보기 -></a>
+
+                            <a href="./place-mz-02.html" class="button" data-modal="modal02">
+                                자세히보기 ->
+                            </a>
+
                         </div>
+
                     </li>
+
+
+                    <!-- 3번 카드 -->
                     <li class="place-card">
+
                         <div class="place-img">
                             <img src="img/플레이스 Colly Bily/colly.png" alt="장소 3">
                         </div>
 
                         <div class="place-text">
-                            <h3 class="card-main">Colly Bily</h3>
+
+                            <h3 class="card-main enfont">
+                                Colly Bily
+                            </h3>
+
+                            <!-- 추가 -->
+                            <div class="card-line">
+                                <span></span>
+                            </div>
+
                             <div class="place-info">
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/sub-clock.png" alt="시간">
-                                    <span class="card-place">운영시간 : 13:00 ~ 19:00</span>
+                                    <span class="card-place">
+                                        운영시간 : 13:00 ~ 19:00
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/telephone.png" alt="전화">
-                                    <span class="card-place">연락처 : 0507-1421-1672</span>
+                                    <span class="card-place">
+                                        연락처 : 0507-1421-1672
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/location.png" alt="장소">
-                                    <span class="card-place">주소 : 서울 종로구 통인동 69</span>
+                                    <span class="card-place">
+                                        주소 : 서울 종로구 통인동 69
+                                    </span>
                                 </div>
+
                             </div>
-                            <a href="#" class="button">자세히보기 -></a>
+
+                            <a href="./place-mz-03.html" class="button" data-modal="modal03">
+                                자세히보기 ->
+                            </a>
+
                         </div>
 
                     </li>
+
+
+                    <!-- 4번 카드 -->
                     <li class="place-card">
+
                         <div class="place-img">
                             <img src="img/플레이스 filmlong/main-img01.jpg" alt="장소 4">
                         </div>
 
                         <div class="place-text">
-                            <h3 class="card-main">Filmlong</h3>
+
+                            <h3 class="card-main enfont">
+                                Filmlong
+                            </h3>
+
+                            <!-- 추가 -->
+                            <div class="card-line">
+                                <span></span>
+                            </div>
+
                             <div class="place-info">
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/sub-clock.png" alt="시간">
-                                    <span class="card-place">운영시간 : 13:00 ~ 18:00</span>
+                                    <span class="card-place">
+                                        운영시간 : 13:00 ~ 18:00
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/instagram.png" alt="인스타">
-                                    <span class="card-place">INSTA : @filmlog_official</span>
+                                    <span class="card-place">
+                                        INSTA : @filmlog_official
+                                    </span>
                                 </div>
+
                                 <div class="info-row">
                                     <img src="img/placeAll MZ/location.png" alt="장소">
-                                    <span class="card-place">주소 : 서울 중구 쌈림동 22-16</span>
+                                    <span class="card-place">
+                                        주소 : 서울 중구 쌈림동 22-16
+                                    </span>
                                 </div>
+
                             </div>
-                            <a href="#" class="button">자세히보기 -></a>
+
+                            <a href="./place-mz-04.html" class="button" data-modal="modal04">
+                                자세히보기 ->
+                            </a>
+
                         </div>
+
                     </li>
 
                 </ul>
-            </div>
-        </section>
 
+            </div>
+
+        </section>
+        <div class="place-modal" id="modal01">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span>장소 자세히보기</span>
+                    <button class="modal-close">×</button>
+                </div>
+
+                <div class="modal-img">
+                    <img src="img/placeAll MZ/placeMZ01.webp" alt="장소 1">
+                </div>
+
+                <div class="modal-info">
+
+                    <h4>VinyL Seongsu</h4>
+
+                    <p class="modal-description">
+                        빈티지 LP와 CD를 만날 수 있는공간입니다
+                        음악을 듣고 구매할 수 있으며, 아날로그 감성을 느낄 수 있으며
+                        빈티지 가구와 클래식한 소품을 자연스럽게 만나보세요
+                    </p>
+
+                    <div class="modal-detail">
+
+                        <div>
+                            <img src="img/모바일/시간.png" alt="">
+                            <span>운영시간</span>
+                            <p>11:00 ~ 23:00</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/연락처.png" alt="">
+                            <span>연락처</span>
+                            <p>0507-1339-5194</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/위치.png" alt="">
+                            <span>주소</span>
+                            <p>성동구 성수동1가
+                                <br>656-1112
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="place-modal" id="modal02">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span>장소 자세히보기</span>
+                    <button class="modal-close">×</button>
+                </div>
+
+                <div class="modal-img">
+                    <img src="img/placeAll MZ/placeMZ02.webp" alt="장소 2">
+                </div>
+
+                <div class="modal-info">
+
+                    <h4>ULTRAVINTAGE </h4>
+
+                    <p class="modal-description">
+                        <span>ULTRAVINTAGE</span>은 빈티지 아이템을 소개하고 판매하는 공간입니다. 오래된 의류와
+                        소품을 통해 각 시대의 분위기와 개성을 느낄 수 있습니다
+                    </p>
+
+                    <div class="modal-detail">
+
+                        <div>
+                            <img src="img/모바일/시간.png" alt="">
+                            <span>운영시간</span>
+                            <p>13:00 - 21:00</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/연락처.png" alt="">
+                            <span>연락처</span>
+                            <p>0507-1461-2523</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/위치.png" alt="">
+                            <span>주소</span>
+                            <p>서교동 346-2</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="place-modal" id="modal03">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span>장소 자세히보기</span>
+                    <button class="modal-close">×</button>
+                </div>
+
+                <div class="modal-img">
+                    <img src="img/플레이스 Colly Bily/colly.png" alt="장소 3">
+                </div>
+
+                <div class="modal-info">
+
+                    <h4>Colly Bily</h4>
+
+                    <p class="modal-description">
+                        오래된 다양한 빈티지 물건들을 한곳에서 만나볼 수 있는
+                        공간으로 세계각지 소품을 큐레이션해 판매를 하며 MZ세대가
+                        부담 없이 문화를 경험할 수 있는 명소입니다.
+                    </p>
+
+                    <div class="modal-detail">
+
+                        <div>
+                            <img src="img/모바일/시간.png" alt="">
+                            <span>운영시간</span>
+                            <p>11:00 - 19:00</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/연락처.png" alt="">
+                            <span>연락처</span>
+                            <p>0507-1421-1672</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/위치.png" alt="">
+                            <span>주소</span>
+                            <p>서울 종로구 통인동
+                                <br> 69
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="place-modal" id="modal04">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <span>장소 자세히보기</span>
+                    <button class="modal-close">×</button>
+                </div>
+
+                <div class="modal-img">
+                    <img src="img/플레이스 filmlong/main-img01.jpg" alt="장소 4">
+                </div>
+
+                <div class="modal-info">
+
+                    <h4> Filmlog</h4>
+
+                    <p class="modal-description">
+                        필름카메라와 아날로그 사진 문화를 경험할 수 있도록 만들어진
+                        공간입니다. 디지털 사진에서는 느낄 수 없는 필름 특유의 감성을
+                        전하고 많은 소품들이 전시되어있습니다.
+                    </p>
+
+                    <div class="modal-detail">
+
+                        <div>
+                            <img src="img/모바일/시간.png" alt="">
+                            <span>운영시간</span>
+                            <p>11:00 - 18:00</p>
+                        </div>
+
+                        <div>
+                            <img src="./img/instagram.png" alt="연락처">
+                            <span class="enfont02">INSTA</span>
+                            <p class="enfont03">@filmlog_official</p>
+                        </div>
+
+                        <div>
+                            <img src="img/모바일/위치.png" alt="">
+                            <span>주소</span>
+                            <p>서울 중구 쌍림동 <br>22-16
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
 
         <footer class="footer">
-            <p class="footer-text">ⓒ2026 RE:CORD.ALL rights reserved.</p>
+            <p class="footer-text">
+                ⓒ2026 RE:CORD.ALL rights reserved.
+            </p>
         </footer>
+
     </div>
 </body>
 
