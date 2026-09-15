@@ -239,10 +239,10 @@
     transition: opacity 0.3s ease;
 }
 
-.card-photo:hover img {
+.timeline-card:hover .card-photo img {
     opacity: 0;
 }
 
-.card-photo:hover video {
+.timeline-card:hover .card-photo video {
     opacity: 1;
 }

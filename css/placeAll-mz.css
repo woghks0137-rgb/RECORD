@@ -160,7 +160,7 @@ body {
     display: block;
     width: 100%;
     background: #26170B;
-    color: rgba(235, 234, 228, 0.8);
+    color: var(--color-logo);
     border-radius: 10px;
     padding: 12px 0;
     margin-top: 15px;
@@ -178,6 +178,20 @@ body {
 .mobile-img {
     display: none;
 }
+
+.card-line {
+    display: none;
+}
+
+.place-modal {
+    display: none;
+}
+
+.modal-info h3.enfont02 {
+    display: var(--font-playfair);
+}
+
+
 
 /* 
     위에서 만든 cardUp 애니메이션 정의
@@ -205,7 +219,6 @@ body {
     body {
         width: 100%;
         min-height: 100vh;
-        height: 1005;
         background: url(../img/모바일/추억의\ 플레이스\ 모바일\ 배경.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -245,7 +258,6 @@ body {
         height: auto;
         padding-top: 0;
         margin: 0 auto;
-        box-sizing: border-box;
     }
 
 
@@ -260,6 +272,7 @@ body {
         border-bottom: none;
         margin-bottom: 30px;
         text-align: center;
+
     }
 
     .mobile-img {
@@ -291,6 +304,8 @@ body {
         line-height: 1.7;
         margin-bottom: 0;
         color: var(--color-main);
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-semibold);
     }
 
 
@@ -309,52 +324,40 @@ body {
     }
 
 
-    /* =========================
-       CARD
-    ========================= */
-
+    /* 카드 전체 */
     .place-card {
         width: 100%;
-
-        filter: drop-shadow(5px 7px 8px rgba(50, 35, 20, 0.4));
     }
 
-
-    /* =========================
-       CARD IMAGE
-    ========================= */
-
+    /* 위쪽 사진 */
     .place-img {
+        display: flex;
+        justify-content: center;
         width: 100%;
-        border-radius: 8px 8px 0 0;
     }
 
     .place-img img {
-        width: 100%;
+        width: 96%;
         height: 130px;
-        aspect-ratio: 1 / 0.78;
         object-fit: cover;
         display: block;
         border-radius: 8px 8px 0 0;
     }
 
-
-    /* =========================
-       CARD TEXT
-    ========================= */
-
+    /* 아래쪽 종이 배경 */
     .place-text {
         width: 100%;
         height: 140px;
-
-
         margin-top: -5px;
-
-        padding: 15px 12px 12px;
-
-        box-sizing: border-box;
+        padding: 25px 12px 12px;
         text-align: center;
+        background-image: url("../img/모바일/플레이스\ 모바일\ 텍스트\ 배경.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
     }
+
 
 
     /* =========================
@@ -362,9 +365,13 @@ body {
     ========================= */
 
     .place-text .card-main {
-        font-size: 15px;
-        padding-bottom: 8px;
-        margin-bottom: 0;
+        font-size: 17px;
+        border: none;
+        margin-bottom: -7px;
+    }
+
+    .place-text .enfont {
+        font-family: var(--font-playfair);
     }
 
 
@@ -377,18 +384,44 @@ body {
         display: none;
     }
 
+    .card-line {
+        width: 150px;
+        margin: 10px auto 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-line::before,
+    .card-line::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #403729;
+    }
+
+    .card-line span {
+        width: 5px;
+        height: 5px;
+        margin: 0 5px;
+        border-radius: 50%;
+        background: #403729;
+        flex-shrink: 0;
+    }
 
     /* =========================
        자세히 보기 버튼
     ========================= */
 
     .place-text .button {
-        width: 100%;
-        font-size: 11px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: 35px;
+        font-size: 14px;
         padding: 9px 0;
-        margin-top: 12px;
-
+        margin: auto;
         border-radius: 8px;
     }
 
@@ -406,4 +439,167 @@ body {
     .footer-text {
         font-size: 9px;
     }
+
+    /* =========================
+   장소 자세히보기 모달
+========================= */
+
+    .place-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 9999;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .place-modal.active {
+        display: flex;
+    }
+
+    .modal-content {
+        width: calc(100% - 48px);
+        height: 450px;
+        max-width: 360px;
+        background: #CCA87C;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .modal-header {
+        position: relative;
+        height: 25px;
+        padding: 16px 10px 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        color: var(--color-main);
+        margin-bottom: 10px;
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-medium);
+    }
+
+    .modal-header::after {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        transform: translateX(-50%);
+        content: '';
+        width: 95%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.438);
+
+    }
+
+    .modal-close {
+        width: 35px;
+        height: 35px;
+        border: none;
+        background: none;
+        font-size: 30px;
+        line-height: 1;
+        cursor: pointer;
+        color: var(--color-main);
+        margin-bottom: 8px;
+    }
+
+    .modal-img {
+        width: calc(100% - 16px);
+        height: 205px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .modal-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .modal-info {
+        padding: 8px 12px 12px;
+    }
+
+    .modal-info h3 {
+        font-family: var(--font-maru);
+        font-size: 20px;
+        margin-bottom: 4px;
+        font-weight: var(--fw-bold);
+    }
+
+    .modal-info h4 {
+        font-family: var(--font-playfair);
+        font-size: 20px;
+        margin-bottom: 4px;
+        font-weight: var(--fw-bold);
+    }
+
+    .modal-description {
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-ragula);
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+    .modal-detail {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: center;
+        border-top: 1px solid rgba(0, 0, 0, 0.438);
+        padding-top: 12px;
+    }
+
+    .modal-detail>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-detail img {
+        width: 22px;
+        height: 22px;
+        object-fit: contain;
+        margin-bottom: 6px;
+    }
+
+    .modal-detail span {
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-medium);
+        color: black;
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+
+    .modal-detail p {
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-medium);
+        color: var(--color-main);
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .modal-description span {
+        font-family: var(--font-playfair);
+    }
+
+    .modal-detail .enfont02 {
+        font-family: var(--font-playfair);
+    }
+
+    .modal-detail .enfont03 {
+        font-family: var(--font-playfair);
+    }
+
+
 }

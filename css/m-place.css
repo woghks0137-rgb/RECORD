@@ -24,7 +24,7 @@
     /* title */
 
     .place-text {
-        padding-top: 105px;
+        padding-top: 90px;
     }
 
     .place-text .main-title {
@@ -60,7 +60,7 @@
     }
 
     .place-card {
-        height: 310px;
+        height: 280px;
         flex: none;
     }
 
