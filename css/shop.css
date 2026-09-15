@@ -294,3 +294,209 @@
     font-size: 18px;
     line-height: 1.5;
 }
+
+/* -------------------------------모바일------------------------------------------ */
+
+@media screen and (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    #wrap {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .shop-inner {
+        padding: 0 20px;
+    }
+
+    /* ---------------------------------메인 배너------------------------------------------ */
+
+    .shop-banner {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%),
+            url(../img/shop/shop-bg.png) no-repeat center/cover;
+    }
+
+    .shop-banner {
+        height: auto;
+        min-height: 0px;
+        padding: 60px 0;
+        margin-bottom: 30px;
+    }
+
+    .banner-text {
+        position: static;
+        /* 모바일에서 레이아웃 이탈 방지 */
+        margin-bottom: 0;
+    }
+
+    .main-title {
+        font-size: 32px;
+        color: #fff;
+    }
+
+    .sub-title {
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .sub-text {
+        font-size: 12px;
+        color: #fff;
+        line-height: 1.5;
+    }
+
+    .shop-title {
+        padding: 15px;
+    }
+
+    .shop-title .items-text {
+        font-size: 16px;
+    }
+
+    .shop-title .product-count {
+        font-size: 16px;
+    }
+
+    /* ----------------------------상품 리스트---------------------------- */
+
+
+    .item-text {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    .item-text .year {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .item-text .item-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .item-text .main-text {
+        font-size: 16px;
+    }
+
+    .hashtag-list {
+        display: none;
+    }
+
+    /* -------------------상품 리스트 카드-------------------- */
+    .product-card {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    /* 상품 영역 좌우 여백 */
+    .product-inner {
+        padding: 0 20px;
+    }
+
+    /* 모바일 가로 스크롤 */
+    .product-list {
+        gap: 15px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+    }
+
+    .product-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* 카드 */
+    .item-list {
+        flex: 0 0 160px;
+        height: auto;
+        padding: 8px 10px;
+    }
+
+    /* 카드 번호 */
+    .number {
+        margin-bottom: 7px;
+    }
+
+    .number img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .number-text {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .number img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 3px;
+    }
+
+
+    /* 카드 텍스트 정보 */
+    .info-text {
+        padding-top: 2px;
+    }
+
+    .info-text .info-year {
+        font-size: 15px;
+    }
+
+    .info-text .product-title {
+        font-size: 17px;
+        margin: 3px 0 7px 0;
+    }
+
+    .info-text a {
+        font-size: 14px;
+    }
+
+    /* --------------------shop info----------------------------- */
+
+    .shop-info {
+        margin-bottom: 20px;
+    }
+
+    .shop-info .shop-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .shop-link {
+        width: 100%;
+        height: 100px;
+        justify-content: flex-start;
+        padding: 0 20px;
+    }
+
+    .shop-link-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .shop-link-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .shop-link-text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .shop-link-text p {
+        font-size: 12px;
+    }
+
+}

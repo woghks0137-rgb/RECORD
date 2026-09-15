@@ -81,6 +81,10 @@ body {
     margin-bottom: 30px;
 }
 
+.place-content h3>span {
+    font-family: var(--font-playfair);
+}
+
 /* ===================플레이스 카드========================= */
 
 .place-list {

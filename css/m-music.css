@@ -1,0 +1,270 @@
+@charset "utf-8";
+@media screen and (max-width: 767px) {
+    .music-inner {
+        width: calc(100% - 40px);
+        padding-bottom: 100px;
+    }
+
+    .music-inner.player-active {
+        padding-bottom: 180px;
+    }
+
+    .music-top {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .music-top .main-title,
+    .music-top .sub-title,
+    .music-top .main-text {
+        margin-bottom: 15px;
+    }
+
+    .music-top .main-title {
+        width: 100%;
+        font-size: 30px;
+        /* size figma = 24 -> 30px 변경 */
+        font-family: var(--font-playfair);
+        font-weight: var(--fw-medium);
+        text-align: center;
+    }
+
+    .music-top .sub-title {
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+        font-size: 15px;
+        /*  size figma 18 -> 15px 변경 */
+        font-weight: var(--fw-medium);
+        font-family: var(--font-pretendard);
+    }
+
+    .music-top .main-text {
+        font-size: 13px;
+        line-height: 1.6;
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-medium);
+        font-size: 14px;
+        /* size figma 16 -> 14px 변경 */
+    }
+
+    /*     .right-img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-img img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+    } */
+    .right-img {
+        display: none;
+    }
+
+    /* ----------------------------- 년도별 버튼 ------------------------------------------ */
+
+    .year-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        margin-bottom: 25px;
+
+    }
+
+    .year-btn {
+        flex: 1;
+        padding: 8px 0;
+        margin: 0;
+        font-size: 13px;
+        white-space: nowrap;
+        font-family: var(--font-pretendard);
+        font-weight: var(--fw-regular);
+        font-size: 15px;
+    }
+
+    .music-list {
+        width: 100%;
+    }
+
+    .music-item {
+        width: 100%;
+        height: 57px;
+        min-height: 70px;
+        margin-bottom: 12px;
+        border-radius: 15px;
+    }
+
+    .music-item-left {
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .music-item-left img {
+        width: 65px;
+        height: 65px;
+        padding: 5px;
+        margin-left: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .music-info {
+        min-width: 0;
+    }
+
+    .music-info .main-text {
+        font-size: 14px;
+        margin: 0;
+        white-space: nowrap;
+        font-weight: var(--fw-regular);
+        font-family: var(--font-pretendard);
+        font-size: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .music-info .sub-text {
+        font-size: 13px;
+        margin-top: 5px;
+        font-weight: var(--fw-regular);
+        font-family: var(--font-pretendard);
+
+    }
+
+    .music-item-right {
+        gap: 10px;
+    }
+
+    .music-item-right .sub-text {
+        display: block;
+        font-size: 13px;
+        font-weight: var(--fw-regular);
+        font-family: var(--font-pretendard);
+    }
+
+    .music-item-right .play-button {
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .music-item-right .play-button img {
+        width: 17px;
+        height: 17px;
+        display: block;
+    }
+
+    .music-player {
+        width: calc(100% - 20px);
+        padding: 10px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .music-player .player-info {
+        width: 120px;
+        flex-shrink: 0;
+    }
+
+    .music-player .player-info .music-item-left img {
+        width: 50px;
+        height: 50px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .music-player .music-info .main-text {
+        font-size: 12px;
+        max-width: 50px;
+    }
+
+    .music-player .music-info .sub-text {
+        font-size: 10px;
+    }
+
+    .progress-area {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .player-center {
+        width: 100%;
+    }
+
+    .progress-bar-wrap {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .progress-bar-wrap span {
+        font-size: 9px;
+        white-space: nowrap;
+    }
+
+    #progressBar {
+        width: 100%;
+        height: 3px;
+    }
+
+    #progressBar::-webkit-slider-thumb {
+        width: 11px;
+        height: 11px;
+    }
+
+    .player-controls {
+        gap: 18px;
+        margin-top: 8px;
+
+    }
+
+    .player-controls button img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #playBtn img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .music-player .music-item-right {
+        gap: 0;
+        flex-shrink: 0;
+    }
+
+    .music-player .music-item-right .sub-text {
+        display: none;
+    }
+
+    .music-player .music-item-right .closeBtn {
+        width: 32px;
+        height: 32px;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .music-player .music-item-right .closeBtn img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+#youtubePlayer {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+}

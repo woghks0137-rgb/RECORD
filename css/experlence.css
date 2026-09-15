@@ -18,6 +18,7 @@ html {
 
 .header {
     position: fixed;
+    z-index: 100;
 }
 
 .experlence-banner,
@@ -44,12 +45,41 @@ html {
     line-height: 1.5;
 }
 
-/* ---------------------------배너----------------------------------- */
-.experlence-banner {
-    background: url(../img/EXPERLENCE/intro.webp) no-repeat center/cover;
+.tv-btn,
+.change-btn,
+.cassette-play-btn,
+.cassette-fast-btn,
+.camera-btn,
+.next-photo-btn {
+    font-family: var(--font-maru);
+    font-weight: var(--fw-semibold);
+    background: url(../img/EXPERLENCE/ex-btn.png)no-repeat center/cover;
+    width: 250px;
+    height: 77px;
+    font-size: 26px;
 }
 
+/* ---------------------------배너----------------------------------- */
+
+.experlence-banner {
+    position: relative;
+}
+
+.banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+
 .experlence-inner {
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 1720px;
     height: 100vh;
@@ -88,20 +118,6 @@ html {
     pointer-events: none;
 }
 
-.tv-btn,
-.change-btn,
-.play-btn,
-.stop-btn,
-.camera-btn,
-.next-photo-btn {
-    font-family: var(--font-maru);
-    font-weight: var(--fw-semibold);
-    background: url(../img/EXPERLENCE/ex-btn.png)no-repeat center/cover;
-    width: 250px;
-    height: 77px;
-    font-size: 26px;
-}
-
 .tv-btns {
     display: flex;
     gap: 70px;
@@ -137,7 +153,15 @@ html {
     inset: 0;
     background: #1A1A1A;
     z-index: 2;
+    opacity: 1;
 }
+
+.screen .off.hide {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+
 
 /* --------------------------카세트 플레이어 체험관----------------------------------- */
 .cassette-experlence {
@@ -158,7 +182,6 @@ html {
 
 
 /* ------------------------- 필름 카메라 체험관----------------------------------- */
-
 .camera-experlence {
     position: relative;
     background: url(../img/EXPERLENCE/sec03.png)no-repeat center/cover;
@@ -177,16 +200,222 @@ html {
 .camera-photo {
     position: absolute;
     top: 17%;
-    right: 23%;
+    right: 20%;
     width: 734px;
     height: 343px;
     border-radius: 5px;
     /* 버튼 클릭전까진 사진은 안보임 */
     opacity: 0;
-    transition: opacity 3s ease;
+    transition: opacity 2s ease;
 }
 
 /* on 클래스가 붙으면 사진이 천천히 나옴  */
 .camera-photo.on {
     opacity: 1;
+}
+
+
+/* ----------------카메라 flash 효과---------------- */
+
+/* 화면 전체 flash 효과 */
+.camera-flash {
+    /* 부모 영역 전체를 채움 flash의 부모 -> section */
+    position: absolute;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    z-index: 2;
+    /* 마우스 클릭 안되게 */
+    pointer-events: none;
+}
+
+
+/* on 클래스가 붙으면 flash애니메이션 실행 */
+.camera-flash.on {
+    animation: flash 0.2s ease;
+}
+
+/* flash opacity가 0 -> 1 -> 0 */
+@keyframes flash {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 사진에 change 속성이 붙으면 페이드효과 */
+.camera-photo.change {
+    animation: photoFade 2s ease;
+}
+
+@keyframes photoFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ------------------------모바일 css------------------------------- */
+@media screen and (max-width: 768px) {
+
+    .experlence-banner,
+    .tv-experlence,
+    .cassette-experlence,
+    .camera-experlence {
+        overflow-x: hidden;
+    }
+
+    .experlence-inner {
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    .tv-btn,
+    .change-btn,
+    .cassette-play-btn,
+    .cassette-fast-btn,
+    .camera-btn,
+    .next-photo-btn {
+        width: 125px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    /* ------------------------배너------------------------------- */
+
+    .banner-text {
+        position: absolute;
+        top: 30%;
+    }
+
+    .main-title {
+        margin-bottom: 30px;
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .sub-title {
+        font-size: 20px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .banner-text .sub-title:nth-of-type(2) {
+        font-size: 18px;
+    }
+
+    /* ------------------------tv------------------------------- */
+
+
+    .tv-experlence {
+        background: url(../img/EXPERLENCE/m-sec01.png) no-repeat center/cover;
+    }
+
+    .tv-experlence .experlence-inner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 120px;
+    }
+
+    .tv-text {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .tv-btns {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .tv {
+        position: relative;
+        left: 0;
+        bottom: auto;
+        width: 370px;
+        margin-top: 50px;
+    }
+
+    .tv-experlence .frame {
+        position: relative;
+        top: 0;
+        right: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    /* ------------------------카세트------------------------------- */
+    .cassette-experlence {
+        background: url(../img/EXPERLENCE/m-sec02.png)no-repeat center/cover;
+    }
+
+    .cassette-experlence .experlence-inner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 120px;
+    }
+
+    .cassette-text {
+        margin-left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .cassette-btn {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* ------------------------카메라------------------------------- */
+
+    .camera-experlence {
+        background: url(../img/EXPERLENCE/m-sec03.png)no-repeat center/cover;
+    }
+
+
+    .camera-experlence .experlence-inner {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 90px;
+    }
+
+    .camera-text {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .camera-text .sub-title {
+        margin-bottom: 30px;
+    }
+
+    .camera-btns {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .camera-photo {
+        top: 51%;
+        right: 21%;
+        width: 57%;
+        height: auto;
+        object-fit: contain;
+    }
 }

@@ -315,12 +315,14 @@ body {
     font-weight: var(--fw-regular);
 }
 
-.object-text a {
+.object-text button {
     display: block;
     margin-top: 15px;
     font-family: var(--font-pretendard);
     font-size: 18px;
     font-weight: var(--fw-medium);
+    padding: 0;
+    color: var(--color-main);
 }
 
 .culture-list {
@@ -425,38 +427,69 @@ body {
 .record-disc {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: contain;
+
+    /* 처음에는 정지 */
+    animation: recordRotate 2s linear infinite;
+    animation-play-state: paused;
 }
+
+
+.record-disc.is-rotating {
+    animation-play-state: running;
+}
+
 
 .tonearm {
     width: 100px;
     height: 100px;
+
     position: absolute;
-    top: -15px;
+    top: 15px;
     right: -10px;
+
     z-index: 3;
-    transform-origin: 82% 15%;
-    transform: rotate(25deg);
-    transition: transform 0.6s ease;
+
+    /*
+        톤암 이미지 안에서
+        맨 위 중심축이 있는 위치를
+        회전 중심으로 잡아준다.
+    */
+    transform-origin: 50% 8%;
+    transform: rotate(-8deg);
+
+    transition: transform 0.8s ease;
 }
 
+/* 이미지 자체는 따로 회전시키지 않는다 */
 .tonearm img {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: contain;
-    margin-top: 35px;
-    margin-left: 18px;
-    transform: rotate(-30deg);
+
+    margin: 0;
+
+    /*
+        기존의 rotate(-30deg) 삭제
+    */
 }
 
+/* =========================
+   재생 상태
+========================= */
+
+
+.record-disc.is-rotating {
+    animation-play-state: running;
+}
+
+/* 재생할 때 LP 쪽으로 이동 */
 .record-player.is-playing .tonearm {
-    transform: rotate(-8deg);
-}
-
-.record-player.is-playing .record-disc {
-    animation: recordRotate 2s linear infinite;
+    transform: rotate(15deg);
 }
 
 @keyframes recordRotate {
@@ -472,23 +505,32 @@ body {
 .progress {
     width: 100%;
     height: 3px;
+
     margin-top: 2px;
+
     background: rgba(223, 203, 168, 0.3);
     border-radius: 10px;
 }
 
 .progress span {
     display: block;
+
     width: 0%;
     height: 3px;
+
     background: #dfcba8;
     border-radius: 10px;
+
+    transition: width 0.1s linear;
 }
 
+/* 시간 */
 .time {
     margin-top: 5px;
+
     display: flex;
     justify-content: space-between;
+
     font-family: var(--font-pretendard);
     font-size: 14px;
 }
@@ -506,22 +548,28 @@ body {
 
 .player-buttons {
     margin-top: 12px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 25px;
 }
 
 .player-buttons button {
     width: 30px;
     height: 30px;
+
     border: none;
     background: transparent;
+
+    cursor: pointer;
 }
 
 .player-buttons button img {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: contain;
 }
@@ -633,4 +681,171 @@ body {
     transform: translateY(-50%) rotate(180deg);
     display: block;
     object-fit: contain;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.modal.active {
+    display: block;
+}
+
+.modal-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    width: 1220px;
+    height: 570px;
+    background: #AF9675;
+    padding: 0 30px;
+    border-radius: 35px;
+    z-index: 999;
+}
+
+
+.img-box {
+    width: 48%;
+    height: 500px;
+    margin: auto 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 542px;
+    height: 510px;
+
+}
+
+.text-box {
+    position: relative;
+    width: 52%;
+    height: 100%;
+    padding: 35px 0;
+}
+
+.text-box .closeBtn {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+}
+
+.point-title {
+    font-family: var(--font-adamina);
+    font-size: 25px;
+    font-weight: var(--fw-regular);
+    color: var(--color-point);
+    border: 1px solid var(--color-point);
+    border-radius: 30px;
+    width: 230px;
+    padding: 5px 20px;
+    margin-bottom: 20px;
+}
+
+.text-box .main-title {
+    font-family: var(--font-pretendard);
+    font-size: 45px;
+    font-weight: var(--fw-medium);
+    color: #000;
+    padding-left: 8px;
+    margin-bottom: 20px;
+}
+
+.point-text {
+    position: relative;
+    font-family: var(--font-adamina);
+    font-size: 24px;
+    font-weight: var(--fw-regular);
+    color: var(--color-point);
+    padding-left: 10px;
+    margin-bottom: 12px;
+}
+
+.point-text::after {
+    display: inline-block;
+    content: '';
+    width: 98%;
+    height: 2px;
+    background: #0000006b;
+    vertical-align: 3px;
+}
+
+.point-text span {
+    font-family: var(--font-pretendard);
+    font-weight: var(--fw-medium);
+    vertical-align: 1px;
+}
+
+.text-box .main-text {
+    padding-left: 10px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.text-box .main-text::after {
+    display: inline-block;
+    content: '';
+    width: 98%;
+    height: 2px;
+    background: #0000006b;
+    vertical-align: 3px;
+}
+
+
+.icon-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+.icon-box img {
+    margin-bottom: 8px;
+}
+
+.icon-box .item {
+    position: relative;
+    text-align: center;
+}
+
+.item img {
+    width: 55px;
+    height: 55px;
+}
+
+.icon-box .item::after {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 120px;
+    background: #0000006b;
+}
+
+.icon-box .item:nth-child(3)::after {
+    display: none;
+}
+
+.icon-box .item .icon-main-text {
+    margin-bottom: 8px;
+    color: black;
+}
+
+.icon-box .item .icon-sub-text {
+    font-size: 15px;
+    color: var(--color-main);
 }
