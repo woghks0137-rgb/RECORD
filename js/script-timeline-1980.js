@@ -117,7 +117,7 @@ if (musicPlayer) {
                     audio.play();
 
                     if (recordDisc) {
-                        recordDisc.classList.add('playing');
+                        recordDisc.classList.add('is-rotating');
                     }
 
                 }
@@ -148,8 +148,8 @@ if (musicPlayer) {
                 tonearm.classList.remove('playing');
             }
 
-            if (recordPlayer) {
-                recordPlayer.classList.remove('playing');
+            if (recordDisc) {
+                recordDisc.classList.remove('is-rotating');
             }
 
         }
