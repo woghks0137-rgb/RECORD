@@ -216,7 +216,8 @@
     }
 
     #progressBar::-webkit-slider-thumb {
-        width: 11 height: 11px;
+        width: 11px;
+        height: 11px;
     }
 
     .player-controls {
