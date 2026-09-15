@@ -216,7 +216,8 @@
     }
 
     #progressBar::-webkit-slider-thumb {
-        width: 11 height: 11px;
+        width: 11px;
+        height: 11px;
     }
 
     .player-controls {
@@ -231,8 +232,8 @@
     }
 
     #playBtn img {
-        width: 22px;
-        height: 22px;
+        width: 20px;
+        height: 20px;
     }
 
     .music-player .music-item-right {
@@ -273,12 +274,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 15px;
+        padding-left: 45px;
+        gap: 5px;
+        transform: translateY(-6px);
     }
 
     /* 진행바 선  */
     #progressBar {
-        width: 200px;
+        width: 145px;
         height: 3px;
         background: #222;
 
@@ -298,8 +301,8 @@
         /* 기본 브라우저 디자인 제거 */
         appearance: none;
 
-        width: 14px;
-        height: 14px;
+        width: 9px;
+        height: 9px;
 
         background: #222;
         border-radius: 50%;
@@ -307,4 +310,11 @@
         /* 마우스를 올렸을 때 클릭할 수 있는 커서로 변경 */
         cursor: pointer;
     }
+
+    .player-controls {
+        padding-left: 50px;
+        transform: translateY(-6px);
+    }
+
+
 }
