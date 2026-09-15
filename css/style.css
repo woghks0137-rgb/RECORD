@@ -500,4 +500,8 @@ section {
     .mobile-modal.on {
         display: flex;
     }
+
+    .INSTA {
+        font-family: var(--font-playfair);
+    }
 }

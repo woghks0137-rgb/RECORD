@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.card-photo');
+const cards = document.querySelectorAll('.timeline-card');
 
 cards.forEach(card => {
     const video = card.querySelector('video');
