@@ -43,6 +43,7 @@ section {
     position: absolute;
     top: 225px;
     left: 40px;
+    pointer-events: none;
 }
 
 .img-box {
@@ -505,4 +506,17 @@ section {
         font-family: var(--font-playfair);
     }
 
+
+    #wrap {
+        transform-origin: none;
+    }
+
+    #wrap.intro-zoom {
+        transform: scale(1);
+    }
+
+    #wrap.zoom-out {
+        transform: scale(1);
+        transition: none;
+    }
 }
