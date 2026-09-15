@@ -40,10 +40,10 @@ section {
 }
 
 .text-box {
+    height: 100px;
     position: absolute;
     top: 225px;
     left: 40px;
-    pointer-events: none;
 }
 
 .img-box {
@@ -253,6 +253,9 @@ section {
 }
 
 
+#youtubePlayer {
+    display: none;
+}
 
 .mobile-modal {
     display: none;
