@@ -175,7 +175,6 @@ let photo = 0;
 
 // 셔터 누르기   
 cameraBtn.addEventListener('click', function () {
-    console.log('PLAY 버튼 클릭됨');
     // 사진이 나와있다면 아무것도 하지 않음  
     if (cameraPhoto.classList.contains('on')) {
         return;
