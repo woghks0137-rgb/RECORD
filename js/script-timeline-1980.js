@@ -1,337 +1,538 @@
+/* =========================
+   MUSIC PLAYER
+========================= */
+
 const musicPlayer = document.querySelector('.music-player');
-const recordPlayer = musicPlayer.querySelector('.record-player');
-const recordDisc = musicPlayer.querySelector('.record-disc');
-const tonearm = musicPlayer.querySelector('.tonearm');
-const playBtn = musicPlayer.querySelector('.play-btn');
-const playBtnImg = playBtn.querySelector('img');
-const audio = musicPlayer.querySelector('.audio');
-const progressBar = musicPlayer.querySelector('.progress span');
-const currentTimeText = musicPlayer.querySelector('.current-time');
-const durationText = musicPlayer.querySelector('.duration');
-const prevBtn = musicPlayer.querySelector('.prev-btn');
-const nextBtn = musicPlayer.querySelector('.next-btn');
 
-const detailBtns = document.querySelectorAll('.detail-btn');
+if (musicPlayer) {
 
-const songs = [
-    {
-        title: '붉은 노을 - 이문세',
-        src: './audio/테스트.mp3'
-    },
-    {
-        title: '테스트 02',
-        src: './audio/테스트02.mp3'
-    },
-    {
-        title: '테스트 03',
-        src: './audio/테스트03.mp3'
-    }
-];
+    const recordPlayer = musicPlayer.querySelector('.record-player');
+    const recordDisc = musicPlayer.querySelector('.record-disc');
+    const tonearm = musicPlayer.querySelector('.tonearm');
 
-let currentSong = 0;
-/* =========================
-   상태
-========================= */
+    const playBtn = musicPlayer.querySelector('.play-btn');
+    const prevBtn = musicPlayer.querySelector('.prev-btn');
+    const nextBtn = musicPlayer.querySelector('.next-btn');
 
-let isPlaying = false;
-let isMovingTonearm = false;
-let playTimer = null;
+    const audio = musicPlayer.querySelector('.audio');
+    const currentTimeEl = musicPlayer.querySelector('.current-time');
+    const durationEl = musicPlayer.querySelector('.duration');
+    const progress = musicPlayer.querySelector('.progress');
+    const progressBar = progress ? progress.querySelector('span') : null;
+
+    const title = musicPlayer.querySelector('.title');
 
 
-/* =========================
-   시간 표시
-========================= */
+    /* =========================
+       음악 목록
+    ========================= */
 
-function formatTime(time) {
+    const musicList = [
+        {
+            title: '붉은 노을 - 이문세',
+            src: './audio/테스트.mp3'
+        }
+    ];
 
-    if (isNaN(time)) {
-        return '0:00';
-    }
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60)
-        .toString()
-        .padStart(2, '0');
-    return `${minutes}:${seconds}`;
-}
+    let currentMusic = 0;
 
 
-/* =========================
-   오디오 메타데이터 로드
-========================= */
+    /* =========================
+       시간 표시
+    ========================= */
 
-audio.addEventListener('loadedmetadata', () => {
+    function formatTime(time) {
 
-    durationText.textContent = formatTime(audio.duration);
+        if (isNaN(time)) {
+            return '0:00';
+        }
 
-});
+        const minutes = Math.floor(time / 60);
+        const seconds = Math.floor(time % 60);
 
-
-/* =========================
-   재생
-========================= */
-
-function startMusic() {
-
-    isPlaying = true;
-
-    /* LP 회전 시작 */
-    recordDisc.classList.add('is-rotating');
-
-    /* 바늘 도착 상태 */
-    recordPlayer.classList.add('is-playing');
-
-    /* 재생 버튼 → 정지 버튼 */
-    playBtnImg.src = './img/pause.png';
-    playBtnImg.alt = '정지';
-
-    /* 음악 재생 */
-    audio.play();
-}
-
-
-/* =========================
-   정지
-========================= */
-
-function stopMusic() {
-
-    isPlaying = false;
-
-    /* 예약된 재생 취소 */
-    clearTimeout(playTimer);
-
-    /* 음악 정지 */
-    audio.pause();
-
-    /* LP 회전 정지 */
-    recordDisc.classList.remove('is-rotating');
-
-    /* 바늘 원위치 */
-    recordPlayer.classList.remove('is-playing');
-
-    /* 정지 버튼 → 재생 버튼 */
-    playBtnImg.src = './img/타임라인 노래 버튼.png';
-    playBtnImg.alt = '재생';
-}
-
-
-/* =========================
-   재생 버튼
-========================= */
-
-playBtn.addEventListener('click', () => {
-
-
-    /* --------------------------------
-       이미 재생 중이면 정지
-    -------------------------------- */
-
-    if (isPlaying) {
-
-        stopMusic();
-
-        return;
+        return `${minutes}:${seconds.toString().padStart(2, '0')}`;
     }
 
 
-    /* --------------------------------
-       바늘이 이동 중이면
-       중복 클릭 방지
-    -------------------------------- */
+    /* =========================
+       음악 불러오기
+    ========================= */
 
-    if (isMovingTonearm) {
+    function loadMusic(index) {
 
-        return;
+        if (!musicList[index]) {
+            return;
+        }
+
+        const music = musicList[index];
+
+        audio.src = music.src;
+        title.textContent = music.title;
+
+        currentTimeEl.textContent = '0:00';
+        durationEl.textContent = '0:00';
+
+        if (progressBar) {
+            progressBar.style.width = '0%';
+        }
+
+        audio.load();
     }
 
+    /* =========================
+       재생 / 일시정지
+    ========================= */
 
-    /* --------------------------------
-       재생 시작
-    -------------------------------- */
+    function togglePlay() {
 
-    isMovingTonearm = true;
+        const playImg = playBtn ? playBtn.querySelector('img') : null;
 
+        if (audio.paused) {
 
-    /*
-        바늘을 LP 쪽으로 이동
+            /* ★ 버튼을 누르자마자 일시정지 이미지로 변경 */
+            if (playImg) {
+                playImg.src = './img/pause.png';
+            }
 
-        여기서는 아직
-        음악 X
-        LP 회전 X
-    */
-
-    recordPlayer.classList.add('is-playing');
-
-
-    /*
-        CSS transition이 0.8초니까
-        0.8초 후에 실제 음악 재생
-    */
-
-    playTimer = setTimeout(() => {
-
-        isMovingTonearm = false;
-        startMusic();
-
-    }, 800);
-
-});
+            if (playBtn) {
+                playBtn.setAttribute('aria-label', '일시정지');
+            }
 
 
-/* =========================
-   현재 재생 시간
-========================= */
+            /* 톤암을 LP 위로 이동 */
+            if (tonearm) {
+                tonearm.classList.add('playing');
+            }
 
-audio.addEventListener('timeupdate', () => {
+            if (recordPlayer) {
+                recordPlayer.classList.add('playing');
+            }
 
-    if (!audio.duration) {
-        return;
+
+            /* 톤암이 LP 위로 내려간 후 음악 재생 */
+            setTimeout(() => {
+
+                if (audio.paused) {
+
+                    audio.play();
+
+                    if (recordDisc) {
+                        recordDisc.classList.add('playing');
+                    }
+
+                }
+
+            }, 800);
+
+
+        } else {
+
+            /* ★ 버튼을 누르자마자 재생 이미지로 변경 */
+            audio.pause();
+
+            if (playImg) {
+                playImg.src = './img/타임라인 노래 버튼.png';
+            }
+
+            if (playBtn) {
+                playBtn.setAttribute('aria-label', '재생');
+            }
+
+
+            if (recordDisc) {
+                recordDisc.classList.remove('playing');
+            }
+
+            /* 톤암 원래 위치 */
+            if (tonearm) {
+                tonearm.classList.remove('playing');
+            }
+
+            if (recordPlayer) {
+                recordPlayer.classList.remove('playing');
+            }
+
+        }
     }
 
+    /* =========================
+       이전 곡
+    ========================= */
 
-    /* 현재 시간 */
+    function prevMusic() {
 
-    currentTimeText.textContent =
-        formatTime(audio.currentTime);
+        currentMusic--;
 
+        if (currentMusic < 0) {
+            currentMusic = musicList.length - 1;
+        }
 
-    /* 진행률 */
-
-    const progress =
-        (audio.currentTime / audio.duration) * 100;
-
-
-    progressBar.style.width = `${progress}%`;
-
-});
-
-
-/* =========================
-   노래 종료
-========================= */
-
-audio.addEventListener('ended', () => {
-
-    isPlaying = false;
-    isMovingTonearm = false;
-
-    recordDisc.classList.remove('is-rotating');
-
-    recordPlayer.classList.remove('is-playing');
-
-    progressBar.style.width = '0%';
-
-    currentTimeText.textContent = '0:00';
-
-    playBtnImg.src = './img/타임라인 노래 버튼.png';
-    playBtnImg.alt = '재생';
-});
-
-prevBtn.addEventListener('click', () => {
-
-    let prevSong = currentSong - 1;
-
-    if (prevSong < 0) {
-        prevSong = songs.length - 1;
-    }
-
-    changeSong(prevSong);
-});
-
-
-nextBtn.addEventListener('click', () => {
-
-    let nextSong = currentSong + 1;
-
-    if (nextSong >= songs.length) {
-        nextSong = 0;
-    }
-
-    changeSong(nextSong);
-});
-function changeSong(index) {
-
-    currentSong = index;
-
-    const song = songs[currentSong];
-
-    // 제목 변경
-    musicPlayer.querySelector('.title').textContent = song.title;
-
-    // 기존 예약 취소
-    clearTimeout(playTimer);
-
-    // 기존 음악 정지
-    audio.pause();
-
-    // 오디오 변경
-    audio.src = song.src;
-    audio.currentTime = 0;
-
-    // 시간 초기화
-    currentTimeText.textContent = '0:00';
-    durationText.textContent = '0:00';
-    progressBar.style.width = '0%';
-
-    // 상태
-    isPlaying = false;
-    isMovingTonearm = true;
-
-    // LP 회전
-    recordDisc.classList.add('is-rotating');
-
-    // 바늘 이동
-    recordPlayer.classList.add('is-playing');
-
-    // 정지 버튼 유지
-    playBtnImg.src = './img/pause.png';
-    playBtnImg.alt = '정지';
-
-    // 1.5초 후 재생
-    playTimer = setTimeout(() => {
-
-        isMovingTonearm = false;
-        isPlaying = true;
-
+        loadMusic(currentMusic);
         audio.play();
 
-    }, 1500);
+    }
+
+
+    /* =========================
+       다음 곡
+    ========================= */
+
+    function nextMusic() {
+
+        currentMusic++;
+
+        if (currentMusic >= musicList.length) {
+            currentMusic = 0;
+        }
+
+        loadMusic(currentMusic);
+        audio.play();
+
+    }
+
+
+    /* =========================
+       재생 버튼
+    ========================= */
+
+    if (playBtn) {
+        playBtn.addEventListener('click', togglePlay);
+    }
+
+
+    /* =========================
+       이전 / 다음 버튼
+    ========================= */
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevMusic);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextMusic);
+    }
+
+
+    /* =========================
+       음악 재생 시간
+    ========================= */
+
+    audio.addEventListener('loadedmetadata', () => {
+
+        durationEl.textContent = formatTime(audio.duration);
+
+    });
+
+
+    audio.addEventListener('timeupdate', () => {
+
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+
+        if (audio.duration && progressBar) {
+
+            const percent =
+                (audio.currentTime / audio.duration) * 100;
+
+            progressBar.style.width = `${percent}%`;
+
+        }
+
+    });
+
+
+    /* =========================
+       음악 종료
+    ========================= */
+
+    audio.addEventListener('ended', () => {
+
+        nextMusic();
+
+    });
+
+
+    /* =========================
+       진행바 클릭
+    ========================= */
+
+    if (progress) {
+
+        progress.addEventListener('click', (e) => {
+
+            if (!audio.duration) {
+                return;
+            }
+
+            const rect = progress.getBoundingClientRect();
+
+            const clickX = e.clientX - rect.left;
+
+            const percent = clickX / rect.width;
+
+            audio.currentTime = audio.duration * percent;
+
+        });
+
+    }
+
+
+    /* =========================
+       최초 음악 설정
+    ========================= */
+
+    loadMusic(currentMusic);
+
 }
 
-detailBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-        document.querySelectorAll(".modal").forEach((modal) => {
-            modal.classList.remove("active")
-        });
 
-        const modalId = btn.dataset.modal;
+/* =========================
+   MODAL
+========================= */
 
-        const modal = document.querySelector(`#${modalId}`)
+const detailButtons = document.querySelectorAll('.detail-btn');
+const closeButtons = document.querySelectorAll('.closeBtn');
+/* =========================
+   모달 열기
+========================= */
 
-        modal.classList.add("active")
-    })
-})
+const modalButtons = document.querySelectorAll('.detail-btn[data-modal');
 
+modalButtons.forEach(button => {
 
-const closeBtns = document.querySelectorAll('.closeBtn');
-closeBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-        btn.closest('.modal').classList.remove('active');
-    });
-});
+    button.addEventListener('click', (e) => {
 
-document.querySelectorAll(".modal").forEach((modal) => {
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.classList.remove("active");
+        e.preventDefault();
+        e.stopPropagation();
+
+        const modalId = button.dataset.modal;
+        const modal = document.getElementById(modalId);
+
+        if (!modal) {
+            console.log('모달을 찾을 수 없음:', modalId);
+            return;
         }
+
+        modal.classList.add('active');
+
     });
+
 });
+
+/* =========================
+   모달 닫기
+========================= */
+
+closeButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        const modal = button.closest('.modal');
+
+        if (modal) {
+            modal.classList.remove('active');
+        }
+
+    });
+
+});
+
+
+/* =========================
+   모달 바깥 클릭
+========================= */
+
+document.querySelectorAll('.modal').forEach(modal => {
+
+    modal.addEventListener('click', (e) => {
+
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+
+    });
+
+});
+
+
+/* =========================
+   ESC로 모달 닫기
+========================= */
 
 document.addEventListener('keydown', (e) => {
+
     if (e.key === 'Escape') {
-        document.querySelectorAll('.modal').forEach((modal) => {
+
+        document.querySelectorAll('.modal').forEach(modal => {
+
             modal.classList.remove('active');
+
         });
+
+    }
+
+});
+
+
+/* =========================
+   MOBILE SWIPER
+   PC / MOBILE 카드가 HTML에서 분리되어 있음
+========================= */
+
+let objectSwiper = null;
+let cultureSwiper = null;
+
+
+/* =========================
+   모바일 Swiper 시작
+========================= */
+
+function startMobileSwiper() {
+
+    /* 대표 물건 - 모바일 전용 */
+
+    const objectList =
+        document.querySelector('.mobile-object-swiper');
+
+    if (objectList && !objectSwiper) {
+
+        objectSwiper = new Swiper(objectList, {
+
+            slidesPerView: 'auto',
+
+            spaceBetween: 0,
+
+            freeMode: true,
+
+            grabCursor: true,
+
+            resistanceRatio: 0.85
+
+        });
+
+    }
+
+
+    /* 당시 문화 - 모바일 전용 */
+
+    const cultureList =
+        document.querySelector('.mobile-culture-swiper');
+
+    if (cultureList && !cultureSwiper) {
+
+        cultureSwiper = new Swiper(cultureList, {
+
+            slidesPerView: 'auto',
+
+            spaceBetween: 0,
+
+            freeMode: true,
+
+            grabCursor: true,
+
+            resistanceRatio: 0.85
+
+        });
+
+    }
+
+}
+
+
+/* =========================
+   모바일 Swiper 종료
+========================= */
+
+function stopMobileSwiper() {
+
+    if (objectSwiper) {
+
+        objectSwiper.destroy(true, true);
+
+        objectSwiper = null;
+
+    }
+
+
+    if (cultureSwiper) {
+
+        cultureSwiper.destroy(true, true);
+
+        cultureSwiper = null;
+
+    }
+
+}
+
+
+/* =========================
+   PC / 모바일 전환
+========================= */
+
+let swiperMode = null;
+
+
+function checkSwiperMode() {
+
+    const nextMode =
+        window.innerWidth <= 768
+            ? 'mobile'
+            : 'pc';
+
+
+    /* 같은 화면이면 다시 실행하지 않음 */
+
+    if (nextMode === swiperMode) {
+        return;
+    }
+
+
+    /* 모바일 */
+
+    if (nextMode === 'mobile') {
+
+        startMobileSwiper();
+
+    }
+
+
+    /* PC */
+
+    else {
+
+        stopMobileSwiper();
+
+    }
+
+
+    swiperMode = nextMode;
+
+}
+
+
+/* =========================
+   최초 실행
+========================= */
+
+checkSwiperMode();
+
+
+/* =========================
+   화면 크기 변경
+========================= */
+
+window.addEventListener('resize', checkSwiperMode);
+
+window.addEventListener('load', () => {
+    if (window.location.hash === '#culture04') {
+        const target = document.querySelector('#culture04');
+
+        if (target) {
+            setTimeout(() => {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }, 100);
+        }
     }
 });
