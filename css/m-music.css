@@ -258,13 +258,54 @@
         width: 15px;
         height: 15px;
     }
-}
 
-#youtubePlayer {
-    position: fixed;
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    pointer-events: none;
-    overflow: hidden;
+
+    #youtubePlayer {
+        position: fixed;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    /* 뮤직 진행바 정렬 */
+    .progress-bar-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* 진행바 선  */
+    #progressBar {
+        width: 200px;
+        height: 3px;
+        background: #222;
+
+        appearance: none;
+        /* 기본 진행바 디자인 제거 */
+        cursor: pointer;
+        /* 마우스를 올렸을 때 클릭할 수 있는 커서로 변경 */
+    }
+
+
+    /* 진행바 동그라미
+    -webkit : 크롬 엣지 브라우저 
+    -slider : input type range의 슬라이더
+    -thumb : 잡고 움직이는 동그라미
+*/
+    #progressBar::-webkit-slider-thumb {
+        /* 기본 브라우저 디자인 제거 */
+        appearance: none;
+
+        width: 14px;
+        height: 14px;
+
+        background: #222;
+        border-radius: 50%;
+
+        /* 마우스를 올렸을 때 클릭할 수 있는 커서로 변경 */
+        cursor: pointer;
+    }
 }
